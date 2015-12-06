@@ -13,6 +13,6 @@
  */
 @protocol TemplateRenderProtocol <NSObject>
 
-//(NSString *)floorIdentifier;
+- (NSString *)floorIdentifier;
 
 @end

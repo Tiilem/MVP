@@ -7,5 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TemplateContentProtocol"
+#import "TemplateJumpProtocol"
+#import "TemplateContainerProtocol"
+#import "TemplateRenderProtocol"
+#import "TemplateCellProtocol"
+
+
+
 
 

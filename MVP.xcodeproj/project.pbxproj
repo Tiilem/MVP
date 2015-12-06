@@ -23,6 +23,12 @@
 		B03F9F891C14047700B653A6 /* TemplateJumpModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B03F9F881C14047700B653A6 /* TemplateJumpModel.m */; };
 		B03F9F8C1C1405D700B653A6 /* TemplateFloorHeaderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B03F9F8B1C1405D700B653A6 /* TemplateFloorHeaderModel.m */; };
 		B03F9F8F1C14066F00B653A6 /* TemplateFloorMarginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B03F9F8E1C14066F00B653A6 /* TemplateFloorMarginModel.m */; };
+		B03F9F921C140C9C00B653A6 /* TemplateFloorFocusModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B03F9F911C140C9C00B653A6 /* TemplateFloorFocusModel.m */; };
+		B03F9F951C140CEB00B653A6 /* TemplateFloorNormalModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B03F9F941C140CEB00B653A6 /* TemplateFloorNormalModel.m */; };
+		B03F9F981C141E2B00B653A6 /* TemplateFloorPicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B03F9F971C141E2B00B653A6 /* TemplateFloorPicModel.m */; };
+		B03F9F9B1C141EC900B653A6 /* TemplateFloorShareModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B03F9F9A1C141EC900B653A6 /* TemplateFloorShareModel.m */; };
+		B03F9F9E1C14288F00B653A6 /* TemplateFloorFocusView.m in Sources */ = {isa = PBXBuildFile; fileRef = B03F9F9D1C14288F00B653A6 /* TemplateFloorFocusView.m */; };
+		B03F9FA31C1429D200B653A6 /* TemplateFocusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B03F9FA21C1429D200B653A6 /* TemplateFocusCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,7 +50,7 @@
 		B03F9F6A1C13F10600B653A6 /* TemplateJumpProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateJumpProtocol.h; sourceTree = "<group>"; };
 		B03F9F6D1C13F16600B653A6 /* TemplateContainerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateContainerProtocol.h; sourceTree = "<group>"; };
 		B03F9F701C13F18400B653A6 /* TemplateRenderProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateRenderProtocol.h; sourceTree = "<group>"; };
-		B03F9F731C13F4A300B653A6 /* TemplateBaseProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateBaseProtocol.h; sourceTree = "<group>"; };
+		B03F9F731C13F4A300B653A6 /* TemplateContentProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateContentProtocol.h; sourceTree = "<group>"; };
 		B03F9F761C13F4FC00B653A6 /* TemplateDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateDefine.h; sourceTree = "<group>"; };
 		B03F9F791C13F54F00B653A6 /* GlobalConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalConfig.h; sourceTree = "<group>"; };
 		B03F9F7C1C13FE1900B653A6 /* chaoshi */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = chaoshi; sourceTree = "<group>"; };
@@ -59,6 +65,19 @@
 		B03F9F8B1C1405D700B653A6 /* TemplateFloorHeaderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateFloorHeaderModel.m; sourceTree = "<group>"; };
 		B03F9F8D1C14066F00B653A6 /* TemplateFloorMarginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateFloorMarginModel.h; sourceTree = "<group>"; };
 		B03F9F8E1C14066F00B653A6 /* TemplateFloorMarginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateFloorMarginModel.m; sourceTree = "<group>"; };
+		B03F9F901C140C9C00B653A6 /* TemplateFloorFocusModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateFloorFocusModel.h; sourceTree = "<group>"; };
+		B03F9F911C140C9C00B653A6 /* TemplateFloorFocusModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateFloorFocusModel.m; sourceTree = "<group>"; };
+		B03F9F931C140CEB00B653A6 /* TemplateFloorNormalModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateFloorNormalModel.h; sourceTree = "<group>"; };
+		B03F9F941C140CEB00B653A6 /* TemplateFloorNormalModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateFloorNormalModel.m; sourceTree = "<group>"; };
+		B03F9F961C141E2B00B653A6 /* TemplateFloorPicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateFloorPicModel.h; sourceTree = "<group>"; };
+		B03F9F971C141E2B00B653A6 /* TemplateFloorPicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateFloorPicModel.m; sourceTree = "<group>"; };
+		B03F9F991C141EC900B653A6 /* TemplateFloorShareModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateFloorShareModel.h; sourceTree = "<group>"; };
+		B03F9F9A1C141EC900B653A6 /* TemplateFloorShareModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateFloorShareModel.m; sourceTree = "<group>"; };
+		B03F9F9C1C14288F00B653A6 /* TemplateFloorFocusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateFloorFocusView.h; sourceTree = "<group>"; };
+		B03F9F9D1C14288F00B653A6 /* TemplateFloorFocusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateFloorFocusView.m; sourceTree = "<group>"; };
+		B03F9F9F1C14290300B653A6 /* TemplateCellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateCellProtocol.h; sourceTree = "<group>"; };
+		B03F9FA11C1429D200B653A6 /* TemplateFocusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateFocusCell.h; sourceTree = "<group>"; };
+		B03F9FA21C1429D200B653A6 /* TemplateFocusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateFocusCell.m; sourceTree = "<group>"; };
 		B7DD2DC6FB0B979D0CA6C60A /* Pods-MVP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVP/Pods-MVP.debug.xcconfig"; sourceTree = "<group>"; };
 		F12F47E4BED75B6E52829F8A /* libPods-MVP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MVP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -139,6 +158,7 @@
 		B03F9F511C13EDBF00B653A6 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				B03F9FA01C14298E00B653A6 /* Focus */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -147,10 +167,6 @@
 			isa = PBXGroup;
 			children = (
 				B03F9F831C13FFEB00B653A6 /* BaseGroup */,
-				B03F9F5D1C13EEA700B653A6 /* Corverflow */,
-				B03F9F5C1C13EE9E00B653A6 /* Category */,
-				B03F9F5B1C13EE9000B653A6 /* FreeChoice */,
-				B03F9F5A1C13EE7600B653A6 /* ProductList */,
 				B03F9F591C13EE6600B653A6 /* NormalFloor */,
 				B03F9F581C13EDFC00B653A6 /* Focus */,
 				B03F9F551C13EDF000B653A6 /* TemplateChannelModel.h */,
@@ -164,10 +180,11 @@
 		B03F9F531C13EDBF00B653A6 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				B03F9F731C13F4A300B653A6 /* TemplateBaseProtocol.h */,
+				B03F9F731C13F4A300B653A6 /* TemplateContentProtocol.h */,
 				B03F9F6A1C13F10600B653A6 /* TemplateJumpProtocol.h */,
 				B03F9F6D1C13F16600B653A6 /* TemplateContainerProtocol.h */,
 				B03F9F701C13F18400B653A6 /* TemplateRenderProtocol.h */,
+				B03F9F9F1C14290300B653A6 /* TemplateCellProtocol.h */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -176,10 +193,6 @@
 			isa = PBXGroup;
 			children = (
 				B03F9F691C13F0C300B653A6 /* BaseModel */,
-				B03F9F631C13EF1700B653A6 /* Corverflow */,
-				B03F9F621C13EF1400B653A6 /* Category */,
-				B03F9F611C13EF1100B653A6 /* FreeChoice */,
-				B03F9F601C13EF0F00B653A6 /* ProductList */,
 				B03F9F5F1C13EEFE00B653A6 /* NormalFloor */,
 				B03F9F5E1C13EEFA00B653A6 /* Focus */,
 			);
@@ -189,6 +202,8 @@
 		B03F9F581C13EDFC00B653A6 /* Focus */ = {
 			isa = PBXGroup;
 			children = (
+				B03F9F901C140C9C00B653A6 /* TemplateFloorFocusModel.h */,
+				B03F9F911C140C9C00B653A6 /* TemplateFloorFocusModel.m */,
 			);
 			name = Focus;
 			sourceTree = "<group>";
@@ -196,41 +211,17 @@
 		B03F9F591C13EE6600B653A6 /* NormalFloor */ = {
 			isa = PBXGroup;
 			children = (
+				B03F9F931C140CEB00B653A6 /* TemplateFloorNormalModel.h */,
+				B03F9F941C140CEB00B653A6 /* TemplateFloorNormalModel.m */,
 			);
 			name = NormalFloor;
-			sourceTree = "<group>";
-		};
-		B03F9F5A1C13EE7600B653A6 /* ProductList */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = ProductList;
-			sourceTree = "<group>";
-		};
-		B03F9F5B1C13EE9000B653A6 /* FreeChoice */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = FreeChoice;
-			sourceTree = "<group>";
-		};
-		B03F9F5C1C13EE9E00B653A6 /* Category */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Category;
-			sourceTree = "<group>";
-		};
-		B03F9F5D1C13EEA700B653A6 /* Corverflow */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Corverflow;
 			sourceTree = "<group>";
 		};
 		B03F9F5E1C13EEFA00B653A6 /* Focus */ = {
 			isa = PBXGroup;
 			children = (
+				B03F9F9C1C14288F00B653A6 /* TemplateFloorFocusView.h */,
+				B03F9F9D1C14288F00B653A6 /* TemplateFloorFocusView.m */,
 			);
 			name = Focus;
 			sourceTree = "<group>";
@@ -240,34 +231,6 @@
 			children = (
 			);
 			name = NormalFloor;
-			sourceTree = "<group>";
-		};
-		B03F9F601C13EF0F00B653A6 /* ProductList */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = ProductList;
-			sourceTree = "<group>";
-		};
-		B03F9F611C13EF1100B653A6 /* FreeChoice */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = FreeChoice;
-			sourceTree = "<group>";
-		};
-		B03F9F621C13EF1400B653A6 /* Category */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Category;
-			sourceTree = "<group>";
-		};
-		B03F9F631C13EF1700B653A6 /* Corverflow */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Corverflow;
 			sourceTree = "<group>";
 		};
 		B03F9F691C13F0C300B653A6 /* BaseModel */ = {
@@ -288,8 +251,21 @@
 				B03F9F8B1C1405D700B653A6 /* TemplateFloorHeaderModel.m */,
 				B03F9F8D1C14066F00B653A6 /* TemplateFloorMarginModel.h */,
 				B03F9F8E1C14066F00B653A6 /* TemplateFloorMarginModel.m */,
+				B03F9F961C141E2B00B653A6 /* TemplateFloorPicModel.h */,
+				B03F9F971C141E2B00B653A6 /* TemplateFloorPicModel.m */,
+				B03F9F991C141EC900B653A6 /* TemplateFloorShareModel.h */,
+				B03F9F9A1C141EC900B653A6 /* TemplateFloorShareModel.m */,
 			);
 			name = BaseGroup;
+			sourceTree = "<group>";
+		};
+		B03F9FA01C14298E00B653A6 /* Focus */ = {
+			isa = PBXGroup;
+			children = (
+				B03F9FA11C1429D200B653A6 /* TemplateFocusCell.h */,
+				B03F9FA21C1429D200B653A6 /* TemplateFocusCell.m */,
+			);
+			name = Focus;
 			sourceTree = "<group>";
 		};
 		D9E1666FD8D12228DA7C5541 /* Frameworks */ = {
@@ -429,9 +405,15 @@
 				B03F9F3A1C13E30500B653A6 /* ViewController.m in Sources */,
 				B03F9F861C14003800B653A6 /* TemplateHeaderModel.m in Sources */,
 				B03F9F371C13E30500B653A6 /* AppDelegate.m in Sources */,
+				B03F9F921C140C9C00B653A6 /* TemplateFloorFocusModel.m in Sources */,
 				B03F9F8C1C1405D700B653A6 /* TemplateFloorHeaderModel.m in Sources */,
 				B03F9F571C13EDF000B653A6 /* TemplateChannelModel.m in Sources */,
+				B03F9F9B1C141EC900B653A6 /* TemplateFloorShareModel.m in Sources */,
+				B03F9F951C140CEB00B653A6 /* TemplateFloorNormalModel.m in Sources */,
+				B03F9F981C141E2B00B653A6 /* TemplateFloorPicModel.m in Sources */,
 				B03F9F8F1C14066F00B653A6 /* TemplateFloorMarginModel.m in Sources */,
+				B03F9F9E1C14288F00B653A6 /* TemplateFloorFocusView.m in Sources */,
+				B03F9FA31C1429D200B653A6 /* TemplateFocusCell.m in Sources */,
 				B03F9F341C13E30500B653A6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

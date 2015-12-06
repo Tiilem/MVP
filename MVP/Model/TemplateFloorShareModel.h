@@ -1,5 +1,5 @@
 //
-//  TemplateFloorMarginModel.h
+//  TemplateFloorShareModel.h
 //  MVP
 //
 //  Created by ccguo on 15/12/6.
@@ -7,8 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TemplateContentProtocol.h"
 
-@interface TemplateFloorMarginModel : NSObject<TemplateContentProtocol>
-
+@interface TemplateFloorShareModel : NSObject
+@property (nonatomic,strong) NSString *avatar;
 @end

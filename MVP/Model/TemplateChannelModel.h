@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TemplateContainerProtocol.h"
+
 #import "TemplateHeaderModel.h"
 
 @interface TemplateChannelModel : NSObject
@@ -21,4 +23,9 @@
 @property (nonatomic,strong) TemplateHeaderModel *head;
 
 //other add
+
+//- (id <TemplateContainerProtocol>)rowFloorModelAtIndexPath:(NSIndexPath *)indexPath;
+
+- (id <TemplateContentProtocol>)rowModelAtIndexPath:(NSIndexPath *)indexPath;
+
 @end

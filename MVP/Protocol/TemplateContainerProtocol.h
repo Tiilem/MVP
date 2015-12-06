@@ -7,15 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TemplateContentProtocol.h"
 
 /**
  *  容器概念
  */
 @protocol TemplateContainerProtocol <NSObject>
 
-//numberInContainerFloor
+@required
 
-//(id)channelModelAtIndexPath:(NSIndexPath)index
+- (NSInteger)numberOfChildFloorModelsInContainer;
+
+- (id <TemplateContentProtocol>)childFloorModelAtIndex:(NSInteger)index;
 
 @end
 

@@ -10,4 +10,11 @@
 
 @interface TemplateJumpModel : NSObject
 
+@property (nonatomic,strong) NSString      *des;
+@property (nonatomic,strong) NSString      *type;
+@property (nonatomic,strong) NSString      *url;
+@property (nonatomic,strong) NSDictionary  *params;
+@property (nonatomic,strong) NSString      *srv;
+
+
 @end

@@ -8,21 +8,21 @@
 
 #import "TemplateChannelModel.h"
 #import "TemplateChannelFloorModel.h"
+#import "TemplateFloorFocusModel.h"
 
 NSString *const TemplateChannelPatternFocus         = @"Focus";
-NSString *const TemplateChannelPatternHorizonSkus   = @"SingleGoods";
 NSString *const TemplateChannelPatternNormal        = @"NormalFloor";
 
 @implementation TemplateChannelModel
 
-+ (NSDictionary *)mj_objectClassInArray
++ (NSDictionary *)mj_replacedKeyFromPropertyName
 {
     return @{
-             @"tempFloors" : @"TemplateChannelFloorModel"
+             @"tempFloors" : @"floors"
              };
 }
 
-- (void)mj_objectDidFinishConvertingToKeyValues
+- (void)mj_keyValuesDidFinishConvertingToObject
 {
     NSMutableArray * modelArray = [NSMutableArray array];
     for (NSDictionary *floorDict in self.tempFloors) {
@@ -40,12 +40,32 @@ NSString *const TemplateChannelPatternNormal        = @"NormalFloor";
             }
         }
     }
+    self.tempFloors = nil;
     self.floors = modelArray;
+}
+
+//- (id <TemplateContainerProtocol>)rowFloorModelAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    return nil;
+//}
+
+- (id <TemplateContentProtocol>)rowModelAtIndexPath:(NSIndexPath *)indexPath
+{
+    TemplateChannelFloorModel *floorModel = [self.floors objectAtIndex:indexPath.section];
+    id<TemplateContentProtocol> rowModel = [floorModel childFloorModelAtIndex:indexPath.row];
+    return rowModel;
 }
 
 - (NSString *)getModelWithPattern:(NSString *)pattern
 {
-    return @"";
+    if ([pattern isEqualToString:TemplateChannelPatternFocus]) {
+        return @"TemplateFloorFocusModel";
+    }
+    
+    if ([pattern isEqualToString:TemplateChannelPatternNormal]) {
+//        return @"TemplateFloorNormalModel";
+    }
+    return nil;
 }
 @end
 

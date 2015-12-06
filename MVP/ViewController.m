@@ -11,7 +11,8 @@
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 
-@property (nonatomic,strong) TemplateChannelFloorModel *floorModel;
+@property (nonatomic,strong) TemplateChannelModel *floorModel;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -20,14 +21,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.title = @"Index";
     
     NSString *path = [[NSBundle mainBundle] pathForResource:@"food.json" ofType:nil];
     
     NSString *content = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+    
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:[content dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableLeaves error:nil];
     //解析
-    self.floorModel = [TemplateChannelFloorModel mj_objectWithKeyValues:content];
+    self.floorModel = [TemplateChannelModel mj_objectWithKeyValues:dic];
     
+    NSLog(@"aa");
     
+    self.tableView.backgroundColor = [UIColor purpleColor];
+    self.tableView.contentInset = UIEdgeInsetsMake(-64, 0, 0, 0);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,17 +46,23 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;
+    return 20;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    static NSString *cellIdentifier = @"cellIdentifier";
     UITableViewCell *cell = nil;
+    cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    }
+    cell.textLabel.text = [NSString stringWithFormat:@"%ld_%ld",indexPath.section,indexPath.row];
     
     return cell;
 }

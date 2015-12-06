@@ -1,5 +1,5 @@
 //
-//  TemplateBaseProtocol.h
+//  TemplateContentProtocol.h
 //  MVP
 //
 //  Created by ccguo on 15/12/6.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol TemplateBaseProtocol <NSObject>
+@protocol TemplateContentProtocol <NSObject>
 
 
 

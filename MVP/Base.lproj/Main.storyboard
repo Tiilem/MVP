@@ -30,12 +30,21 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="GVH-yz-xeQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="08g-Qy-agU"/>
+                            <constraint firstItem="GVH-yz-xeQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="PW0-Jy-1pL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="GVH-yz-xeQ" secondAttribute="trailing" constant="-20" id="a5I-Xh-rLg"/>
                             <constraint firstItem="GVH-yz-xeQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="tPX-0i-eSq"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GVH-yz-xeQ" secondAttribute="bottom" id="vPS-pp-14y"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="08g-Qy-agU"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="Bnc-AU-FBr"/>
+                    <connections>
+                        <outlet property="tableView" destination="GVH-yz-xeQ" id="qBx-1l-531"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
