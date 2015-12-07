@@ -10,24 +10,30 @@
 #import <iCarousel/iCarousel.h>
 #import "TemplateFloorFocusModel.h"
 #import "TemplateFloorPicModel.h"
+
 @interface TemplateFloorFocusView ()<iCarouselDataSource,iCarouselDelegate>
 {
     UIPageControl *_pageControl;
-    iCarousel  *_scrollView;
+    iCarousel     *_scrollView;
 }
 
 @property (nonatomic,strong) TemplateFloorFocusModel *focusModel;
 @end
+
 @implementation TemplateFloorFocusView
 
 - (instancetype)init
 {
     self = [super init];
-    if (self) {
-        //imageView
+    
+    if (self)
+    {
         _scrollView = [[iCarousel alloc] init];
         _scrollView.delegate = self;
         _scrollView.dataSource = self;
+        _scrollView.type = iCarouselTypeLinear;
+        _scrollView.bounceDistance = 0.5;
+        _scrollView.decelerationRate = 0.5;
         _scrollView.translatesAutoresizingMaskIntoConstraints = NO;
         [self addSubview:_scrollView];
         
@@ -37,6 +43,7 @@
             make.width.mas_equalTo(@(ScreenWidth));
             make.height.mas_equalTo(@(165));
         }];
+        
     }
     return self;
 }
@@ -74,6 +81,15 @@
     TemplateFloorPicModel *model = self.focusModel.itemList[index];
     [imageView setImageWithURL:[NSURL URLWithString:model.img]];
     return imageView;
+}
+
+- (CGFloat)carousel:(iCarousel *)carousel valueForOption:(iCarouselOption)option withDefault:(CGFloat)value
+{
+    if (option == iCarouselOptionWrap)
+    {
+        return YES;
+    }
+    return value;
 }
 
 @end

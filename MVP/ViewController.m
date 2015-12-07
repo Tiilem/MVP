@@ -41,9 +41,9 @@
 
 - (void)registTableViewCell
 {
-    NSArray *cellIdentifiers = @[
-                                 @"TemplateFocusCell"
-                                 ];
+//    NSArray *cellIdentifiers = @[
+//                                 @"TemplateFocusCell"
+//                                 ];
     
     [self.tableView registerClass:[TemplateFocusCell class] forCellReuseIdentifier:@"TemplateFocusCell"];
 
@@ -86,17 +86,37 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 20;
+    return [self.floorModel.floors count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     id <TemplateContentProtocol> model = [self.floorModel rowModelAtIndexPath:indexPath];
-    id <TemplateCellProtocol> cell = [tableView dequeueReusableCellWithIdentifier:[model floorIdentifier]];
+    
+    UITableViewCell <TemplateCellProtocol> * cell = [tableView dequeueReusableCellWithIdentifier:[model floorIdentifier]];
     
     [cell processData:model];
     
-    return cell;
+    if(!cell){
+        return [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+    }else{
+        return (UITableViewCell *)cell;
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+//    TemplateChannelFloorModel  *floor = self.floorModel.floors[indexPath.section];
+//    
+//    NSString *identifier = [floor floorIdentifier];
+//    Class<TemplateCellProtocol> headerViewClass = NSClassFromString(identifier);
+//    CGSize size = [headerViewClass calculateSizeWithData:floor constrainedToSize:CGSizeMake(tableView.frame.size.width, 0.0)];
+//    return size.height;
+
+    if (indexPath.row == 0) {
+        return 164;
+    }
+    return 50;
 }
 
 @end

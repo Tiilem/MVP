@@ -12,6 +12,7 @@
 
 @protocol TemplateCellProtocol;
 @protocol TemplateContentProtocol;
+
 @interface TemplateFloorFocusView : UIView<TemplateCellProtocol>
 
 @end
