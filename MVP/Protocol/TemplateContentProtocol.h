@@ -10,6 +10,6 @@
 
 @protocol TemplateContentProtocol <NSObject>
 
-
+- (NSString *)floorIdentifier;
 
 @end

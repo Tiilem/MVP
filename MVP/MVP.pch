@@ -14,7 +14,8 @@
 
 #import <AFNetworking/AFNetworking.h>
 #import <AFNetworking/UIImageView+AFNetworking.h>
-
+#import <AFNetworking/AFURLRequestSerialization.h>
+#import <AFNetworking/AFURLResponseSerialization.h>
 #import <MJExtension/MJExtension.h>
 #import <Masonry/Masonry.h>
 

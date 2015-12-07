@@ -39,7 +39,7 @@
 {
     if ((self.margin)&&(index+1) == [self numberOfChildFloorInContainer])
         return self.margin;  //最后一行
-    return nil;
+    return self;
 }
 
 #pragma mark - TemplateJumpProtocol
@@ -52,7 +52,7 @@
 #pragma mark -  TemplateRenderProtocol
 - (NSString *)floorIdentifier
 {
-    return nil;
+    return @"TemplateFocusCell";
 }
 
 @end

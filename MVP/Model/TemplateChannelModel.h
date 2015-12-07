@@ -28,4 +28,6 @@
 
 - (id <TemplateContentProtocol>)rowModelAtIndexPath:(NSIndexPath *)indexPath;
 
+
+
 @end

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "TemplateChannelFloorModel.h"
 
-@interface TemplateFloorFocusModel : TemplateChannelFloorModel
+@interface TemplateFloorFocusModel : TemplateChannelFloorModel<TemplateContentProtocol>
 
 @property (nonatomic,assign) NSNumber *width;
 @property (nonatomic,assign) NSNumber *height;
