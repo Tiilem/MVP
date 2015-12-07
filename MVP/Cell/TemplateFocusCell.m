@@ -49,7 +49,8 @@
 
 + (CGSize)calculateSizeWithData:(id<NSObject>)data constrainedToSize:(CGSize)size
 {
-    return size;
+    CGSize curSize = CGSizeMake(ScreenWidth, 375/2);
+    return curSize;
 }
 
 

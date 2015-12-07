@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '18FEABB1CE4006FCEADABB30'
-               BlueprintName = 'AFNetworking'
+               BlueprintIdentifier = 'B5F380A50BD2980A5B8F0B5D'
+               BlueprintName = 'UITableView+FDTemplateLayoutCell'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libAFNetworking.a'>
+               BuildableName = 'libUITableView+FDTemplateLayoutCell.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

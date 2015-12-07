@@ -106,17 +106,17 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-//    TemplateChannelFloorModel  *floor = self.floorModel.floors[indexPath.section];
-//    
-//    NSString *identifier = [floor floorIdentifier];
-//    Class<TemplateCellProtocol> headerViewClass = NSClassFromString(identifier);
-//    CGSize size = [headerViewClass calculateSizeWithData:floor constrainedToSize:CGSizeMake(tableView.frame.size.width, 0.0)];
-//    return size.height;
+    TemplateChannelFloorModel  *floor = self.floorModel.floors[indexPath.section];
+    
+    NSString *identifier = [floor floorIdentifier];
+    Class<TemplateCellProtocol> headerViewClass = NSClassFromString(identifier);
+    CGSize size = [headerViewClass calculateSizeWithData:floor constrainedToSize:CGSizeMake(tableView.frame.size.width, 0.0)];
+    return size.height;
 
-    if (indexPath.row == 0) {
-        return 164;
-    }
-    return 50;
+//    if (indexPath.row == 0) {
+//        return 164;
+//    }
+//    return 50;
 }
 
 @end

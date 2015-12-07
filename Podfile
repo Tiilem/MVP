@@ -8,5 +8,6 @@ pod 'iCarousel', '~> 1.8'
 pod 'Masonry', '~> 0.6.0'
 pod 'AFNetworking', '~> 2.5.0'
 pod 'MJExtension', '~> 3.0.7'
+pod 'UITableView+FDTemplateLayoutCell', '~> 1.3'
 end
 
