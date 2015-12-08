@@ -7,7 +7,7 @@
 //
 
 #import "TemplateChannelModel.h"
-#import "TemplateChannelFloorModel.h"
+#import "TemplateFloorContainerModel.h"
 #import "TemplateFloorFocusModel.h"
 
 NSString *const TemplateChannelPatternFocus         = @"Focus";
@@ -32,7 +32,7 @@ NSString *const TemplateChannelPatternNormal        = @"NormalFloor";
             Class aclass = NSClassFromString(modelType);
             if (aclass)
             {
-                TemplateChannelFloorModel *floorModel = [aclass mj_objectWithKeyValues:floorDict];
+                TemplateFloorContainerModel *floorModel = [aclass mj_objectWithKeyValues:floorDict];
                 floorModel.channelModel = self;
                 if (floorModel) {
                     [modelArray addObject:floorModel];
@@ -51,7 +51,7 @@ NSString *const TemplateChannelPatternNormal        = @"NormalFloor";
 
 - (id <TemplateContentProtocol>)rowModelAtIndexPath:(NSIndexPath *)indexPath
 {
-    TemplateChannelFloorModel *floorModel = [self.floors objectAtIndex:indexPath.section];
+    TemplateFloorContainerModel *floorModel = [self.floors objectAtIndex:indexPath.section];
     id<TemplateContentProtocol> rowModel = [floorModel childFloorModelAtIndex:indexPath.row];
     return rowModel;
 }

@@ -1,5 +1,5 @@
 //
-//  TemplateJumpProtocol.h
+//  TemplateActionProtocol.h
 //  MVP
 //
 //  Created by ccguo on 15/12/6.
@@ -11,7 +11,7 @@
 /**
  *  <#Description#>
  */
-@protocol TemplateJumpProtocol <NSObject>
+@protocol TemplateActionProtocol <NSObject>
 
 - (TemplateJumpModel *)jumpFloorModelAtIndexPath:(NSIndexPath *)indexPath;
 

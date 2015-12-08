@@ -1,5 +1,5 @@
 //
-//  TemplateChannelFloorModel.h
+//  TemplateFloorContainerModel.h
 //  MVP
 //
 //  Created by ccguo on 15/12/6.
@@ -9,12 +9,23 @@
 #import <Foundation/Foundation.h>
 #import "TemplateFloorHeaderModel.h"
 #import "TemplateFloorMarginModel.h"
-#import "TemplateChannelModel.h"
-#import "TemplateContainerProtocol.h"
-#import "TemplateJumpProtocol.h"
-#import "TemplateRenderProtocol.h"
+#import "TemplateActionProtocol.h"
 
-@interface TemplateChannelFloorModel : NSObject<TemplateContainerProtocol,TemplateJumpProtocol,TemplateRenderProtocol>
+/**
+ *  容器概念
+ */
+@protocol TemplateContainerProtocol <NSObject>
+
+@required
+
+- (NSInteger)numberOfChildFloorModelsInContainer;
+
+- (id <TemplateContentProtocol>)childFloorModelAtIndex:(NSInteger)index;
+
+@end
+
+@class TemplateChannelModel;
+@interface TemplateFloorContainerModel : NSObject<TemplateContainerProtocol,TemplateActionProtocol>
 
 //netList
 @property (nonatomic,strong) NSNumber                 *identityId;
@@ -24,5 +35,5 @@
 @property (nonatomic,strong) TemplateJumpModel        *jump;
 @property (nonatomic,strong) TemplateFloorMarginModel *margin;
 //other add
-@property (nonatomic,strong) TemplateChannelModel     *channelModel;
+@property (nonatomic,assign) TemplateChannelModel     *channelModel;
 @end

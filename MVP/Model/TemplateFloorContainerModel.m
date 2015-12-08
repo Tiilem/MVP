@@ -1,14 +1,14 @@
 //
-//  TemplateChannelFloorModel.m
+//  TemplateFloorContainerModel.m
 //  MVP
 //
 //  Created by ccguo on 15/12/6.
 //  Copyright © 2015年 ccguo. All rights reserved.
 //
 
-#import "TemplateChannelFloorModel.h"
+#import "TemplateFloorContainerModel.h"
 
-@implementation TemplateChannelFloorModel
+@implementation TemplateFloorContainerModel
 
 
 #pragma mark - TemplateContainerProtocol
