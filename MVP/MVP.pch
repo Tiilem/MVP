@@ -26,5 +26,6 @@
 
 
 #import "GlobalConfig.h"
+#import "NavigateManager.h"
 
 #endif /* MVP_pch */

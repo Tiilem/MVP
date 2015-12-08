@@ -14,12 +14,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MJRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Masonry.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>Pods-MVP.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SVProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -37,12 +47,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2602F3D0DAC534568B6AD7EEA0DD1959</key>
+		<key>1B16820C6F4206F2CB386D85E0FABD39</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3CE29F4BBC2230AE986E9431FEF068C7</key>
+		<key>2602F3D0DAC534568B6AD7EEA0DD1959</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,17 +62,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>8C1707B6A8C25063D6B4E103EDDD03DC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8F74D9EA91F4C43190670066BAC37D44</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>9494390523250106847516AB47E5F9FF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B23B3D15FFC0FC9893968F478086D58D</key>
+		<key>9E4F93FEE8B3FB31E258F01CFD49097E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E9BBFA415D7825F79452A2C15B6BE2CF</key>
+		<key>B23B3D15FFC0FC9893968F478086D58D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -11,8 +11,8 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="h1b-SW-mPa"/>
+                        <viewControllerLayoutGuide type="bottom" id="jNg-hE-pxO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -29,19 +29,25 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="GVH-yz-xeQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="08g-Qy-agU"/>
-                            <constraint firstItem="GVH-yz-xeQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="PW0-Jy-1pL"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="GVH-yz-xeQ" secondAttribute="trailing" constant="-20" id="a5I-Xh-rLg"/>
-                            <constraint firstItem="GVH-yz-xeQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="tPX-0i-eSq"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GVH-yz-xeQ" secondAttribute="bottom" id="vPS-pp-14y"/>
+                            <constraint firstItem="GVH-yz-xeQ" firstAttribute="top" secondItem="h1b-SW-mPa" secondAttribute="bottom" id="PDq-Dy-PEA"/>
+                            <constraint firstItem="GVH-yz-xeQ" firstAttribute="bottom" secondItem="jNg-hE-pxO" secondAttribute="top" id="fTY-DB-1Yf"/>
+                            <constraint firstItem="GVH-yz-xeQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="q78-bC-Sa8"/>
+                            <constraint firstItem="GVH-yz-xeQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="z2Z-Nv-Ond"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="08g-Qy-agU"/>
-                            </mask>
-                        </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="Bnc-AU-FBr"/>
+                    <navigationItem key="navigationItem" id="Bnc-AU-FBr">
+                        <nil key="title"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="dEJ-Fb-UcT">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ica-d4-Uh1">
+                                <rect key="frame" x="530" y="7" width="50" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Push"/>
+                                <connections>
+                                    <action selector="cliicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w73-hC-ZnX"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="GVH-yz-xeQ" id="qBx-1l-531"/>
                     </connections>
@@ -66,7 +72,24 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CZI-lh-aya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="413" y="325"/>
+            <point key="canvasLocation" x="-236.99999999999997" y="336.99999999999994"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="3gf-yO-PCq">
+            <objects>
+                <viewController id="Bxc-8t-Trj" customClass="WebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QsG-P9-kXZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="WFV-if-ygX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uSM-7e-eXc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hVH-nn-ing" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="355" y="1022.9999999999999"/>
         </scene>
     </scenes>
 </document>

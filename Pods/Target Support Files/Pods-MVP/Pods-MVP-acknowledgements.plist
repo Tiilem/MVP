@@ -121,8 +121,6 @@ THE SOFTWARE.</string>
 		</dict>
 		<dict>
 			<key>FooterText</key>
-<<<<<<< HEAD
-=======
 			<string>Copyright (c) 2011-2014 Sam Vermette
 
 Permission is hereby granted, free of charge, to any person
@@ -156,7 +154,6 @@ respective headers for the terms of their individual licenses.</string>
 		</dict>
 		<dict>
 			<key>FooterText</key>
->>>>>>> origin/dev
 			<string>The MIT License (MIT)
 
 Copyright (c) 2015 

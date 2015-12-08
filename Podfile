@@ -4,16 +4,14 @@
 # use_frameworks!
 
 target 'MVP' do
+
 pod 'iCarousel', '~> 1.8'
 pod 'Masonry', '~> 0.6.0'
 pod 'AFNetworking', '~> 2.5.0'
 pod 'MJExtension', '~> 3.0.7'
 pod 'UITableView+FDTemplateLayoutCell', '~> 1.3'
-<<<<<<< HEAD
-=======
 pod 'SVProgressHUD', '~> 1.1.3'
 pod 'MJRefresh', '~> 3.0.7'
 
->>>>>>> origin/dev
 end
 

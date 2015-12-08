@@ -92,8 +92,6 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
-<<<<<<< HEAD
-=======
 ## SVProgressHUD
 
 Copyright (c) 2011-2014 Sam Vermette
@@ -123,7 +121,6 @@ A different license may apply to other resources included in this package,
 including Freepik Icons. Please consult their 
 respective headers for the terms of their individual licenses.
 
->>>>>>> origin/dev
 ## UITableView+FDTemplateLayoutCell
 
 The MIT License (MIT)

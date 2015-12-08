@@ -10,25 +10,31 @@
 		65EBE5A4E57EA4334C64C36D /* libPods-MVP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F12F47E4BED75B6E52829F8A /* libPods-MVP.a */; };
 		B03F9F341C13E30500B653A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B03F9F331C13E30500B653A6 /* main.m */; };
 		B03F9F371C13E30500B653A6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B03F9F361C13E30500B653A6 /* AppDelegate.m */; };
-		B03F9F3A1C13E30500B653A6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B03F9F391C13E30500B653A6 /* ViewController.m */; };
 		B03F9F3D1C13E30500B653A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B03F9F3B1C13E30500B653A6 /* Main.storyboard */; };
 		B03F9F3F1C13E30500B653A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B03F9F3E1C13E30500B653A6 /* Assets.xcassets */; };
 		B03F9F421C13E30500B653A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B03F9F401C13E30500B653A6 /* LaunchScreen.storyboard */; };
-		B03F9F571C13EDF000B653A6 /* TemplateChannelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B03F9F561C13EDF000B653A6 /* TemplateChannelModel.m */; };
 		B03F9F681C13EFBB00B653A6 /* READ.me in Resources */ = {isa = PBXBuildFile; fileRef = B03F9F671C13EFBA00B653A6 /* READ.me */; };
 		B03F9F7E1C13FE1900B653A6 /* chaoshi in Resources */ = {isa = PBXBuildFile; fileRef = B03F9F7C1C13FE1900B653A6 /* chaoshi */; };
 		B03F9F7F1C13FE1900B653A6 /* food.json in Resources */ = {isa = PBXBuildFile; fileRef = B03F9F7D1C13FE1900B653A6 /* food.json */; };
-		B03F9F821C13FE9F00B653A6 /* TemplateFloorContainerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B03F9F811C13FE9F00B653A6 /* TemplateFloorContainerModel.m */; };
-		B03F9F861C14003800B653A6 /* TemplateHeaderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B03F9F851C14003800B653A6 /* TemplateHeaderModel.m */; };
-		B03F9F891C14047700B653A6 /* TemplateJumpModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B03F9F881C14047700B653A6 /* TemplateJumpModel.m */; };
-		B03F9F8C1C1405D700B653A6 /* TemplateFloorHeaderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B03F9F8B1C1405D700B653A6 /* TemplateFloorHeaderModel.m */; };
-		B03F9F8F1C14066F00B653A6 /* TemplateFloorMarginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B03F9F8E1C14066F00B653A6 /* TemplateFloorMarginModel.m */; };
-		B03F9F921C140C9C00B653A6 /* TemplateFloorFocusModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B03F9F911C140C9C00B653A6 /* TemplateFloorFocusModel.m */; };
-		B03F9F951C140CEB00B653A6 /* TemplateFloorNormalModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B03F9F941C140CEB00B653A6 /* TemplateFloorNormalModel.m */; };
-		B03F9F981C141E2B00B653A6 /* TemplateFloorPicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B03F9F971C141E2B00B653A6 /* TemplateFloorPicModel.m */; };
-		B03F9F9B1C141EC900B653A6 /* TemplateFloorShareModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B03F9F9A1C141EC900B653A6 /* TemplateFloorShareModel.m */; };
-		B03F9F9E1C14288F00B653A6 /* TemplateFloorFocusView.m in Sources */ = {isa = PBXBuildFile; fileRef = B03F9F9D1C14288F00B653A6 /* TemplateFloorFocusView.m */; };
-		B03F9FA31C1429D200B653A6 /* TemplateFocusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B03F9FA21C1429D200B653A6 /* TemplateFocusCell.m */; };
+		B06B759F1C1709FF00F59BB1 /* TemplateFocusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B06B757F1C1709FF00F59BB1 /* TemplateFocusCell.m */; };
+		B06B75A01C1709FF00F59BB1 /* TemplateChannelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B06B75821C1709FF00F59BB1 /* TemplateChannelModel.m */; };
+		B06B75A11C1709FF00F59BB1 /* TemplateContainerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B06B75841C1709FF00F59BB1 /* TemplateContainerModel.m */; };
+		B06B75A21C1709FF00F59BB1 /* TemplateFloorFocusModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B06B75861C1709FF00F59BB1 /* TemplateFloorFocusModel.m */; };
+		B06B75A41C1709FF00F59BB1 /* TemplateMarginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B06B758A1C1709FF00F59BB1 /* TemplateMarginModel.m */; };
+		B06B75A51C1709FF00F59BB1 /* TemplateNormalModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B06B758C1C1709FF00F59BB1 /* TemplateNormalModel.m */; };
+		B06B75A61C1709FF00F59BB1 /* TemplatePicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B06B758E1C1709FF00F59BB1 /* TemplatePicModel.m */; };
+		B06B75A71C1709FF00F59BB1 /* TemplateShareModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B06B75901C1709FF00F59BB1 /* TemplateShareModel.m */; };
+		B06B75A81C1709FF00F59BB1 /* TemplateHeaderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B06B75921C1709FF00F59BB1 /* TemplateHeaderModel.m */; };
+		B06B75A91C1709FF00F59BB1 /* TemplateJumpModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B06B75941C1709FF00F59BB1 /* TemplateJumpModel.m */; };
+		B06B75AA1C1709FF00F59BB1 /* TemplateFocusView.m in Sources */ = {isa = PBXBuildFile; fileRef = B06B759C1C1709FF00F59BB1 /* TemplateFocusView.m */; };
+		B06B75AB1C1709FF00F59BB1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B06B759E1C1709FF00F59BB1 /* ViewController.m */; };
+		B06B75AF1C170A4F00F59BB1 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B06B75AE1C170A4F00F59BB1 /* WebViewController.m */; };
+		B06B75B21C170D7F00F59BB1 /* NavigateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B06B75B11C170D7F00F59BB1 /* NavigateManager.m */; };
+		B06B75BB1C1715EB00F59BB1 /* TemplateSingleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B06B75BA1C1715EB00F59BB1 /* TemplateSingleModel.m */; };
+		B06B75BE1C17165F00F59BB1 /* TemplateSkuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B06B75BD1C17165F00F59BB1 /* TemplateSkuModel.m */; };
+		B06B75C21C17199D00F59BB1 /* TemplateSingleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B06B75C11C17199D00F59BB1 /* TemplateSingleCell.m */; };
+		B06B75C61C1719FA00F59BB1 /* TemplateHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B06B75C51C1719FA00F59BB1 /* TemplateHeaderCell.m */; };
+		B06B75CA1C171C6D00F59BB1 /* TemplateSingleView.m in Sources */ = {isa = PBXBuildFile; fileRef = B06B75C91C171C6D00F59BB1 /* TemplateSingleView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,45 +43,57 @@
 		B03F9F331C13E30500B653A6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B03F9F351C13E30500B653A6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B03F9F361C13E30500B653A6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B03F9F381C13E30500B653A6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B03F9F391C13E30500B653A6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B03F9F3C1C13E30500B653A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B03F9F3E1C13E30500B653A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B03F9F411C13E30500B653A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B03F9F431C13E30500B653A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B03F9F491C13EB7100B653A6 /* MVP.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVP.pch; sourceTree = "<group>"; };
-		B03F9F551C13EDF000B653A6 /* TemplateChannelModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateChannelModel.h; sourceTree = "<group>"; };
-		B03F9F561C13EDF000B653A6 /* TemplateChannelModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateChannelModel.m; sourceTree = "<group>"; };
 		B03F9F671C13EFBA00B653A6 /* READ.me */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = READ.me; sourceTree = "<group>"; };
-		B03F9F6A1C13F10600B653A6 /* TemplateActionProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateActionProtocol.h; sourceTree = "<group>"; };
-		B03F9F731C13F4A300B653A6 /* TemplateContentProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateContentProtocol.h; sourceTree = "<group>"; };
-		B03F9F761C13F4FC00B653A6 /* TemplateDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateDefine.h; sourceTree = "<group>"; };
 		B03F9F791C13F54F00B653A6 /* GlobalConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalConfig.h; sourceTree = "<group>"; };
 		B03F9F7C1C13FE1900B653A6 /* chaoshi */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = chaoshi; sourceTree = "<group>"; };
 		B03F9F7D1C13FE1900B653A6 /* food.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = food.json; sourceTree = "<group>"; };
-		B03F9F801C13FE9F00B653A6 /* TemplateFloorContainerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateFloorContainerModel.h; sourceTree = "<group>"; };
-		B03F9F811C13FE9F00B653A6 /* TemplateFloorContainerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateFloorContainerModel.m; sourceTree = "<group>"; };
-		B03F9F841C14003800B653A6 /* TemplateHeaderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateHeaderModel.h; sourceTree = "<group>"; };
-		B03F9F851C14003800B653A6 /* TemplateHeaderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateHeaderModel.m; sourceTree = "<group>"; };
-		B03F9F871C14047700B653A6 /* TemplateJumpModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateJumpModel.h; sourceTree = "<group>"; };
-		B03F9F881C14047700B653A6 /* TemplateJumpModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateJumpModel.m; sourceTree = "<group>"; };
-		B03F9F8A1C1405D700B653A6 /* TemplateFloorHeaderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateFloorHeaderModel.h; sourceTree = "<group>"; };
-		B03F9F8B1C1405D700B653A6 /* TemplateFloorHeaderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateFloorHeaderModel.m; sourceTree = "<group>"; };
-		B03F9F8D1C14066F00B653A6 /* TemplateFloorMarginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateFloorMarginModel.h; sourceTree = "<group>"; };
-		B03F9F8E1C14066F00B653A6 /* TemplateFloorMarginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateFloorMarginModel.m; sourceTree = "<group>"; };
-		B03F9F901C140C9C00B653A6 /* TemplateFloorFocusModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateFloorFocusModel.h; sourceTree = "<group>"; };
-		B03F9F911C140C9C00B653A6 /* TemplateFloorFocusModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateFloorFocusModel.m; sourceTree = "<group>"; };
-		B03F9F931C140CEB00B653A6 /* TemplateFloorNormalModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateFloorNormalModel.h; sourceTree = "<group>"; };
-		B03F9F941C140CEB00B653A6 /* TemplateFloorNormalModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateFloorNormalModel.m; sourceTree = "<group>"; };
-		B03F9F961C141E2B00B653A6 /* TemplateFloorPicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateFloorPicModel.h; sourceTree = "<group>"; };
-		B03F9F971C141E2B00B653A6 /* TemplateFloorPicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateFloorPicModel.m; sourceTree = "<group>"; };
-		B03F9F991C141EC900B653A6 /* TemplateFloorShareModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateFloorShareModel.h; sourceTree = "<group>"; };
-		B03F9F9A1C141EC900B653A6 /* TemplateFloorShareModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateFloorShareModel.m; sourceTree = "<group>"; };
-		B03F9F9C1C14288F00B653A6 /* TemplateFloorFocusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateFloorFocusView.h; sourceTree = "<group>"; };
-		B03F9F9D1C14288F00B653A6 /* TemplateFloorFocusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateFloorFocusView.m; sourceTree = "<group>"; };
-		B03F9F9F1C14290300B653A6 /* TemplateCellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateCellProtocol.h; sourceTree = "<group>"; };
-		B03F9FA11C1429D200B653A6 /* TemplateFocusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateFocusCell.h; sourceTree = "<group>"; };
-		B03F9FA21C1429D200B653A6 /* TemplateFocusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateFocusCell.m; sourceTree = "<group>"; };
+		B06B757E1C1709FF00F59BB1 /* TemplateFocusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateFocusCell.h; sourceTree = "<group>"; };
+		B06B757F1C1709FF00F59BB1 /* TemplateFocusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateFocusCell.m; sourceTree = "<group>"; };
+		B06B75811C1709FF00F59BB1 /* TemplateChannelModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateChannelModel.h; sourceTree = "<group>"; };
+		B06B75821C1709FF00F59BB1 /* TemplateChannelModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateChannelModel.m; sourceTree = "<group>"; };
+		B06B75831C1709FF00F59BB1 /* TemplateContainerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateContainerModel.h; sourceTree = "<group>"; };
+		B06B75841C1709FF00F59BB1 /* TemplateContainerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateContainerModel.m; sourceTree = "<group>"; };
+		B06B75851C1709FF00F59BB1 /* TemplateFloorFocusModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateFloorFocusModel.h; sourceTree = "<group>"; };
+		B06B75861C1709FF00F59BB1 /* TemplateFloorFocusModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateFloorFocusModel.m; sourceTree = "<group>"; };
+		B06B75891C1709FF00F59BB1 /* TemplateMarginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateMarginModel.h; sourceTree = "<group>"; };
+		B06B758A1C1709FF00F59BB1 /* TemplateMarginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateMarginModel.m; sourceTree = "<group>"; };
+		B06B758B1C1709FF00F59BB1 /* TemplateNormalModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateNormalModel.h; sourceTree = "<group>"; };
+		B06B758C1C1709FF00F59BB1 /* TemplateNormalModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateNormalModel.m; sourceTree = "<group>"; };
+		B06B758D1C1709FF00F59BB1 /* TemplatePicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplatePicModel.h; sourceTree = "<group>"; };
+		B06B758E1C1709FF00F59BB1 /* TemplatePicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplatePicModel.m; sourceTree = "<group>"; };
+		B06B758F1C1709FF00F59BB1 /* TemplateShareModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateShareModel.h; sourceTree = "<group>"; };
+		B06B75901C1709FF00F59BB1 /* TemplateShareModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateShareModel.m; sourceTree = "<group>"; };
+		B06B75911C1709FF00F59BB1 /* TemplateHeaderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateHeaderModel.h; sourceTree = "<group>"; };
+		B06B75921C1709FF00F59BB1 /* TemplateHeaderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateHeaderModel.m; sourceTree = "<group>"; };
+		B06B75931C1709FF00F59BB1 /* TemplateJumpModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateJumpModel.h; sourceTree = "<group>"; };
+		B06B75941C1709FF00F59BB1 /* TemplateJumpModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateJumpModel.m; sourceTree = "<group>"; };
+		B06B75961C1709FF00F59BB1 /* TemplateActionProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateActionProtocol.h; sourceTree = "<group>"; };
+		B06B75971C1709FF00F59BB1 /* TemplateCellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateCellProtocol.h; sourceTree = "<group>"; };
+		B06B75981C1709FF00F59BB1 /* TemplateContentProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateContentProtocol.h; sourceTree = "<group>"; };
+		B06B75991C1709FF00F59BB1 /* TemplateDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateDefine.h; sourceTree = "<group>"; };
+		B06B759B1C1709FF00F59BB1 /* TemplateFocusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateFocusView.h; sourceTree = "<group>"; };
+		B06B759C1C1709FF00F59BB1 /* TemplateFocusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateFocusView.m; sourceTree = "<group>"; };
+		B06B759D1C1709FF00F59BB1 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B06B759E1C1709FF00F59BB1 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B06B75AD1C170A4F00F59BB1 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		B06B75AE1C170A4F00F59BB1 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		B06B75B01C170D7F00F59BB1 /* NavigateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NavigateManager.h; path = MVP/Web/NavigateManager.h; sourceTree = SOURCE_ROOT; };
+		B06B75B11C170D7F00F59BB1 /* NavigateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NavigateManager.m; path = MVP/Web/NavigateManager.m; sourceTree = SOURCE_ROOT; };
+		B06B75B91C1715EB00F59BB1 /* TemplateSingleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateSingleModel.h; sourceTree = "<group>"; };
+		B06B75BA1C1715EB00F59BB1 /* TemplateSingleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateSingleModel.m; sourceTree = "<group>"; };
+		B06B75BC1C17165F00F59BB1 /* TemplateSkuModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateSkuModel.h; sourceTree = "<group>"; };
+		B06B75BD1C17165F00F59BB1 /* TemplateSkuModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateSkuModel.m; sourceTree = "<group>"; };
+		B06B75C01C17199D00F59BB1 /* TemplateSingleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateSingleCell.h; sourceTree = "<group>"; };
+		B06B75C11C17199D00F59BB1 /* TemplateSingleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateSingleCell.m; sourceTree = "<group>"; };
+		B06B75C41C1719FA00F59BB1 /* TemplateHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateHeaderCell.h; sourceTree = "<group>"; };
+		B06B75C51C1719FA00F59BB1 /* TemplateHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateHeaderCell.m; sourceTree = "<group>"; };
+		B06B75C81C171C6D00F59BB1 /* TemplateSingleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateSingleView.h; sourceTree = "<group>"; };
+		B06B75C91C171C6D00F59BB1 /* TemplateSingleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateSingleView.m; sourceTree = "<group>"; };
 		B7DD2DC6FB0B979D0CA6C60A /* Pods-MVP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVP/Pods-MVP.debug.xcconfig"; sourceTree = "<group>"; };
 		F12F47E4BED75B6E52829F8A /* libPods-MVP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MVP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -95,6 +113,8 @@
 		37F4C6B71C1689050039B7BE /* Actions */ = {
 			isa = PBXGroup;
 			children = (
+				B06B75B01C170D7F00F59BB1 /* NavigateManager.h */,
+				B06B75B11C170D7F00F59BB1 /* NavigateManager.m */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -129,22 +149,17 @@
 		B03F9F311C13E30500B653A6 /* MVP */ = {
 			isa = PBXGroup;
 			children = (
+				B06B75AC1C170A3400F59BB1 /* Web */,
+				B06B757C1C1709D500F59BB1 /* Home */,
 				37F4C6B71C1689050039B7BE /* Actions */,
-				B03F9F521C13EDBF00B653A6 /* Model */,
-				B03F9F541C13EDBF00B653A6 /* View */,
-				B03F9F531C13EDBF00B653A6 /* Protocol */,
-				B03F9F511C13EDBF00B653A6 /* Cell */,
 				B03F9F351C13E30500B653A6 /* AppDelegate.h */,
 				B03F9F361C13E30500B653A6 /* AppDelegate.m */,
-				B03F9F381C13E30500B653A6 /* ViewController.h */,
-				B03F9F391C13E30500B653A6 /* ViewController.m */,
 				B03F9F3B1C13E30500B653A6 /* Main.storyboard */,
 				B03F9F3E1C13E30500B653A6 /* Assets.xcassets */,
 				B03F9F401C13E30500B653A6 /* LaunchScreen.storyboard */,
 				B03F9F431C13E30500B653A6 /* Info.plist */,
 				B03F9F321C13E30500B653A6 /* Supporting Files */,
 				B03F9F671C13EFBA00B653A6 /* READ.me */,
-				B03F9F761C13F4FC00B653A6 /* TemplateDefine.h */,
 			);
 			path = MVP;
 			sourceTree = "<group>";
@@ -161,115 +176,162 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		B03F9F511C13EDBF00B653A6 /* Cell */ = {
+		B06B757C1C1709D500F59BB1 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				B03F9FA01C14298E00B653A6 /* Focus */,
+				B06B757D1C1709FF00F59BB1 /* Cell */,
+				B06B75801C1709FF00F59BB1 /* Model */,
+				B06B75951C1709FF00F59BB1 /* Protocol */,
+				B06B759A1C1709FF00F59BB1 /* View */,
+				B06B759D1C1709FF00F59BB1 /* ViewController.h */,
+				B06B759E1C1709FF00F59BB1 /* ViewController.m */,
+				B06B75991C1709FF00F59BB1 /* TemplateDefine.h */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B06B757D1C1709FF00F59BB1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B06B75C31C1719DF00F59BB1 /* BaseCell */,
+				B06B75BF1C17197A00F59BB1 /* SingleGood */,
+				B06B75B51C1714D800F59BB1 /* Focus */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		B03F9F521C13EDBF00B653A6 /* Model */ = {
+		B06B75801C1709FF00F59BB1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B03F9F831C13FFEB00B653A6 /* BaseGroup */,
-				B03F9F591C13EE6600B653A6 /* NormalFloor */,
-				B03F9F581C13EDFC00B653A6 /* Focus */,
-				B03F9F551C13EDF000B653A6 /* TemplateChannelModel.h */,
-				B03F9F561C13EDF000B653A6 /* TemplateChannelModel.m */,
-				B03F9F801C13FE9F00B653A6 /* TemplateFloorContainerModel.h */,
-				B03F9F811C13FE9F00B653A6 /* TemplateFloorContainerModel.m */,
+				B06B75B81C1715A600F59BB1 /* SingleGood */,
+				B06B75B71C1714FD00F59BB1 /* Normal */,
+				B06B75B61C1714E800F59BB1 /* BaseModel */,
+				B06B75B41C1714BA00F59BB1 /* Focus */,
+				B06B75811C1709FF00F59BB1 /* TemplateChannelModel.h */,
+				B06B75821C1709FF00F59BB1 /* TemplateChannelModel.m */,
+				B06B75831C1709FF00F59BB1 /* TemplateContainerModel.h */,
+				B06B75841C1709FF00F59BB1 /* TemplateContainerModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		B03F9F531C13EDBF00B653A6 /* Protocol */ = {
+		B06B75951C1709FF00F59BB1 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				B03F9F731C13F4A300B653A6 /* TemplateContentProtocol.h */,
-				B03F9F6A1C13F10600B653A6 /* TemplateActionProtocol.h */,
-				B03F9F9F1C14290300B653A6 /* TemplateCellProtocol.h */,
+				B06B75961C1709FF00F59BB1 /* TemplateActionProtocol.h */,
+				B06B75971C1709FF00F59BB1 /* TemplateCellProtocol.h */,
+				B06B75981C1709FF00F59BB1 /* TemplateContentProtocol.h */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
 		};
-		B03F9F541C13EDBF00B653A6 /* View */ = {
+		B06B759A1C1709FF00F59BB1 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B03F9F691C13F0C300B653A6 /* BaseModel */,
-				B03F9F5F1C13EEFE00B653A6 /* NormalFloor */,
-				B03F9F5E1C13EEFA00B653A6 /* Focus */,
+				B06B75C71C171A4F00F59BB1 /* SingleGood */,
+				B06B75B31C1714AB00F59BB1 /* Focus */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		B03F9F581C13EDFC00B653A6 /* Focus */ = {
+		B06B75AC1C170A3400F59BB1 /* Web */ = {
 			isa = PBXGroup;
 			children = (
-				B03F9F901C140C9C00B653A6 /* TemplateFloorFocusModel.h */,
-				B03F9F911C140C9C00B653A6 /* TemplateFloorFocusModel.m */,
+				B06B75AD1C170A4F00F59BB1 /* WebViewController.h */,
+				B06B75AE1C170A4F00F59BB1 /* WebViewController.m */,
+			);
+			path = Web;
+			sourceTree = "<group>";
+		};
+		B06B75B31C1714AB00F59BB1 /* Focus */ = {
+			isa = PBXGroup;
+			children = (
+				B06B759B1C1709FF00F59BB1 /* TemplateFocusView.h */,
+				B06B759C1C1709FF00F59BB1 /* TemplateFocusView.m */,
 			);
 			name = Focus;
 			sourceTree = "<group>";
 		};
-		B03F9F591C13EE6600B653A6 /* NormalFloor */ = {
+		B06B75B41C1714BA00F59BB1 /* Focus */ = {
 			isa = PBXGroup;
 			children = (
-				B03F9F931C140CEB00B653A6 /* TemplateFloorNormalModel.h */,
-				B03F9F941C140CEB00B653A6 /* TemplateFloorNormalModel.m */,
-			);
-			name = NormalFloor;
-			sourceTree = "<group>";
-		};
-		B03F9F5E1C13EEFA00B653A6 /* Focus */ = {
-			isa = PBXGroup;
-			children = (
-				B03F9F9C1C14288F00B653A6 /* TemplateFloorFocusView.h */,
-				B03F9F9D1C14288F00B653A6 /* TemplateFloorFocusView.m */,
+				B06B75851C1709FF00F59BB1 /* TemplateFloorFocusModel.h */,
+				B06B75861C1709FF00F59BB1 /* TemplateFloorFocusModel.m */,
 			);
 			name = Focus;
 			sourceTree = "<group>";
 		};
-		B03F9F5F1C13EEFE00B653A6 /* NormalFloor */ = {
+		B06B75B51C1714D800F59BB1 /* Focus */ = {
 			isa = PBXGroup;
 			children = (
+				B06B757E1C1709FF00F59BB1 /* TemplateFocusCell.h */,
+				B06B757F1C1709FF00F59BB1 /* TemplateFocusCell.m */,
 			);
-			name = NormalFloor;
+			name = Focus;
 			sourceTree = "<group>";
 		};
-		B03F9F691C13F0C300B653A6 /* BaseModel */ = {
+		B06B75B61C1714E800F59BB1 /* BaseModel */ = {
 			isa = PBXGroup;
 			children = (
+				B06B758D1C1709FF00F59BB1 /* TemplatePicModel.h */,
+				B06B758E1C1709FF00F59BB1 /* TemplatePicModel.m */,
+				B06B758F1C1709FF00F59BB1 /* TemplateShareModel.h */,
+				B06B75901C1709FF00F59BB1 /* TemplateShareModel.m */,
+				B06B75911C1709FF00F59BB1 /* TemplateHeaderModel.h */,
+				B06B75921C1709FF00F59BB1 /* TemplateHeaderModel.m */,
+				B06B75931C1709FF00F59BB1 /* TemplateJumpModel.h */,
+				B06B75941C1709FF00F59BB1 /* TemplateJumpModel.m */,
+				B06B75891C1709FF00F59BB1 /* TemplateMarginModel.h */,
+				B06B758A1C1709FF00F59BB1 /* TemplateMarginModel.m */,
+				B06B75BC1C17165F00F59BB1 /* TemplateSkuModel.h */,
+				B06B75BD1C17165F00F59BB1 /* TemplateSkuModel.m */,
 			);
 			name = BaseModel;
 			sourceTree = "<group>";
 		};
-		B03F9F831C13FFEB00B653A6 /* BaseGroup */ = {
+		B06B75B71C1714FD00F59BB1 /* Normal */ = {
 			isa = PBXGroup;
 			children = (
-				B03F9F841C14003800B653A6 /* TemplateHeaderModel.h */,
-				B03F9F851C14003800B653A6 /* TemplateHeaderModel.m */,
-				B03F9F871C14047700B653A6 /* TemplateJumpModel.h */,
-				B03F9F881C14047700B653A6 /* TemplateJumpModel.m */,
-				B03F9F8A1C1405D700B653A6 /* TemplateFloorHeaderModel.h */,
-				B03F9F8B1C1405D700B653A6 /* TemplateFloorHeaderModel.m */,
-				B03F9F8D1C14066F00B653A6 /* TemplateFloorMarginModel.h */,
-				B03F9F8E1C14066F00B653A6 /* TemplateFloorMarginModel.m */,
-				B03F9F961C141E2B00B653A6 /* TemplateFloorPicModel.h */,
-				B03F9F971C141E2B00B653A6 /* TemplateFloorPicModel.m */,
-				B03F9F991C141EC900B653A6 /* TemplateFloorShareModel.h */,
-				B03F9F9A1C141EC900B653A6 /* TemplateFloorShareModel.m */,
+				B06B758B1C1709FF00F59BB1 /* TemplateNormalModel.h */,
+				B06B758C1C1709FF00F59BB1 /* TemplateNormalModel.m */,
 			);
-			name = BaseGroup;
+			name = Normal;
 			sourceTree = "<group>";
 		};
-		B03F9FA01C14298E00B653A6 /* Focus */ = {
+		B06B75B81C1715A600F59BB1 /* SingleGood */ = {
 			isa = PBXGroup;
 			children = (
-				B03F9FA11C1429D200B653A6 /* TemplateFocusCell.h */,
-				B03F9FA21C1429D200B653A6 /* TemplateFocusCell.m */,
+				B06B75B91C1715EB00F59BB1 /* TemplateSingleModel.h */,
+				B06B75BA1C1715EB00F59BB1 /* TemplateSingleModel.m */,
 			);
-			name = Focus;
+			name = SingleGood;
+			sourceTree = "<group>";
+		};
+		B06B75BF1C17197A00F59BB1 /* SingleGood */ = {
+			isa = PBXGroup;
+			children = (
+				B06B75C01C17199D00F59BB1 /* TemplateSingleCell.h */,
+				B06B75C11C17199D00F59BB1 /* TemplateSingleCell.m */,
+			);
+			name = SingleGood;
+			sourceTree = "<group>";
+		};
+		B06B75C31C1719DF00F59BB1 /* BaseCell */ = {
+			isa = PBXGroup;
+			children = (
+				B06B75C41C1719FA00F59BB1 /* TemplateHeaderCell.h */,
+				B06B75C51C1719FA00F59BB1 /* TemplateHeaderCell.m */,
+			);
+			name = BaseCell;
+			sourceTree = "<group>";
+		};
+		B06B75C71C171A4F00F59BB1 /* SingleGood */ = {
+			isa = PBXGroup;
+			children = (
+				B06B75C81C171C6D00F59BB1 /* TemplateSingleView.h */,
+				B06B75C91C171C6D00F59BB1 /* TemplateSingleView.m */,
+			);
+			name = SingleGood;
 			sourceTree = "<group>";
 		};
 		D9E1666FD8D12228DA7C5541 /* Frameworks */ = {
@@ -404,21 +466,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B03F9F891C14047700B653A6 /* TemplateJumpModel.m in Sources */,
-				B03F9F821C13FE9F00B653A6 /* TemplateFloorContainerModel.m in Sources */,
-				B03F9F3A1C13E30500B653A6 /* ViewController.m in Sources */,
-				B03F9F861C14003800B653A6 /* TemplateHeaderModel.m in Sources */,
+				B06B75C61C1719FA00F59BB1 /* TemplateHeaderCell.m in Sources */,
+				B06B75BE1C17165F00F59BB1 /* TemplateSkuModel.m in Sources */,
 				B03F9F371C13E30500B653A6 /* AppDelegate.m in Sources */,
-				B03F9F921C140C9C00B653A6 /* TemplateFloorFocusModel.m in Sources */,
-				B03F9F8C1C1405D700B653A6 /* TemplateFloorHeaderModel.m in Sources */,
-				B03F9F571C13EDF000B653A6 /* TemplateChannelModel.m in Sources */,
-				B03F9F9B1C141EC900B653A6 /* TemplateFloorShareModel.m in Sources */,
-				B03F9F951C140CEB00B653A6 /* TemplateFloorNormalModel.m in Sources */,
-				B03F9F981C141E2B00B653A6 /* TemplateFloorPicModel.m in Sources */,
-				B03F9F8F1C14066F00B653A6 /* TemplateFloorMarginModel.m in Sources */,
-				B03F9F9E1C14288F00B653A6 /* TemplateFloorFocusView.m in Sources */,
-				B03F9FA31C1429D200B653A6 /* TemplateFocusCell.m in Sources */,
+				B06B75A11C1709FF00F59BB1 /* TemplateContainerModel.m in Sources */,
+				B06B75CA1C171C6D00F59BB1 /* TemplateSingleView.m in Sources */,
+				B06B75A81C1709FF00F59BB1 /* TemplateHeaderModel.m in Sources */,
+				B06B75A41C1709FF00F59BB1 /* TemplateMarginModel.m in Sources */,
+				B06B75A71C1709FF00F59BB1 /* TemplateShareModel.m in Sources */,
+				B06B759F1C1709FF00F59BB1 /* TemplateFocusCell.m in Sources */,
+				B06B75A51C1709FF00F59BB1 /* TemplateNormalModel.m in Sources */,
+				B06B75A21C1709FF00F59BB1 /* TemplateFloorFocusModel.m in Sources */,
 				B03F9F341C13E30500B653A6 /* main.m in Sources */,
+				B06B75AB1C1709FF00F59BB1 /* ViewController.m in Sources */,
+				B06B75A61C1709FF00F59BB1 /* TemplatePicModel.m in Sources */,
+				B06B75AF1C170A4F00F59BB1 /* WebViewController.m in Sources */,
+				B06B75A91C1709FF00F59BB1 /* TemplateJumpModel.m in Sources */,
+				B06B75B21C170D7F00F59BB1 /* NavigateManager.m in Sources */,
+				B06B75AA1C1709FF00F59BB1 /* TemplateFocusView.m in Sources */,
+				B06B75C21C17199D00F59BB1 /* TemplateSingleCell.m in Sources */,
+				B06B75BB1C1715EB00F59BB1 /* TemplateSingleModel.m in Sources */,
+				B06B75A01C1709FF00F59BB1 /* TemplateChannelModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
