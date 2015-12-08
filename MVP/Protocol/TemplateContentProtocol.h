@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TemplateActionProtocol.h"
 
-@protocol TemplateContentProtocol <NSObject>
+@protocol TemplateContentProtocol <NSObject,TemplateActionProtocol>
 
 - (NSString *)floorIdentifier;
 

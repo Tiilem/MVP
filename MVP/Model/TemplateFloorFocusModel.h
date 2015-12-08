@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TemplateChannelFloorModel.h"
+#import "TemplateFloorContainerModel.h"
 
-@interface TemplateFloorFocusModel : TemplateChannelFloorModel<TemplateContentProtocol>
+@interface TemplateFloorFocusModel : TemplateFloorContainerModel<TemplateContentProtocol>
 
 @property (nonatomic,assign) NSNumber *width;
 @property (nonatomic,assign) NSNumber *height;

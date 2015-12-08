@@ -32,18 +32,24 @@
         _scrollView.delegate = self;
         _scrollView.dataSource = self;
         _scrollView.type = iCarouselTypeLinear;
+        _scrollView.pagingEnabled = YES;
         _scrollView.bounceDistance = 0.5;
         _scrollView.decelerationRate = 0.5;
         _scrollView.translatesAutoresizingMaskIntoConstraints = NO;
         [self addSubview:_scrollView];
         
+        _pageControl = [[UIPageControl alloc] init];
+        _pageControl.translatesAutoresizingMaskIntoConstraints = NO;
+        [self addSubview:_pageControl];
+            
         [_scrollView mas_makeConstraints:^(MASConstraintMaker *make){
-            make.top.mas_equalTo(@0);
-            make.left.mas_equalTo(@0);
-            make.width.mas_equalTo(@(ScreenWidth));
-            make.height.mas_equalTo(@(165));
+            make.edges.equalTo(self).insets(UIEdgeInsetsZero);
         }];
         
+        [_pageControl mas_makeConstraints:^(MASConstraintMaker *make){
+            make.bottom.mas_equalTo(@(5));
+            make.centerX.equalTo(self);
+        }];
     }
     return self;
 }
@@ -57,6 +63,7 @@
 - (void)processData:(id <TemplateContentProtocol>)data
 {
     self.focusModel = (TemplateFloorFocusModel *)data;
+    _pageControl.numberOfPages = self.focusModel.itemList.count;
     [_scrollView reloadData];
     
     [self layoutIfNeeded];
@@ -72,9 +79,9 @@
 {
     UIImageView *imageView = nil;
     if (!view) {
-         imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 165)];
+        imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenWidth/2)];
         imageView.contentMode = UIViewContentModeScaleToFill;
-    }else{
+        }else{
         imageView = (UIImageView *)view;
     }
    
@@ -91,5 +98,14 @@
     }
     return value;
 }
+
+- (void)carouselDidEndScrollingAnimation:(iCarousel *)carousel
+{
+    NSInteger index = _scrollView.scrollOffset;
+    
+    [_pageControl setCurrentPage:index];
+    NSLog(@"%ld",index);
+}
+
 
 @end

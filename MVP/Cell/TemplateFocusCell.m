@@ -26,13 +26,13 @@
     if (self) {
         _focusView = [[TemplateFloorFocusView alloc] init];
         _focusView.translatesAutoresizingMaskIntoConstraints = NO;
-        [self addSubview:_focusView];
-        
+        [self.contentView addSubview:_focusView];
+                
         [_focusView mas_makeConstraints:^(MASConstraintMaker *make){
             make.top.mas_equalTo(0);
             make.left.mas_equalTo(0);
             make.width.mas_equalTo(@(ScreenWidth));
-            make.height.mas_equalTo(@(164));
+            make.height.mas_equalTo(@(ScreenWidth/2));
         }];
     }
     return self;
