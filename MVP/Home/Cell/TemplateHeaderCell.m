@@ -10,9 +10,24 @@
 
 @implementation TemplateHeaderCell
 
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        self.backgroundColor = [UIColor purpleColor];
+    }
+    return self;
+}
+
 + (CGSize)calculateSizeWithData:(id<NSObject>)data constrainedToSize:(CGSize)size
 {
-    return size;
+    return CGSizeMake(ScreenWidth, 20);
 }
+
+- (void)processData:(id <TemplateContentProtocol>)data
+{
+    
+}
+
 
 @end

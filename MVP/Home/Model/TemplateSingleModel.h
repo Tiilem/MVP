@@ -1,5 +1,5 @@
 //
-//  TemplateFloorSingleModel.h
+//  TemplateSingleModel.h
 //  MVP
 //
 //  Created by ccguo on 15/12/8.
@@ -7,7 +7,8 @@
 //
 
 #import "TemplateContainerModel.h"
+#import "TemplateSkuModel.h"
 
-@interface TemplateFloorSingleModel : TemplateContainerModel<TemplateContentProtocol>
+@interface TemplateSingleModel : TemplateContainerModel<TemplateContentProtocol>
 
 @end

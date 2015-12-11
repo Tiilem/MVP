@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TemplateHeaderModel.h"
+#import "TemplateFHeaderModel.h"
 #import "TemplateMarginModel.h"
 #import "TemplateActionProtocol.h"
 
@@ -18,7 +18,7 @@
 
 @required
 
-- (NSInteger)numberOfChildFloorModelsInContainer;
+- (NSInteger)numberOfChildModelsInContainer;
 
 - (id <TemplateContentProtocol>)childFloorModelAtIndex:(NSInteger)index;
 
@@ -30,10 +30,10 @@
 //netList
 @property (nonatomic,strong) NSNumber                 *identityId;
 @property (nonatomic,strong) NSString                 *pattern;
-@property (nonatomic,strong) TemplateHeaderModel *fheader;
+@property (nonatomic,strong) TemplateFHeaderModel     *fheader;
 @property (nonatomic,strong) NSArray                  *itemList;
 @property (nonatomic,strong) TemplateJumpModel        *jump;
-@property (nonatomic,strong) TemplateMarginModel *margin;
+@property (nonatomic,strong) TemplateMarginModel      *margin;
 //other add
 @property (nonatomic,assign) TemplateChannelModel     *channelModel;
 @end

@@ -35,6 +35,7 @@
         _scrollView.pagingEnabled = YES;
         _scrollView.bounceDistance = 0.5;
         _scrollView.decelerationRate = 0.5;
+        _scrollView.clipsToBounds = YES;
         _scrollView.translatesAutoresizingMaskIntoConstraints = NO;
         [self addSubview:_scrollView];
         
@@ -74,7 +75,7 @@
     UIImageView *imageView = nil;
     if (!view) {
         imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenWidth/2)];
-        imageView.contentMode = UIViewContentModeScaleToFill;
+        imageView.contentMode = UIViewContentModeScaleAspectFit;
         }else{
         imageView = (UIImageView *)view;
     }

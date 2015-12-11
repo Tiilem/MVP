@@ -1,5 +1,5 @@
 //
-//  TemplateFloorSingleModel.m
+//  TemplateSingleModel.m
 //  MVP
 //
 //  Created by ccguo on 15/12/8.
@@ -7,9 +7,9 @@
 //
 
 #import "TemplateSingleModel.h"
-#import "TemplateSkuModel.h"
 
-@implementation TemplateFloorSingleModel
+@implementation TemplateSingleModel
+
 + (NSDictionary *)mj_replacedKeyFromPropertyName
 {
     return @{
@@ -20,13 +20,13 @@
 + (NSDictionary *)mj_objectClassInArray
 {
     return @{
-             @"itemList" : @"TemplateFloorSkuModel"
+             @"itemList" : @"TemplateSkuModel"
              };
 }
 
 #pragma mark - TemplateContainerProtocol
 
-- (NSInteger)numberOfChildFloorInContainer
+- (NSInteger)numberOfChildModelsInContainer
 {
     NSUInteger rows = 0;
     if (self.margin) rows++;
@@ -36,7 +36,7 @@
 
 - (id <TemplateContentProtocol>)childFloorModelAtIndex:(NSInteger)index
 {
-    if ((self.margin)&&(index+1) == [self numberOfChildFloorInContainer])
+    if ((self.margin)&&(index+1) == [self numberOfChildModelsInContainer])
         return self.margin;  //最后一行
     return self.itemList[index];
 }
@@ -51,7 +51,7 @@
 #pragma mark -  TemplateRenderProtocol
 - (NSString *)floorIdentifier
 {
-    if ((self.margin)&&(NSInteger)(index+1) == [self numberOfChildFloorInContainer])
+    if ((self.margin)&&(NSInteger)(index+1) == [self numberOfChildModelsInContainer])
         return @"TemplateHeaderCell";  //最后一行
     return @"TemplateSingleCell";
 }

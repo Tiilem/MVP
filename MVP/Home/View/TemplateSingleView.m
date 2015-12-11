@@ -30,31 +30,36 @@
         _imageView.translatesAutoresizingMaskIntoConstraints = NO;
         [self addSubview:_imageView];
         
-        _pPriceLabel = [[UILabel alloc] init];
-        _pPriceLabel.translatesAutoresizingMaskIntoConstraints = NO;
-        [self addSubview:_pPriceLabel];
-        
-        _wPriceLabel = [[UILabel alloc] init];
-        _wPriceLabel.translatesAutoresizingMaskIntoConstraints = NO;
-        [self addSubview:_wPriceLabel];
+//        _pPriceLabel = [[UILabel alloc] init];
+//        _pPriceLabel.translatesAutoresizingMaskIntoConstraints = NO;
+//        [self addSubview:_pPriceLabel];
+//        
+//        _wPriceLabel = [[UILabel alloc] init];
+//        _wPriceLabel.translatesAutoresizingMaskIntoConstraints = NO;
+//        [self addSubview:_wPriceLabel];
         
         _titleLabel = [[UILabel alloc] init];
+        _titleLabel.numberOfLines = 0;
         _titleLabel.translatesAutoresizingMaskIntoConstraints = NO;
         [self addSubview:_titleLabel];
         
+        self.backgroundColor = [UIColor redColor];
+        _titleLabel.backgroundColor = [UIColor yellowColor];
+        
         [_imageView mas_makeConstraints:^(MASConstraintMaker *make){
-            make.top.mas_equalTo(@0);
+            make.top.mas_equalTo(@10);
             make.left.mas_equalTo(@10);
-            make.width.mas_equalTo(@100);
-            make.height.mas_equalTo(@100);
+            make.width.mas_equalTo(@120);
+            make.height.mas_equalTo(@120);
         }];
         
         [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make){
-            make.top.mas_equalTo(@0);
-            make.left.equalTo(_imageView);
-            make.right.mas_equalTo(@(5));
-            make.height.mas_equalTo(@(120));
+            make.top.mas_equalTo(@10);
+            make.left.equalTo(_imageView.mas_right).offset(5);
+            make.width.equalTo(@(ScreenWidth - 150));
+            make.height.lessThanOrEqualTo(@(70));
         }];
+        
     }
     return self;
 }
@@ -67,7 +72,6 @@
 - (void)processData:(id <TemplateContentProtocol>)data
 {
     TemplateSkuModel<TemplateContentProtocol> *skuModel = (TemplateSkuModel *)data;
-    
     [_imageView setImageWithURL:[NSURL URLWithString:skuModel.img]];
     [_titleLabel setText:skuModel.title];
 }

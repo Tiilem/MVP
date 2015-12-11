@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37D64E731C1ACE410052D5D3 /* TemplateFHeaderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D64E721C1ACE410052D5D3 /* TemplateFHeaderModel.m */; };
 		65EBE5A4E57EA4334C64C36D /* libPods-MVP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F12F47E4BED75B6E52829F8A /* libPods-MVP.a */; };
 		B03F9F341C13E30500B653A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B03F9F331C13E30500B653A6 /* main.m */; };
 		B03F9F371C13E30500B653A6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B03F9F361C13E30500B653A6 /* AppDelegate.m */; };
@@ -38,6 +39,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		37D64E711C1ACE410052D5D3 /* TemplateFHeaderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateFHeaderModel.h; sourceTree = "<group>"; };
+		37D64E721C1ACE410052D5D3 /* TemplateFHeaderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateFHeaderModel.m; sourceTree = "<group>"; };
 		69D15DC9917C1A5FA5B20A0C /* Pods-MVP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVP.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVP/Pods-MVP.release.xcconfig"; sourceTree = "<group>"; };
 		B03F9F2F1C13E30500B653A6 /* MVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B03F9F331C13E30500B653A6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -285,6 +288,8 @@
 				B06B758A1C1709FF00F59BB1 /* TemplateMarginModel.m */,
 				B06B75BC1C17165F00F59BB1 /* TemplateSkuModel.h */,
 				B06B75BD1C17165F00F59BB1 /* TemplateSkuModel.m */,
+				37D64E711C1ACE410052D5D3 /* TemplateFHeaderModel.h */,
+				37D64E721C1ACE410052D5D3 /* TemplateFHeaderModel.m */,
 			);
 			name = BaseModel;
 			sourceTree = "<group>";
@@ -467,6 +472,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B06B75C61C1719FA00F59BB1 /* TemplateHeaderCell.m in Sources */,
+				37D64E731C1ACE410052D5D3 /* TemplateFHeaderModel.m in Sources */,
 				B06B75BE1C17165F00F59BB1 /* TemplateSkuModel.m in Sources */,
 				B03F9F371C13E30500B653A6 /* AppDelegate.m in Sources */,
 				B06B75A11C1709FF00F59BB1 /* TemplateContainerModel.m in Sources */,

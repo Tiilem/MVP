@@ -13,7 +13,7 @@
 
 #pragma mark - TemplateContainerProtocol
 
-- (NSInteger)numberOfChildFloorModelsInContainer
+- (NSInteger)numberOfChildModelsInContainer
 {
     return [self.itemList count];
 }

@@ -12,9 +12,7 @@
 
 NSString *const TemplateChannelPatternFocus          = @"Focus";
 NSString *const TemplateChannelPatternSingle         = @"SingleGoods";
-
-
-NSString *const TemplateChannelPatternNormal        = @"NormalFloor";
+NSString *const TemplateChannelPatternNormal         = @"NormalFloor";
 
 @implementation TemplateChannelModel
 
@@ -54,6 +52,7 @@ NSString *const TemplateChannelPatternNormal        = @"NormalFloor";
 
 - (id <TemplateContentProtocol>)rowModelAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSLog(@"%ld   %ld",indexPath.section,indexPath.row);
     TemplateContainerModel *floorModel = [self.floors objectAtIndex:indexPath.section];
     id<TemplateContentProtocol> rowModel = [floorModel childFloorModelAtIndex:indexPath.row];
     return rowModel;
@@ -66,7 +65,7 @@ NSString *const TemplateChannelPatternNormal        = @"NormalFloor";
     }
     
     if ([pattern isEqualToString:TemplateChannelPatternSingle]) {
-        return @"TemplateFloorSingleModel";
+        return @"TemplateSingleModel";
     }
     return nil;
 }

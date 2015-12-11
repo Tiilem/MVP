@@ -12,7 +12,7 @@
 @protocol TemplateBaseProtocol;
 @protocol TemplateCellProtocol <NSObject>
 
-+ (CGSize)calculateSizeWithData:(id<NSObject>)data constrainedToSize:(CGSize)size;
++ (CGSize)calculateSizeWithData:(id<TemplateContentProtocol>)data constrainedToSize:(CGSize)size;
 
 - (void)processData:(id <TemplateContentProtocol>)data;
 

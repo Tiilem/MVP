@@ -20,25 +20,29 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
         _singleView = [[TemplateSingleView alloc] init];
         _singleView.translatesAutoresizingMaskIntoConstraints = NO;
-        [self addSubview:_singleView];
+        [self.contentView addSubview:_singleView];
+        
         
         [_singleView mas_makeConstraints:^(MASConstraintMaker *make){
             make.edges.equalTo(self.contentView).insets(UIEdgeInsetsZero);
         }];
+        
     }
     return self;
 }
 
 + (CGSize)calculateSizeWithData:(id<NSObject>)data constrainedToSize:(CGSize)size
 {
-    return size;
+    return CGSizeMake(ScreenWidth, 150);
 }
 
 - (void)processData:(id <TemplateContentProtocol>)data
 {
-    
+    self.contentView.backgroundColor = [UIColor grayColor];
+
     [_singleView processData:data];
 }
 @end

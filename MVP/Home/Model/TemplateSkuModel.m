@@ -1,5 +1,5 @@
 //
-//  TemplateFloorSkuModel.m
+//  TemplateSkuModel.m
 //  MVP
 //
 //  Created by ccguo on 15/12/8.
@@ -10,9 +10,9 @@
 
 @implementation TemplateSkuModel
 
-//- (NSString *)floorIdentifier
-//{
-//    return @"TemplateFloorSkuCell";
-//}
+- (NSString *)floorIdentifier
+{
+    return @"TemplateSingleCell";
+}
 
 @end

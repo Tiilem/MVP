@@ -11,6 +11,7 @@
 #import "TemplateContainerModel.h"
 #import "TemplateFocusCell.h"
 #import "TemplateSingleCell.h"
+#import "TemplateHeaderCell.h"
 
 #import "WebViewController.h"
 
@@ -18,9 +19,6 @@
 
 @property (nonatomic,strong) TemplateChannelModel *floorModel;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (strong, nonatomic)  UIActivityIndicatorView *activityView;
-
-@property (nonatomic, assign) BOOL cellHeightCacheEnabled;
 
 @end
 
@@ -32,7 +30,6 @@
     self.title = @"Index";
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.cellHeightCacheEnabled = YES;
     [self registTableViewCell];
     
     [self fetchData];
@@ -54,6 +51,7 @@
 {
     [self.tableView registerClass:[TemplateFocusCell class] forCellReuseIdentifier:@"TemplateFocusCell"];
     [self.tableView registerClass:[TemplateSingleCell class] forCellReuseIdentifier:@"TemplateSingleCell"];
+    [self.tableView registerClass:[TemplateHeaderCell class] forCellReuseIdentifier:@"TemplateHeaderCell"];
 
 }
 
@@ -104,7 +102,8 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     TemplateContainerModel<TemplateContainerProtocol> *list = self.floorModel.floors[section];
-    return [list numberOfChildFloorModelsInContainer];
+    
+    return [list numberOfChildModelsInContainer];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -124,40 +123,15 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    TemplateContainerModel  *floor = self.floorModel.floors[indexPath.section];
-    
-    NSString *cellIdentifier = [floor floorIdentifier];
-    
-    Class<TemplateCellProtocol> viewClass = NSClassFromString(cellIdentifier);
-    CGSize size = [viewClass calculateSizeWithData:floor constrainedToSize:CGSizeMake(tableView.frame.size.width, 0.0)];
-    return size.height;
-
-//    if (indexPath.row == 0) {
-//        return ScreenWidth/2;
-//    }
-//    return 50;
+    id <TemplateContentProtocol>  floor = [self.floorModel rowModelAtIndexPath:indexPath];
+    if ([floor respondsToSelector:@selector(floorIdentifier)]) {
+        NSString *cellIdentifier = [floor floorIdentifier];
+        Class<TemplateCellProtocol> viewClass = NSClassFromString(cellIdentifier);
+        CGSize size = [viewClass calculateSizeWithData:floor constrainedToSize:CGSizeMake(tableView.frame.size.width, 0.0)];
+        return size.height;
+    }
+    return 0;
 }
-
-
-
-//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    id <TemplateContentProtocol> floor = [self.floorModel rowModelAtIndexPath:indexPath];
-//    
-//    NSString *identifier = [floor floorIdentifier];
-//    
-//    if (self.cellHeightCacheEnabled) {
-//        return [_tableView fd_heightForCellWithIdentifier:identifier cacheByIndexPath:indexPath configuration:^(UITableViewCell<TemplateCellProtocol> *cell) {
-//            cell.fd_enforceFrameLayout = NO; // Enable to use "-sizeThatFits:"
-//            [cell processData:floor];
-//        }];
-//    } else {
-//        return [_tableView fd_heightForCellWithIdentifier:identifier configuration:^(UITableViewCell<TemplateCellProtocol> *cell) {
-//            cell.fd_enforceFrameLayout = NO; // Enable to use "-sizeThatFits:"
-//            [cell processData:floor];
-//        }];
-//    }
-//}
 
 
 @end

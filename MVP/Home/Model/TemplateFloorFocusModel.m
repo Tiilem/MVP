@@ -27,7 +27,7 @@
 
 #pragma mark - TemplateContainerProtocol
 
-- (NSInteger)numberOfChildFloorInContainer
+- (NSInteger)numberOfChildModelsInContainer
 {
     NSUInteger rows = 0;
     if (self.margin) rows++;
@@ -37,7 +37,7 @@
 
 - (id <TemplateContentProtocol>)childFloorModelAtIndex:(NSInteger)index
 {
-    if ((self.margin)&&(index+1) == [self numberOfChildFloorInContainer])
+    if ((self.margin)&&(index+1) == [self numberOfChildModelsInContainer])
         return self.margin;  //最后一行
     return self;
 }

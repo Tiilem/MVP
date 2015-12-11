@@ -29,10 +29,7 @@
         [self.contentView addSubview:_focusView];
                 
         [_focusView mas_makeConstraints:^(MASConstraintMaker *make){
-            make.top.mas_equalTo(0);
-            make.left.mas_equalTo(0);
-            make.width.mas_equalTo(@(ScreenWidth));
-            make.height.mas_equalTo(@(ScreenWidth/2));
+            make.edges.equalTo(self).insets(UIEdgeInsetsZero);
         }];
     }
     return self;
@@ -49,7 +46,8 @@
 
 + (CGSize)calculateSizeWithData:(id<NSObject>)data constrainedToSize:(CGSize)size
 {
-    CGSize curSize = CGSizeMake(ScreenWidth, 375/2);
+//    id<TemplateContentProtocol> model = data;
+    CGSize curSize = CGSizeMake(ScreenWidth, 110);
     return curSize;
 }
 
