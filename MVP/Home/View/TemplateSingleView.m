@@ -30,20 +30,19 @@
         _imageView.translatesAutoresizingMaskIntoConstraints = NO;
         [self addSubview:_imageView];
         
-//        _pPriceLabel = [[UILabel alloc] init];
-//        _pPriceLabel.translatesAutoresizingMaskIntoConstraints = NO;
-//        [self addSubview:_pPriceLabel];
-//        
-//        _wPriceLabel = [[UILabel alloc] init];
-//        _wPriceLabel.translatesAutoresizingMaskIntoConstraints = NO;
-//        [self addSubview:_wPriceLabel];
+        _pPriceLabel = [[UILabel alloc] init];
+        _pPriceLabel.translatesAutoresizingMaskIntoConstraints = NO;
+        [self addSubview:_pPriceLabel];
+        
+        _wPriceLabel = [[UILabel alloc] init];
+        _wPriceLabel.translatesAutoresizingMaskIntoConstraints = NO;
+        [self addSubview:_wPriceLabel];
         
         _titleLabel = [[UILabel alloc] init];
         _titleLabel.numberOfLines = 0;
         _titleLabel.translatesAutoresizingMaskIntoConstraints = NO;
         [self addSubview:_titleLabel];
         
-        self.backgroundColor = [UIColor redColor];
         _titleLabel.backgroundColor = [UIColor yellowColor];
         
         [_imageView mas_makeConstraints:^(MASConstraintMaker *make){
@@ -55,10 +54,12 @@
         
         [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make){
             make.top.mas_equalTo(@10);
-            make.left.equalTo(_imageView.mas_right).offset(5);
-            make.width.equalTo(@(ScreenWidth - 150));
+            make.left.equalTo(_imageView.mas_right).offset(10);
+            make.right.equalTo(@(-20));
             make.height.lessThanOrEqualTo(@(70));
         }];
+        
+//        [];
         
     }
     return self;
