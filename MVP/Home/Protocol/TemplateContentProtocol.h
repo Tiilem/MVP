@@ -9,8 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "TemplateActionProtocol.h"
 
+@protocol TemplateContainerProtocol;
 @protocol TemplateContentProtocol <NSObject,TemplateActionProtocol>
 
 - (NSString *)floorIdentifier;
+- (id <TemplateContentProtocol>)headerFloor;
 
 @end

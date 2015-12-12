@@ -20,6 +20,8 @@
 @property (nonatomic,strong) TemplateChannelModel *floorModel;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+@property (nonatomic, assign) BOOL cellHeightCacheEnabled;
+
 @end
 
 @implementation ViewController
@@ -30,6 +32,8 @@
     self.title = @"Index";
     self.view.backgroundColor = [UIColor whiteColor];
     
+    self.cellHeightCacheEnabled = YES;
+
     [self registTableViewCell];
     
     [self fetchData];
@@ -121,6 +125,12 @@
     }
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    WebViewController *webViewController = [[WebViewController alloc] initWithUrl:nil];
+    [NavigateManager pushViewController:webViewController];
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     id <TemplateContentProtocol>  floor = [self.floorModel rowModelAtIndexPath:indexPath];
@@ -133,5 +143,49 @@
     return 0;
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    id <TemplateContentProtocol> floor = self.floorModel.floors[section];
+    
+//    UITableViewCell <TemplateCellProtocol> * cell = [tableView dequeueReusableCellWithIdentifier:[model floorIdentifier]];
+//    
+//    [cell processData:model];
+    
+    
+    if ([floor respondsToSelector:@selector(headerFloor)]) {
+        id<TemplateContentProtocol> headerModel = [floor headerFloor];
+        if (headerModel) {
+            NSString *identifier = [headerModel floorIdentifier];
+            UIView <TemplateCellProtocol> *headerView = (UIView <TemplateCellProtocol> *)[tableView dequeueReusableHeaderFooterViewWithIdentifier:identifier];
+//            [headerView populateWithData:headerModel];
+            
+//            if ([headerView respondsToSelector:@selector(tapOnePlace:)]) {
+//                [headerView tapOnePlace:[self tapBlockForModel:headerModel]];
+//            }
+            
+            return headerView;
+        }
+    }
+    return nil;
+    
+}
 
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    id <TemplateContentProtocol> floor = [self.floorModel rowModelAtIndexPath:indexPath];
+//
+//    NSString *identifier = [floor floorIdentifier];
+//
+//    if (self.cellHeightCacheEnabled) {
+//        return [_tableView fd_heightForCellWithIdentifier:identifier cacheByIndexPath:indexPath configuration:^(UITableViewCell<TemplateCellProtocol> *cell) {
+//            cell.fd_enforceFrameLayout = NO; // Enable to use "-sizeThatFits:"
+//            [cell processData:floor];
+//        }];
+//    } else {
+//        return [_tableView fd_heightForCellWithIdentifier:identifier configuration:^(UITableViewCell<TemplateCellProtocol> *cell) {
+//            cell.fd_enforceFrameLayout = NO; // Enable to use "-sizeThatFits:"
+//            [cell processData:floor];
+//        }];
+//    }
+//}
 @end

@@ -27,7 +27,11 @@
         _focusView = [[TemplateFocusView alloc] init];
         _focusView.translatesAutoresizingMaskIntoConstraints = NO;
         [self.contentView addSubview:_focusView];
-                
+        
+        [self.contentView mas_makeConstraints:^(MASConstraintMaker *make){
+            make.edges.equalTo(self).insets(UIEdgeInsetsZero);
+
+        }];
         [_focusView mas_makeConstraints:^(MASConstraintMaker *make){
             make.edges.equalTo(self).insets(UIEdgeInsetsZero);
         }];

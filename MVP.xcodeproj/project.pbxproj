@@ -36,6 +36,11 @@
 		B06B75C21C17199D00F59BB1 /* TemplateSingleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B06B75C11C17199D00F59BB1 /* TemplateSingleCell.m */; };
 		B06B75C61C1719FA00F59BB1 /* TemplateHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B06B75C51C1719FA00F59BB1 /* TemplateHeaderCell.m */; };
 		B06B75CA1C171C6D00F59BB1 /* TemplateSingleView.m in Sources */ = {isa = PBXBuildFile; fileRef = B06B75C91C171C6D00F59BB1 /* TemplateSingleView.m */; };
+		B0FCB2491C1BD8C100989E36 /* TemplateCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B0FCB2481C1BD8C100989E36 /* TemplateCategoryModel.m */; };
+		B0FCB24C1C1BD97900989E36 /* TemplateCategoryItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B0FCB24B1C1BD97900989E36 /* TemplateCategoryItemModel.m */; };
+		B0FCB24F1C1BD98B00989E36 /* TemplateCategorySubItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B0FCB24E1C1BD98B00989E36 /* TemplateCategorySubItemModel.m */; };
+		B0FCB2521C1BE62200989E36 /* TemplateCategoryHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B0FCB2511C1BE62200989E36 /* TemplateCategoryHeaderCell.m */; };
+		B0FCB2561C1BEA8A00989E36 /* TemplateCategoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = B0FCB2551C1BEA8A00989E36 /* TemplateCategoryView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,6 +102,17 @@
 		B06B75C51C1719FA00F59BB1 /* TemplateHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateHeaderCell.m; sourceTree = "<group>"; };
 		B06B75C81C171C6D00F59BB1 /* TemplateSingleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateSingleView.h; sourceTree = "<group>"; };
 		B06B75C91C171C6D00F59BB1 /* TemplateSingleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateSingleView.m; sourceTree = "<group>"; };
+		B0FCB2451C1BCFE400989E36 /* TemplateRenderProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateRenderProtocol.h; sourceTree = "<group>"; };
+		B0FCB2471C1BD8C100989E36 /* TemplateCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateCategoryModel.h; sourceTree = "<group>"; };
+		B0FCB2481C1BD8C100989E36 /* TemplateCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateCategoryModel.m; sourceTree = "<group>"; };
+		B0FCB24A1C1BD97900989E36 /* TemplateCategoryItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateCategoryItemModel.h; sourceTree = "<group>"; };
+		B0FCB24B1C1BD97900989E36 /* TemplateCategoryItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateCategoryItemModel.m; sourceTree = "<group>"; };
+		B0FCB24D1C1BD98B00989E36 /* TemplateCategorySubItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateCategorySubItemModel.h; sourceTree = "<group>"; };
+		B0FCB24E1C1BD98B00989E36 /* TemplateCategorySubItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateCategorySubItemModel.m; sourceTree = "<group>"; };
+		B0FCB2501C1BE62200989E36 /* TemplateCategoryHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateCategoryHeaderCell.h; sourceTree = "<group>"; };
+		B0FCB2511C1BE62200989E36 /* TemplateCategoryHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateCategoryHeaderCell.m; sourceTree = "<group>"; };
+		B0FCB2541C1BEA8A00989E36 /* TemplateCategoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateCategoryView.h; sourceTree = "<group>"; };
+		B0FCB2551C1BEA8A00989E36 /* TemplateCategoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateCategoryView.m; sourceTree = "<group>"; };
 		B7DD2DC6FB0B979D0CA6C60A /* Pods-MVP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVP/Pods-MVP.debug.xcconfig"; sourceTree = "<group>"; };
 		F12F47E4BED75B6E52829F8A /* libPods-MVP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MVP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -199,6 +215,8 @@
 				B06B75C31C1719DF00F59BB1 /* BaseCell */,
 				B06B75BF1C17197A00F59BB1 /* SingleGood */,
 				B06B75B51C1714D800F59BB1 /* Focus */,
+				B0FCB2501C1BE62200989E36 /* TemplateCategoryHeaderCell.h */,
+				B0FCB2511C1BE62200989E36 /* TemplateCategoryHeaderCell.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -206,6 +224,7 @@
 		B06B75801C1709FF00F59BB1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B0FCB2461C1BD89D00989E36 /* category */,
 				B06B75B81C1715A600F59BB1 /* SingleGood */,
 				B06B75B71C1714FD00F59BB1 /* Normal */,
 				B06B75B61C1714E800F59BB1 /* BaseModel */,
@@ -224,6 +243,7 @@
 				B06B75961C1709FF00F59BB1 /* TemplateActionProtocol.h */,
 				B06B75971C1709FF00F59BB1 /* TemplateCellProtocol.h */,
 				B06B75981C1709FF00F59BB1 /* TemplateContentProtocol.h */,
+				B0FCB2451C1BCFE400989E36 /* TemplateRenderProtocol.h */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -231,6 +251,7 @@
 		B06B759A1C1709FF00F59BB1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B0FCB2531C1BEA5B00989E36 /* category */,
 				B06B75C71C171A4F00F59BB1 /* SingleGood */,
 				B06B75B31C1714AB00F59BB1 /* Focus */,
 			);
@@ -337,6 +358,28 @@
 				B06B75C91C171C6D00F59BB1 /* TemplateSingleView.m */,
 			);
 			name = SingleGood;
+			sourceTree = "<group>";
+		};
+		B0FCB2461C1BD89D00989E36 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				B0FCB2471C1BD8C100989E36 /* TemplateCategoryModel.h */,
+				B0FCB2481C1BD8C100989E36 /* TemplateCategoryModel.m */,
+				B0FCB24A1C1BD97900989E36 /* TemplateCategoryItemModel.h */,
+				B0FCB24B1C1BD97900989E36 /* TemplateCategoryItemModel.m */,
+				B0FCB24D1C1BD98B00989E36 /* TemplateCategorySubItemModel.h */,
+				B0FCB24E1C1BD98B00989E36 /* TemplateCategorySubItemModel.m */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
+		B0FCB2531C1BEA5B00989E36 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				B0FCB2541C1BEA8A00989E36 /* TemplateCategoryView.h */,
+				B0FCB2551C1BEA8A00989E36 /* TemplateCategoryView.m */,
+			);
+			path = category;
 			sourceTree = "<group>";
 		};
 		D9E1666FD8D12228DA7C5541 /* Frameworks */ = {
@@ -471,6 +514,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0FCB24C1C1BD97900989E36 /* TemplateCategoryItemModel.m in Sources */,
 				B06B75C61C1719FA00F59BB1 /* TemplateHeaderCell.m in Sources */,
 				37D64E731C1ACE410052D5D3 /* TemplateFHeaderModel.m in Sources */,
 				B06B75BE1C17165F00F59BB1 /* TemplateSkuModel.m in Sources */,
@@ -478,14 +522,18 @@
 				B06B75A11C1709FF00F59BB1 /* TemplateContainerModel.m in Sources */,
 				B06B75CA1C171C6D00F59BB1 /* TemplateSingleView.m in Sources */,
 				B06B75A81C1709FF00F59BB1 /* TemplateHeaderModel.m in Sources */,
+				B0FCB2521C1BE62200989E36 /* TemplateCategoryHeaderCell.m in Sources */,
 				B06B75A41C1709FF00F59BB1 /* TemplateMarginModel.m in Sources */,
 				B06B75A71C1709FF00F59BB1 /* TemplateShareModel.m in Sources */,
+				B0FCB2561C1BEA8A00989E36 /* TemplateCategoryView.m in Sources */,
 				B06B759F1C1709FF00F59BB1 /* TemplateFocusCell.m in Sources */,
 				B06B75A51C1709FF00F59BB1 /* TemplateNormalModel.m in Sources */,
 				B06B75A21C1709FF00F59BB1 /* TemplateFloorFocusModel.m in Sources */,
 				B03F9F341C13E30500B653A6 /* main.m in Sources */,
+				B0FCB2491C1BD8C100989E36 /* TemplateCategoryModel.m in Sources */,
 				B06B75AB1C1709FF00F59BB1 /* ViewController.m in Sources */,
 				B06B75A61C1709FF00F59BB1 /* TemplatePicModel.m in Sources */,
+				B0FCB24F1C1BD98B00989E36 /* TemplateCategorySubItemModel.m in Sources */,
 				B06B75AF1C170A4F00F59BB1 /* WebViewController.m in Sources */,
 				B06B75A91C1709FF00F59BB1 /* TemplateJumpModel.m in Sources */,
 				B06B75B21C170D7F00F59BB1 /* NavigateManager.m in Sources */,
