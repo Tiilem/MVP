@@ -12,7 +12,9 @@
 #import "TemplateFocusCell.h"
 #import "TemplateSingleCell.h"
 #import "TemplateHeaderCell.h"
-
+#import "TemplateCategoryCell.h"
+#import "TemplateCategoryHeaderCell.h"
+#import "TemplateHeaderProtocol.h"
 #import "WebViewController.h"
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
@@ -56,6 +58,10 @@
     [self.tableView registerClass:[TemplateFocusCell class] forCellReuseIdentifier:@"TemplateFocusCell"];
     [self.tableView registerClass:[TemplateSingleCell class] forCellReuseIdentifier:@"TemplateSingleCell"];
     [self.tableView registerClass:[TemplateHeaderCell class] forCellReuseIdentifier:@"TemplateHeaderCell"];
+    [self.tableView registerClass:[TemplateCategoryHeaderCell class] forHeaderFooterViewReuseIdentifier:@"TemplateCategoryHeaderCell"];
+
+    
+    [self.tableView registerClass:[TemplateCategoryCell class] forCellReuseIdentifier:@"TemplateCategoryCell"];
 
 }
 
@@ -143,22 +149,31 @@
     return 0;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    id <TemplateHeaderProtocol,TemplateContentProtocol> floor = self.floorModel.floors[section];
+    if ([floor conformsToProtocol:@protocol(TemplateHeaderProtocol)]) {
+        NSString *headerIdentifier = [floor headerFloorIdentifier];
+        if (headerIdentifier) {
+            Class<TemplateCellProtocol> viewClass = NSClassFromString(headerIdentifier);
+            CGSize size = [viewClass calculateSizeWithData:floor constrainedToSize:CGSizeMake(tableView.frame.size.width, 0.0)];
+            return size.height;
+        }
+    }
+
+    return 0;
+}
+
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    id <TemplateContentProtocol> floor = self.floorModel.floors[section];
+    id <TemplateHeaderProtocol,TemplateContentProtocol> floor = self.floorModel.floors[section];
     
-//    UITableViewCell <TemplateCellProtocol> * cell = [tableView dequeueReusableCellWithIdentifier:[model floorIdentifier]];
-//    
-//    [cell processData:model];
-    
-    
-    if ([floor respondsToSelector:@selector(headerFloor)]) {
-        id<TemplateContentProtocol> headerModel = [floor headerFloor];
+    if ([floor conformsToProtocol:@protocol(TemplateHeaderProtocol)]) {
+        id<TemplateHeaderProtocol> headerModel = [floor headerFloorModelAtIndex:section];
         if (headerModel) {
-            NSString *identifier = [headerModel floorIdentifier];
+            NSString *identifier = [headerModel headerFloorIdentifier];
             UIView <TemplateCellProtocol> *headerView = (UIView <TemplateCellProtocol> *)[tableView dequeueReusableHeaderFooterViewWithIdentifier:identifier];
-//            [headerView populateWithData:headerModel];
-            
+            [headerView processData:floor];
 //            if ([headerView respondsToSelector:@selector(tapOnePlace:)]) {
 //                [headerView tapOnePlace:[self tapBlockForModel:headerModel]];
 //            }
@@ -167,25 +182,5 @@
         }
     }
     return nil;
-    
 }
-
-//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    id <TemplateContentProtocol> floor = [self.floorModel rowModelAtIndexPath:indexPath];
-//
-//    NSString *identifier = [floor floorIdentifier];
-//
-//    if (self.cellHeightCacheEnabled) {
-//        return [_tableView fd_heightForCellWithIdentifier:identifier cacheByIndexPath:indexPath configuration:^(UITableViewCell<TemplateCellProtocol> *cell) {
-//            cell.fd_enforceFrameLayout = NO; // Enable to use "-sizeThatFits:"
-//            [cell processData:floor];
-//        }];
-//    } else {
-//        return [_tableView fd_heightForCellWithIdentifier:identifier configuration:^(UITableViewCell<TemplateCellProtocol> *cell) {
-//            cell.fd_enforceFrameLayout = NO; // Enable to use "-sizeThatFits:"
-//            [cell processData:floor];
-//        }];
-//    }
-//}
 @end

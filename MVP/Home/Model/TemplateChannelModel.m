@@ -44,6 +44,7 @@ NSString *const TemplateChannelPatternCategory         = @"Category";
             }
         }
     }
+        
     self.tempFloors = nil;
     self.floors = modelArray;
 }

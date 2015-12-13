@@ -10,5 +10,4 @@
 
 - (NSString *)floorIdentifier;
 
-
 @end

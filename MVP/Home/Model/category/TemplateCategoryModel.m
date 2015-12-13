@@ -30,14 +30,15 @@
 {
     NSUInteger rows = 0;
     if (self.margin) rows++;
-    if (self.itemList) rows++;
-    return rows;
+    if (self.itemList) rows+=self.itemList.count;
+//    return rows;
+    return 20;
 }
 
 - (id <TemplateContentProtocol>)childFloorModelAtIndex:(NSInteger)index
 {
-    if ((self.margin)&&(index+1) == [self numberOfChildModelsInContainer])
-        return self.margin;  //最后一行
+//    if ((self.margin)&&(index+1) == [self numberOfChildModelsInContainer])
+//        return self.margin;  //最后一行
     return self;
 }
 
@@ -51,12 +52,18 @@
 #pragma mark -  TemplateRenderProtocol
 - (NSString *)floorIdentifier
 {
+    return @"TemplateCategoryCell";
+}
+
+- (NSString *)headerFloorIdentifier
+{
     return @"TemplateCategoryHeaderCell";
 }
 
-- (id <TemplateContentProtocol>)headerFloor
+- (id <TemplateHeaderProtocol>)headerFloorModelAtIndex:(NSInteger)index
 {
     return self;
 }
+
 
 @end

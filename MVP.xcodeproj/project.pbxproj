@@ -36,6 +36,8 @@
 		B06B75C21C17199D00F59BB1 /* TemplateSingleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B06B75C11C17199D00F59BB1 /* TemplateSingleCell.m */; };
 		B06B75C61C1719FA00F59BB1 /* TemplateHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B06B75C51C1719FA00F59BB1 /* TemplateHeaderCell.m */; };
 		B06B75CA1C171C6D00F59BB1 /* TemplateSingleView.m in Sources */ = {isa = PBXBuildFile; fileRef = B06B75C91C171C6D00F59BB1 /* TemplateSingleView.m */; };
+		B0D058011C1D814F00ABDFD5 /* TemplateCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D058001C1D814F00ABDFD5 /* TemplateCategoryCell.m */; };
+		B0D058041C1DA4F000ABDFD5 /* back_bt_7h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B0D058031C1DA4F000ABDFD5 /* back_bt_7h@3x.png */; };
 		B0FCB2491C1BD8C100989E36 /* TemplateCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B0FCB2481C1BD8C100989E36 /* TemplateCategoryModel.m */; };
 		B0FCB24C1C1BD97900989E36 /* TemplateCategoryItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B0FCB24B1C1BD97900989E36 /* TemplateCategoryItemModel.m */; };
 		B0FCB24F1C1BD98B00989E36 /* TemplateCategorySubItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B0FCB24E1C1BD98B00989E36 /* TemplateCategorySubItemModel.m */; };
@@ -102,6 +104,10 @@
 		B06B75C51C1719FA00F59BB1 /* TemplateHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateHeaderCell.m; sourceTree = "<group>"; };
 		B06B75C81C171C6D00F59BB1 /* TemplateSingleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateSingleView.h; sourceTree = "<group>"; };
 		B06B75C91C171C6D00F59BB1 /* TemplateSingleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateSingleView.m; sourceTree = "<group>"; };
+		B0D057FF1C1D814F00ABDFD5 /* TemplateCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateCategoryCell.h; sourceTree = "<group>"; };
+		B0D058001C1D814F00ABDFD5 /* TemplateCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateCategoryCell.m; sourceTree = "<group>"; };
+		B0D058021C1D85E000ABDFD5 /* TemplateHeaderProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateHeaderProtocol.h; sourceTree = "<group>"; };
+		B0D058031C1DA4F000ABDFD5 /* back_bt_7h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back_bt_7h@3x.png"; sourceTree = "<group>"; };
 		B0FCB2451C1BCFE400989E36 /* TemplateRenderProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateRenderProtocol.h; sourceTree = "<group>"; };
 		B0FCB2471C1BD8C100989E36 /* TemplateCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateCategoryModel.h; sourceTree = "<group>"; };
 		B0FCB2481C1BD8C100989E36 /* TemplateCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateCategoryModel.m; sourceTree = "<group>"; };
@@ -187,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				B03F9F7C1C13FE1900B653A6 /* chaoshi */,
+				B0D058031C1DA4F000ABDFD5 /* back_bt_7h@3x.png */,
 				B03F9F7D1C13FE1900B653A6 /* food.json */,
 				B03F9F331C13E30500B653A6 /* main.m */,
 				B03F9F491C13EB7100B653A6 /* MVP.pch */,
@@ -212,6 +219,7 @@
 		B06B757D1C1709FF00F59BB1 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				B0D057FE1C1D810200ABDFD5 /* category */,
 				B06B75C31C1719DF00F59BB1 /* BaseCell */,
 				B06B75BF1C17197A00F59BB1 /* SingleGood */,
 				B06B75B51C1714D800F59BB1 /* Focus */,
@@ -360,6 +368,15 @@
 			name = SingleGood;
 			sourceTree = "<group>";
 		};
+		B0D057FE1C1D810200ABDFD5 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				B0D057FF1C1D814F00ABDFD5 /* TemplateCategoryCell.h */,
+				B0D058001C1D814F00ABDFD5 /* TemplateCategoryCell.m */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
 		B0FCB2461C1BD89D00989E36 /* category */ = {
 			isa = PBXGroup;
 			children = (
@@ -369,6 +386,7 @@
 				B0FCB24B1C1BD97900989E36 /* TemplateCategoryItemModel.m */,
 				B0FCB24D1C1BD98B00989E36 /* TemplateCategorySubItemModel.h */,
 				B0FCB24E1C1BD98B00989E36 /* TemplateCategorySubItemModel.m */,
+				B0D058021C1D85E000ABDFD5 /* TemplateHeaderProtocol.h */,
 			);
 			path = category;
 			sourceTree = "<group>";
@@ -455,6 +473,7 @@
 				B03F9F3D1C13E30500B653A6 /* Main.storyboard in Resources */,
 				B03F9F7F1C13FE1900B653A6 /* food.json in Resources */,
 				B03F9F7E1C13FE1900B653A6 /* chaoshi in Resources */,
+				B0D058041C1DA4F000ABDFD5 /* back_bt_7h@3x.png in Resources */,
 				B03F9F681C13EFBB00B653A6 /* READ.me in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -533,6 +552,7 @@
 				B0FCB2491C1BD8C100989E36 /* TemplateCategoryModel.m in Sources */,
 				B06B75AB1C1709FF00F59BB1 /* ViewController.m in Sources */,
 				B06B75A61C1709FF00F59BB1 /* TemplatePicModel.m in Sources */,
+				B0D058011C1D814F00ABDFD5 /* TemplateCategoryCell.m in Sources */,
 				B0FCB24F1C1BD98B00989E36 /* TemplateCategorySubItemModel.m in Sources */,
 				B06B75AF1C170A4F00F59BB1 /* WebViewController.m in Sources */,
 				B06B75A91C1709FF00F59BB1 /* TemplateJumpModel.m in Sources */,

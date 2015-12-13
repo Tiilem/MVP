@@ -7,7 +7,8 @@
 //
 
 #import "TemplateContainerModel.h"
+#import "TemplateHeaderProtocol.h"
 
-@interface TemplateCategoryModel : TemplateContainerModel
+@interface TemplateCategoryModel : TemplateContainerModel<TemplateHeaderProtocol>
 
 @end
