@@ -17,6 +17,9 @@
 		B03F9F681C13EFBB00B653A6 /* READ.me in Resources */ = {isa = PBXBuildFile; fileRef = B03F9F671C13EFBA00B653A6 /* READ.me */; };
 		B03F9F7E1C13FE1900B653A6 /* chaoshi in Resources */ = {isa = PBXBuildFile; fileRef = B03F9F7C1C13FE1900B653A6 /* chaoshi */; };
 		B03F9F7F1C13FE1900B653A6 /* food.json in Resources */ = {isa = PBXBuildFile; fileRef = B03F9F7D1C13FE1900B653A6 /* food.json */; };
+		B06113D91C1EF0C0006BA721 /* MUAction.m in Sources */ = {isa = PBXBuildFile; fileRef = B06113D81C1EF0C0006BA721 /* MUAction.m */; };
+		B06113DD1C1EF0F8006BA721 /* NavigateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B06113DC1C1EF0F8006BA721 /* NavigateManager.m */; };
+		B06113E01C1EF184006BA721 /* MUHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B06113DF1C1EF184006BA721 /* MUHandler.m */; };
 		B06B759F1C1709FF00F59BB1 /* TemplateFocusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B06B757F1C1709FF00F59BB1 /* TemplateFocusCell.m */; };
 		B06B75A01C1709FF00F59BB1 /* TemplateChannelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B06B75821C1709FF00F59BB1 /* TemplateChannelModel.m */; };
 		B06B75A11C1709FF00F59BB1 /* TemplateContainerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B06B75841C1709FF00F59BB1 /* TemplateContainerModel.m */; };
@@ -30,7 +33,6 @@
 		B06B75AA1C1709FF00F59BB1 /* TemplateFocusView.m in Sources */ = {isa = PBXBuildFile; fileRef = B06B759C1C1709FF00F59BB1 /* TemplateFocusView.m */; };
 		B06B75AB1C1709FF00F59BB1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B06B759E1C1709FF00F59BB1 /* ViewController.m */; };
 		B06B75AF1C170A4F00F59BB1 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B06B75AE1C170A4F00F59BB1 /* WebViewController.m */; };
-		B06B75B21C170D7F00F59BB1 /* NavigateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B06B75B11C170D7F00F59BB1 /* NavigateManager.m */; };
 		B06B75BB1C1715EB00F59BB1 /* TemplateSingleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B06B75BA1C1715EB00F59BB1 /* TemplateSingleModel.m */; };
 		B06B75BE1C17165F00F59BB1 /* TemplateSkuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B06B75BD1C17165F00F59BB1 /* TemplateSkuModel.m */; };
 		B06B75C21C17199D00F59BB1 /* TemplateSingleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B06B75C11C17199D00F59BB1 /* TemplateSingleCell.m */; };
@@ -62,6 +64,12 @@
 		B03F9F791C13F54F00B653A6 /* GlobalConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalConfig.h; sourceTree = "<group>"; };
 		B03F9F7C1C13FE1900B653A6 /* chaoshi */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = chaoshi; sourceTree = "<group>"; };
 		B03F9F7D1C13FE1900B653A6 /* food.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = food.json; sourceTree = "<group>"; };
+		B06113D71C1EF0C0006BA721 /* MUAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUAction.h; sourceTree = "<group>"; };
+		B06113D81C1EF0C0006BA721 /* MUAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUAction.m; sourceTree = "<group>"; };
+		B06113DB1C1EF0F8006BA721 /* NavigateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigateManager.h; sourceTree = "<group>"; };
+		B06113DC1C1EF0F8006BA721 /* NavigateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigateManager.m; sourceTree = "<group>"; };
+		B06113DE1C1EF184006BA721 /* MUHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUHandler.h; sourceTree = "<group>"; };
+		B06113DF1C1EF184006BA721 /* MUHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUHandler.m; sourceTree = "<group>"; };
 		B06B757E1C1709FF00F59BB1 /* TemplateFocusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateFocusCell.h; sourceTree = "<group>"; };
 		B06B757F1C1709FF00F59BB1 /* TemplateFocusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateFocusCell.m; sourceTree = "<group>"; };
 		B06B75811C1709FF00F59BB1 /* TemplateChannelModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateChannelModel.h; sourceTree = "<group>"; };
@@ -92,8 +100,6 @@
 		B06B759E1C1709FF00F59BB1 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B06B75AD1C170A4F00F59BB1 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		B06B75AE1C170A4F00F59BB1 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
-		B06B75B01C170D7F00F59BB1 /* NavigateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NavigateManager.h; path = MVP/Web/NavigateManager.h; sourceTree = SOURCE_ROOT; };
-		B06B75B11C170D7F00F59BB1 /* NavigateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NavigateManager.m; path = MVP/Web/NavigateManager.m; sourceTree = SOURCE_ROOT; };
 		B06B75B91C1715EB00F59BB1 /* TemplateSingleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateSingleModel.h; sourceTree = "<group>"; };
 		B06B75BA1C1715EB00F59BB1 /* TemplateSingleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateSingleModel.m; sourceTree = "<group>"; };
 		B06B75BC1C17165F00F59BB1 /* TemplateSkuModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateSkuModel.h; sourceTree = "<group>"; };
@@ -135,15 +141,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		37F4C6B71C1689050039B7BE /* Actions */ = {
-			isa = PBXGroup;
-			children = (
-				B06B75B01C170D7F00F59BB1 /* NavigateManager.h */,
-				B06B75B11C170D7F00F59BB1 /* NavigateManager.m */,
-			);
-			path = Actions;
-			sourceTree = "<group>";
-		};
 		58AD0FEA73C405F31CF9AB8B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,9 +171,10 @@
 		B03F9F311C13E30500B653A6 /* MVP */ = {
 			isa = PBXGroup;
 			children = (
+				B06113DA1C1EF0D9006BA721 /* Utils */,
+				B06113D31C1EF0A5006BA721 /* Action */,
 				B06B75AC1C170A3400F59BB1 /* Web */,
 				B06B757C1C1709D500F59BB1 /* Home */,
-				37F4C6B71C1689050039B7BE /* Actions */,
 				B03F9F351C13E30500B653A6 /* AppDelegate.h */,
 				B03F9F361C13E30500B653A6 /* AppDelegate.m */,
 				B03F9F3B1C13E30500B653A6 /* Main.storyboard */,
@@ -200,6 +198,26 @@
 				B03F9F791C13F54F00B653A6 /* GlobalConfig.h */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B06113D31C1EF0A5006BA721 /* Action */ = {
+			isa = PBXGroup;
+			children = (
+				B06113D71C1EF0C0006BA721 /* MUAction.h */,
+				B06113D81C1EF0C0006BA721 /* MUAction.m */,
+				B06113DE1C1EF184006BA721 /* MUHandler.h */,
+				B06113DF1C1EF184006BA721 /* MUHandler.m */,
+			);
+			path = Action;
+			sourceTree = "<group>";
+		};
+		B06113DA1C1EF0D9006BA721 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B06113DB1C1EF0F8006BA721 /* NavigateManager.h */,
+				B06113DC1C1EF0F8006BA721 /* NavigateManager.m */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		B06B757C1C1709D500F59BB1 /* Home */ = {
@@ -541,6 +559,7 @@
 				B06B75A11C1709FF00F59BB1 /* TemplateContainerModel.m in Sources */,
 				B06B75CA1C171C6D00F59BB1 /* TemplateSingleView.m in Sources */,
 				B06B75A81C1709FF00F59BB1 /* TemplateHeaderModel.m in Sources */,
+				B06113DD1C1EF0F8006BA721 /* NavigateManager.m in Sources */,
 				B0FCB2521C1BE62200989E36 /* TemplateCategoryHeaderCell.m in Sources */,
 				B06B75A41C1709FF00F59BB1 /* TemplateMarginModel.m in Sources */,
 				B06B75A71C1709FF00F59BB1 /* TemplateShareModel.m in Sources */,
@@ -554,12 +573,13 @@
 				B06B75A61C1709FF00F59BB1 /* TemplatePicModel.m in Sources */,
 				B0D058011C1D814F00ABDFD5 /* TemplateCategoryCell.m in Sources */,
 				B0FCB24F1C1BD98B00989E36 /* TemplateCategorySubItemModel.m in Sources */,
+				B06113E01C1EF184006BA721 /* MUHandler.m in Sources */,
 				B06B75AF1C170A4F00F59BB1 /* WebViewController.m in Sources */,
 				B06B75A91C1709FF00F59BB1 /* TemplateJumpModel.m in Sources */,
-				B06B75B21C170D7F00F59BB1 /* NavigateManager.m in Sources */,
 				B06B75AA1C1709FF00F59BB1 /* TemplateFocusView.m in Sources */,
 				B06B75C21C17199D00F59BB1 /* TemplateSingleCell.m in Sources */,
 				B06B75BB1C1715EB00F59BB1 /* TemplateSingleModel.m in Sources */,
+				B06113D91C1EF0C0006BA721 /* MUAction.m in Sources */,
 				B06B75A01C1709FF00F59BB1 /* TemplateChannelModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
