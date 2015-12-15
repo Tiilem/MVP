@@ -35,7 +35,7 @@
     return rows;
 }
 
-- (id <TemplateContentProtocol>)childFloorModelAtIndex:(NSInteger)index
+- (id <TemplateRenderProtocol>)childFloorModelAtIndex:(NSInteger)index
 {
     if ((self.margin)&&(index+1) == [self numberOfChildModelsInContainer])
         return self.margin;  //最后一行

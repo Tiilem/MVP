@@ -48,6 +48,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		373164701C200844001FADE6 /* TemplateSpecialRenderProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateSpecialRenderProtocol.h; sourceTree = "<group>"; };
 		37D64E711C1ACE410052D5D3 /* TemplateFHeaderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateFHeaderModel.h; sourceTree = "<group>"; };
 		37D64E721C1ACE410052D5D3 /* TemplateFHeaderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateFHeaderModel.m; sourceTree = "<group>"; };
 		69D15DC9917C1A5FA5B20A0C /* Pods-MVP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVP.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVP/Pods-MVP.release.xcconfig"; sourceTree = "<group>"; };
@@ -92,7 +93,6 @@
 		B06B75941C1709FF00F59BB1 /* TemplateJumpModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateJumpModel.m; sourceTree = "<group>"; };
 		B06B75961C1709FF00F59BB1 /* TemplateActionProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateActionProtocol.h; sourceTree = "<group>"; };
 		B06B75971C1709FF00F59BB1 /* TemplateCellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateCellProtocol.h; sourceTree = "<group>"; };
-		B06B75981C1709FF00F59BB1 /* TemplateContentProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateContentProtocol.h; sourceTree = "<group>"; };
 		B06B75991C1709FF00F59BB1 /* TemplateDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateDefine.h; sourceTree = "<group>"; };
 		B06B759B1C1709FF00F59BB1 /* TemplateFocusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateFocusView.h; sourceTree = "<group>"; };
 		B06B759C1C1709FF00F59BB1 /* TemplateFocusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateFocusView.m; sourceTree = "<group>"; };
@@ -112,7 +112,6 @@
 		B06B75C91C171C6D00F59BB1 /* TemplateSingleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateSingleView.m; sourceTree = "<group>"; };
 		B0D057FF1C1D814F00ABDFD5 /* TemplateCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateCategoryCell.h; sourceTree = "<group>"; };
 		B0D058001C1D814F00ABDFD5 /* TemplateCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateCategoryCell.m; sourceTree = "<group>"; };
-		B0D058021C1D85E000ABDFD5 /* TemplateHeaderProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateHeaderProtocol.h; sourceTree = "<group>"; };
 		B0D058031C1DA4F000ABDFD5 /* back_bt_7h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back_bt_7h@3x.png"; sourceTree = "<group>"; };
 		B0FCB2451C1BCFE400989E36 /* TemplateRenderProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateRenderProtocol.h; sourceTree = "<group>"; };
 		B0FCB2471C1BD8C100989E36 /* TemplateCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateCategoryModel.h; sourceTree = "<group>"; };
@@ -266,9 +265,9 @@
 		B06B75951C1709FF00F59BB1 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				373164701C200844001FADE6 /* TemplateSpecialRenderProtocol.h */,
 				B06B75961C1709FF00F59BB1 /* TemplateActionProtocol.h */,
 				B06B75971C1709FF00F59BB1 /* TemplateCellProtocol.h */,
-				B06B75981C1709FF00F59BB1 /* TemplateContentProtocol.h */,
 				B0FCB2451C1BCFE400989E36 /* TemplateRenderProtocol.h */,
 			);
 			path = Protocol;
@@ -404,7 +403,6 @@
 				B0FCB24B1C1BD97900989E36 /* TemplateCategoryItemModel.m */,
 				B0FCB24D1C1BD98B00989E36 /* TemplateCategorySubItemModel.h */,
 				B0FCB24E1C1BD98B00989E36 /* TemplateCategorySubItemModel.m */,
-				B0D058021C1D85E000ABDFD5 /* TemplateHeaderProtocol.h */,
 			);
 			path = category;
 			sourceTree = "<group>";

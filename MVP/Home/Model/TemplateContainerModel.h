@@ -20,12 +20,12 @@
 
 - (NSInteger)numberOfChildModelsInContainer;
 
-- (id <TemplateContentProtocol>)childFloorModelAtIndex:(NSInteger)index;
+- (id <TemplateRenderProtocol>)childFloorModelAtIndex:(NSInteger)index;
 
 @end
 
 @class TemplateChannelModel;
-@interface TemplateContainerModel : NSObject<TemplateContainerProtocol,TemplateActionProtocol,TemplateContentProtocol>
+@interface TemplateContainerModel : NSObject<TemplateContainerProtocol,TemplateActionProtocol,TemplateRenderProtocol>
 
 //netList
 @property (nonatomic,strong) NSNumber                 *identityId;

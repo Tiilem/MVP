@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "TemplateCellProtocol.h"
-#import "TemplateContentProtocol.h"
+#import "TemplateRenderProtocol.h"
 
 @protocol TemplateCellProtocol;
-@protocol TemplateContentProtocol;
+@protocol TemplateRenderProtocol;
 
 @interface TemplateFocusView : UIView<TemplateCellProtocol>
 

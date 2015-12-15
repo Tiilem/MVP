@@ -9,6 +9,6 @@
 #import "TemplateContainerModel.h"
 #import "TemplateSkuModel.h"
 
-@interface TemplateSingleModel : TemplateContainerModel<TemplateContentProtocol>
+@interface TemplateSingleModel : TemplateContainerModel<TemplateRenderProtocol>
 
 @end

@@ -14,7 +14,7 @@
 #import "TemplateHeaderCell.h"
 #import "TemplateCategoryCell.h"
 #import "TemplateCategoryHeaderCell.h"
-#import "TemplateHeaderProtocol.h"
+#import "TemplateSpecialRenderProtocol.h"
 #import "WebViewController.h"
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
@@ -118,7 +118,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    id <TemplateContentProtocol> model = [self.floorModel rowModelAtIndexPath:indexPath];
+    id <TemplateRenderProtocol> model = [self.floorModel rowModelAtIndexPath:indexPath];
     
     UITableViewCell <TemplateCellProtocol> * cell = [tableView dequeueReusableCellWithIdentifier:[model floorIdentifier]];
     
@@ -139,7 +139,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    id <TemplateContentProtocol>  floor = [self.floorModel rowModelAtIndexPath:indexPath];
+    id <TemplateRenderProtocol>  floor = [self.floorModel rowModelAtIndexPath:indexPath];
     if ([floor respondsToSelector:@selector(floorIdentifier)]) {
         NSString *cellIdentifier = [floor floorIdentifier];
         Class<TemplateCellProtocol> viewClass = NSClassFromString(cellIdentifier);
@@ -151,8 +151,8 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    id <TemplateHeaderProtocol,TemplateContentProtocol> floor = self.floorModel.floors[section];
-    if ([floor conformsToProtocol:@protocol(TemplateHeaderProtocol)]) {
+    id <TemplateSpecialRenderProtocol,TemplateRenderProtocol> floor = self.floorModel.floors[section];
+    if ([floor conformsToProtocol:@protocol(TemplateSpecialRenderProtocol)]) {
         NSString *headerIdentifier = [floor headerFloorIdentifier];
         if (headerIdentifier) {
             Class<TemplateCellProtocol> viewClass = NSClassFromString(headerIdentifier);
@@ -166,10 +166,10 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    id <TemplateHeaderProtocol,TemplateContentProtocol> floor = self.floorModel.floors[section];
+    id <TemplateSpecialRenderProtocol,TemplateRenderProtocol> floor = self.floorModel.floors[section];
     
-    if ([floor conformsToProtocol:@protocol(TemplateHeaderProtocol)]) {
-        id<TemplateHeaderProtocol> headerModel = [floor headerFloorModelAtIndex:section];
+    if ([floor conformsToProtocol:@protocol(TemplateSpecialRenderProtocol)]) {
+        id<TemplateSpecialRenderProtocol> headerModel = [floor headerFloorModelAtIndex:section];
         if (headerModel) {
             NSString *identifier = [headerModel headerFloorIdentifier];
             UIView <TemplateCellProtocol> *headerView = (UIView <TemplateCellProtocol> *)[tableView dequeueReusableHeaderFooterViewWithIdentifier:identifier];

@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TemplateContentProtocol.h"
+#import "TemplateRenderProtocol.h"
 
-@interface TemplateSkuModel : NSObject<TemplateContentProtocol>
+@interface TemplateSkuModel : NSObject<TemplateRenderProtocol>
 
 @property (nonatomic, strong) NSString *skuId;
 @property (nonatomic, strong) NSString *img;

@@ -14,7 +14,7 @@
     TemplateFocusView *_focusView;
 }
 
-@property (nonatomic,strong) id <TemplateContentProtocol> data;
+@property (nonatomic,strong) id <TemplateRenderProtocol> data;
 
 @end
 @implementation TemplateFocusCell
@@ -39,18 +39,18 @@
     return self;
 }
 
-- (void)processData:(id <TemplateContentProtocol>)data
+- (void)processData:(id <TemplateRenderProtocol>)data
 {
     if([data isKindOfClass:[TemplateFloorFocusModel class]])
     {
         self.data = data;
-        [_focusView processData:(id <TemplateContentProtocol>)data];
+        [_focusView processData:(id <TemplateRenderProtocol>)data];
     }
 }
 
 + (CGSize)calculateSizeWithData:(id<NSObject>)data constrainedToSize:(CGSize)size
 {
-//    id<TemplateContentProtocol> model = data;
+//    id<TemplateRenderProtocol> model = data;
     CGSize curSize = CGSizeMake(ScreenWidth, 110);
     return curSize;
 }

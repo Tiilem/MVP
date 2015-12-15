@@ -13,6 +13,8 @@
  */
 @protocol TemplateActionProtocol <NSObject>
 
+@optional
+
 - (TemplateJumpModel *)jumpFloorModelAtIndexPath:(NSIndexPath *)indexPath;
 
 @end

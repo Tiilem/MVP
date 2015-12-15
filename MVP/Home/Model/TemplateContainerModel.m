@@ -18,7 +18,7 @@
     return [self.itemList count];
 }
 
-- (id <TemplateContentProtocol>)childFloorModelAtIndex:(NSInteger)index
+- (id <TemplateRenderProtocol>)childFloorModelAtIndex:(NSInteger)index
 {
     return nil;
 }
@@ -30,7 +30,7 @@
     return nil;
 }
 
-#pragma mark -  TemplateContentProtocol
+#pragma mark -  TemplateRenderProtocol
 - (NSString *)floorIdentifier
 {
     return nil;

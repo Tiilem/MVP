@@ -60,12 +60,12 @@
     return self;
 }
 
-+ (CGSize)calculateSizeWithData:(id<TemplateContentProtocol>)data constrainedToSize:(CGSize)size
++ (CGSize)calculateSizeWithData:(id<TemplateRenderProtocol>)data constrainedToSize:(CGSize)size
 {
     return CGSizeMake(ScreenWidth, 44);
 }
 
-- (void)processData:(id <TemplateContentProtocol>)data
+- (void)processData:(id <TemplateRenderProtocol>)data
 {
     NSArray <TemplateCategoryItemModel *> *list = [(TemplateContainerModel *)data itemList];
     

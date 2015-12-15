@@ -22,6 +22,6 @@
 @property (nonatomic,strong) TemplateHeaderModel *head;
 
 //other add
-- (id <TemplateContentProtocol>)rowModelAtIndexPath:(NSIndexPath *)indexPath;
+- (id <TemplateRenderProtocol>)rowModelAtIndexPath:(NSIndexPath *)indexPath;
 
 @end

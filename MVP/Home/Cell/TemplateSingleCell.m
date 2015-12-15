@@ -39,7 +39,7 @@
     return CGSizeMake(ScreenWidth, 150);
 }
 
-- (void)processData:(id <TemplateContentProtocol>)data
+- (void)processData:(id <TemplateRenderProtocol>)data
 {
     self.contentView.backgroundColor = [UIColor grayColor];
 

@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "TemplateJumpModel.h"
-#import "TemplateContentProtocol.h"
+#import "TemplateRenderProtocol.h"
 
-@interface TemplateFHeaderModel : NSObject<TemplateContentProtocol>
+@interface TemplateFHeaderModel : NSObject<TemplateRenderProtocol>
 
 @property (nonatomic,strong) NSString           *lctitle;
 @property (nonatomic,strong) NSString           *lctitleImg;

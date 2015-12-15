@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TemplateContentProtocol.h"
+#import "TemplateRenderProtocol.h"
 
-@interface TemplateMarginModel : NSObject<TemplateContentProtocol>
+@interface TemplateMarginModel : NSObject<TemplateRenderProtocol>
 @property (nonatomic,strong) NSNumber *height;
 @end

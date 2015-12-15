@@ -97,9 +97,9 @@
     return size;
 }
 
-- (void)processData:(id <TemplateContentProtocol>)data
+- (void)processData:(id <TemplateRenderProtocol>)data
 {
-    TemplateSkuModel<TemplateContentProtocol> *skuModel = (TemplateSkuModel *)data;
+    TemplateSkuModel<TemplateRenderProtocol> *skuModel = (TemplateSkuModel *)data;
     [_imageView setImageWithURL:[NSURL URLWithString:skuModel.img]];
     [_titleLabel setText:skuModel.title];
     _pPriceLabel.text = skuModel.pprice;

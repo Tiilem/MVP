@@ -55,7 +55,12 @@
     return self;
 }
 
-- (void)processData:(id <TemplateContentProtocol>)data
++ (CGSize)calculateSizeWithData:(id<TemplateRenderProtocol>)data constrainedToSize:(CGSize)size
+{
+    return size;
+}
+
+- (void)processData:(id <TemplateRenderProtocol>)data
 {
     self.focusModel = (TemplateFloorFocusModel *)data;
     _pageControl.numberOfPages = self.focusModel.itemList.count;

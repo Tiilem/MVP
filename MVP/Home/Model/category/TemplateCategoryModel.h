@@ -7,8 +7,8 @@
 //
 
 #import "TemplateContainerModel.h"
-#import "TemplateHeaderProtocol.h"
+#import "TemplateSpecialRenderProtocol.h"
 
-@interface TemplateCategoryModel : TemplateContainerModel<TemplateHeaderProtocol>
+@interface TemplateCategoryModel : TemplateContainerModel<TemplateSpecialRenderProtocol>
 
 @end

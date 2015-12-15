@@ -41,7 +41,7 @@
     return CGSizeMake(ScreenWidth, 20);
 }
 
-- (void)processData:(id <TemplateContentProtocol>)data
+- (void)processData:(id <TemplateRenderProtocol>)data
 {
     
 }

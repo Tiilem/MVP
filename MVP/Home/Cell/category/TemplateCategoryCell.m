@@ -20,12 +20,12 @@
     return self;
 }
 
-+ (CGSize)calculateSizeWithData:(id<TemplateContentProtocol>)data constrainedToSize:(CGSize)size
++ (CGSize)calculateSizeWithData:(id<TemplateRenderProtocol>)data constrainedToSize:(CGSize)size
 {
     return CGSizeMake(ScreenWidth, 60);
 }
 
-- (void)processData:(id <TemplateContentProtocol>)data
+- (void)processData:(id <TemplateRenderProtocol>)data
 {
     self.textLabel.text = [NSString stringWithFormat:@"cell"];
 }

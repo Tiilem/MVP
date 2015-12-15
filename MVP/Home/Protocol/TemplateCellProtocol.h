@@ -7,13 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TemplateContentProtocol.h"
+#import "TemplateRenderProtocol.h"
 
 @protocol TemplateBaseProtocol;
 @protocol TemplateCellProtocol <NSObject>
 
-+ (CGSize)calculateSizeWithData:(id<TemplateContentProtocol>)data constrainedToSize:(CGSize)size;
++ (CGSize)calculateSizeWithData:(id<TemplateRenderProtocol>)data constrainedToSize:(CGSize)size;
 
-- (void)processData:(id <TemplateContentProtocol>)data;
+- (void)processData:(id <TemplateRenderProtocol>)data;
 
 @end
