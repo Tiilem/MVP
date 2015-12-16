@@ -56,7 +56,6 @@ NSString *const TemplateChannelPatternCategory         = @"Category";
 
 - (id <TemplateRenderProtocol>)rowModelAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"%ld   %ld",indexPath.section,indexPath.row);
     TemplateContainerModel *floorModel = [self.floors objectAtIndex:indexPath.section];
     id<TemplateRenderProtocol> rowModel = [floorModel childFloorModelAtIndex:indexPath.row];
     return rowModel;

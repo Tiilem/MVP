@@ -1,5 +1,5 @@
 //
-//  TemplateFloorFocusView.m
+//  TemplateFocusView.m
 //  MVP
 //
 //  Created by ccguo on 15/12/6.
@@ -104,7 +104,6 @@
     NSInteger index = _scrollView.scrollOffset;
     
     [_pageControl setCurrentPage:index];
-    NSLog(@"%ld",index);
 }
 
 

@@ -50,7 +50,6 @@
 
 + (CGSize)calculateSizeWithData:(id<NSObject>)data constrainedToSize:(CGSize)size
 {
-//    id<TemplateRenderProtocol> model = data;
     CGSize curSize = CGSizeMake(ScreenWidth, 110);
     return curSize;
 }

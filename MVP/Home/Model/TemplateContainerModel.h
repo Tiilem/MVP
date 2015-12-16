@@ -1,5 +1,5 @@
 //
-//  TemplateFloorContainerModel.h
+//  TemplateContainerModel.h
 //  MVP
 //
 //  Created by ccguo on 15/12/6.
