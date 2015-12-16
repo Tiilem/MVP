@@ -6,37 +6,40 @@
 
 ## 传统开发模式
   ### MVC 
+  
 第一次听到MVC这个名词是在C#中，相信做对于MVC大家都已经很熟悉了，作为一种软件设计模式，MVC这个概念已经诞生好多年了，
 
 模型-视图-控制器（Model-View-Controller，MVC）是Xerox PARC在20世纪80年代为编程语言Smalltalk－80发明的一种软件设计模式，至今已广泛应用于用户交互应用程序中。在iOS开发中MVC的机制被使用的淋漓尽致，充分理解iOS的MVC模式，有助于我们程序的组织合理性。
 
-Model_View_Controller
+Model-View-Controller
+
 模型对象
+
 模型对象封装了应用程序的数据，并定义操控和处理该数据的逻辑和运算。例如，模型对象可能是表示游戏中的角色或地址簿中的联系人。用户在视图层中所进行的创建或修改数据的操作，通过控制器对象传达出去，最终会创建或更新模型对象。模型对象更改时（例如通过网络连接接收到新数据），它通知控制器对象，控制器对象更新相应的视图对象。
+
 视图对象
+
 视图对象是应用程序中用户可以看见的对象。视图对象知道如何将自己绘制出来，并可能对用户的操作作出响应。视图对象的主要目的，就是显示来自应用程序模型对象的数据，并使该数据可被编辑。尽管如此，在 MVC 应用程序中，视图对象通常与模型对象分离。
 
 在iOS应用程序开发中，所有的控件、窗口等都继承自 UIView，对应MVC中的V。UIView及其子类主要负责UI的实现，而UIView所产生的事件都可以采用委托的方式，交给UIViewController实现。
+
 控制器对象
-在应用程序的一个或多个视图对象和一个或多个模型对象之间，控制器对象充当媒介。控制器对象因此是同步管道程序，通过它，视图对象了解模型对象的更改，反之亦然。控制器对象还可以为应用程序执行设置和协调任务，并管理其他对象的生命周期。
+
+在应用程序的一个或多个视图对象和一个或多个模型对象之间，控制器对象充当媒介。控制器对象因此是同步管道程序，通过它，视图对象了解模型对象的更改，反之亦然，控制器主要负责数据的传递解耦等工作。控制器对象还可以为应用程序执行设置和协调任务，并管理其他对象的生命周期。
 
 控制器对象解释在视图对象中进行的用户操作，并将新的或更改过的数据传达给模型对象。模型对象更改时，一个控制器对象会将新的模型数据传达给视图对象，以便视图对象可以显示它。
-
-对于不同的UIView，有相应的UIViewController，对应MVC中的C。例如在iOS上常用的UITableView，它所对应的Controller就是UITableViewController。
 
 Model和View永远不能相互通信，只能通过Controller传递。
 Controller可以直接与Model对话（读写调用Model），Model通过Notification和KVO机制与Controller间接通信。
 Controller可以直接与View对话，通过outlet,直接操作View,outlet直接对应到View中的控件,View通过action向Controller报告事件的发生(如用户Touch我了)。Controller是View的直接数据源（数据很可能是Controller从Model中取得并经过加工了）。Controller是View的代理（delegate),以同步View与Controller。
- 
-
-有关“模型－视图－控制器”的完整信息，请参阅 Concepts in Objective-C 
 
 ### MVVM
+
 在经历了一大堆吐槽之后，诞生了MVVM(一个高大尚牛逼哄哄的名次，从此软件界又再次多了一种人，你懂MVVM ？如果你的回答是否，瞬间被鄙视一把)
 
 //MVVM介绍
 
-如果你已经开发一段时间的iOS应用，你一定听说过Model-View-Controller，即MVC。MVC是构建iOS App的标准模式。然而，最近我已经越来越厌倦MVC的一些缺点。在本文，我将重温一下MVC是什么，详述它的缺点，并且告诉你一个新的方式来架构你的App：Model-View-ViewModel。拿出你的流行语bingo card(宾果卡，一种游戏卡片-译者注)，因为我们即将进行一次范式转变。
+如果你已经开发一段时间的iOS应用，你一定听说过Model-View-Controller，即MVC。MVC是构建iOS App的标准模式。然而，最近我已经越来越厌倦MVC的一些缺点。在本文，我将重温一下MVC是什么，详述它的缺点，并且告诉你一个新的方式来架构你的App：Model-View-ViewModel。因为我们即将进行一次范式转变。
  
 Model-View-Controller
 Model-View-Controller是一个用来组织代码的权威范式。Apple甚至是这么说的。在MVC下，所有的对象被归类为一个model，一个view，或一个controller。Model持有数据，View显示与用户交互的界面，而View Controller调解Model和View之间的交互。
@@ -94,12 +97,30 @@ view model是一个放置用户输入验证逻辑，视图显示逻辑，发起�
   
 ## 基于面向协议MVP的介绍
 
+上文提到了MVC、MVVM，真实的业务场景中，如果场景的逻辑异常复杂，在反复的迭代中仍会出现各式各样的问题。真对MVVM我个人理解主要是将原来Controller中处理数据逻辑的代码统一归到一个新的class(viewModel)中去，更甚之网络请求等工作全部从Controller移到viewModel。刚一开始总觉的怪怪的。现阶段客户端开发越来越进入一个2.0的阶段，早期的app功能都相对比较简单，无论是从界面还是从业务逻辑上给人的感觉都是简洁实用，这中间包括UI的设计、功能的设计、产品的设计定位等。随着行业的深入，用户的过渡依赖移动端最终导致业各式各样的业务更加依赖客户端，这就导致客户端的开发不得不向PC端靠齐，在版本的反复迭代中业务场景变的愈发不尽人意，仿佛又回到了软件设计的早期。
+
+在传统软件领域，从MVC的诞生主要是为了解决软件界面的行为的分离，在复杂的业务场景内会进一步区分业务逻辑场景的分离，这些手段的最终的目的都是尽最大限度的降低整个场景的藕合度，使其达到分离的目的，模块与模块最终得到独立，将整个场景化整为零，最终使每个模块在一个零上工作，这对于无论是软件的开发还是后续的维护、以及使用普遍遵循这个原则，现有的模式大概产生了相关的类似架构。
+
+传统web架构里面是这样解决的 : 
+
+web段以及其他业务层负责从接口层获取数据，并执行自己的逻辑
+service层为外部提供接口
+DTO从负责从DB链接并进行数据读写操作
+DB层(物理机器负责数据存储)
+
+曾降有无数个人总喜欢问我你们的iOS采用什么样的架构，其实每次被问到这样的问题，不是瞬间被萌了，就是想自己问自己iOS也有架构？？
+
+现有客户度一度采用下面的模式:
+
+
+
+
+
+
 
 ## MVP实战开发
 
 
-
-Model-View-Controller (http://developer.apple.com/library/ios/documentation/general/conceptual/CocoaEncyclopedia/Model-View-Controller/Model-View-Controller.html#//apple_ref/doc/uid/TP40010810-CH14-SW1)
 
 MVVM (https://leanpub.com/iosfrp)
 
@@ -111,3 +132,5 @@ http://liuzhichao.com/p/1379.html
 http://www.cocoachina.com/ios/20140716/9152.html
 http://www.cocoachina.com/ios/20150122/10987.html
 http://www.cnblogs.com/xueduanyang/p/3601471.html
+
+[Model-View-Controller](http://developer.apple.com/library/ios/documentation/general/conceptual/CocoaEncyclopedia/Model-View-Controller/Model-View-Controller.html#//apple_ref/doc/uid/TP40010810-CH14-SW1)

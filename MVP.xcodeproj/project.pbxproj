@@ -691,6 +691,7 @@
 			baseConfigurationReference = B7DD2DC6FB0B979D0CA6C60A /* Pods-MVP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Xiaoman Wang (ZSGG66K35W)";
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MVP/MVP.pch";
 				INFOPLIST_FILE = MVP/Info.plist;
@@ -698,6 +699,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.360buy.MVP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4248a077-8fcd-4dc9-a782-5a0b640869c6";
 			};
 			name = Debug;
 		};
@@ -713,6 +715,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.360buy.MVP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4248a077-8fcd-4dc9-a782-5a0b640869c6";
 			};
 			name = Release;
 		};
