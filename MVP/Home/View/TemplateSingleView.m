@@ -49,9 +49,9 @@
         _lineView.backgroundColor = [UIColor blackColor];
         [self addSubview:_lineView];
         
-        _titleLabel.backgroundColor = [UIColor yellowColor];
-        _pPriceLabel.backgroundColor = [UIColor purpleColor];
-        _wPriceLabel.backgroundColor = [UIColor greenColor];
+//        _titleLabel.backgroundColor = [UIColor yellowColor];
+//        _pPriceLabel.backgroundColor = [UIColor purpleColor];
+//        _wPriceLabel.backgroundColor = [UIColor greenColor];
         
         [_imageView mas_makeConstraints:^(MASConstraintMaker *make){
             make.top.mas_equalTo(@10);

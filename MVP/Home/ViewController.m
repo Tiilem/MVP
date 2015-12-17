@@ -9,20 +9,14 @@
 #import "ViewController.h"
 #import "TemplateChannelModel.h"
 #import "TemplateContainerModel.h"
-#import "TemplateFocusCell.h"
-#import "TemplateSingleCell.h"
-#import "TemplateHeaderCell.h"
-#import "TemplateCategoryCell.h"
-#import "TemplateCategoryHeaderCell.h"
-#import "TemplateSpecialRenderProtocol.h"
 #import "WebViewController.h"
+#import "TemplateCellProtocol.h"
+#import "TemplateSpecialRenderProtocol.h"
+#import "UITableView+Template.h"
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic,strong) TemplateChannelModel *floorModel;
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
-
-@property (nonatomic, assign) BOOL cellHeightCacheEnabled;
 
 @end
 
@@ -34,11 +28,11 @@
     self.title = @"Index";
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.cellHeightCacheEnabled = YES;
 
-    [self registTableViewCell];
+    [self.tableView registTableViewCell];
     
     [self fetchData];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.contentInset = UIEdgeInsetsMake(-64, 0, 0, 0);
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         // 进入刷新状态后会自动调用这个block
@@ -53,25 +47,13 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)registTableViewCell
-{
-    [self.tableView registerClass:[TemplateFocusCell class] forCellReuseIdentifier:@"TemplateFocusCell"];
-    [self.tableView registerClass:[TemplateSingleCell class] forCellReuseIdentifier:@"TemplateSingleCell"];
-    [self.tableView registerClass:[TemplateHeaderCell class] forCellReuseIdentifier:@"TemplateHeaderCell"];
-    [self.tableView registerClass:[TemplateCategoryHeaderCell class] forHeaderFooterViewReuseIdentifier:@"TemplateCategoryHeaderCell"];
-
-    
-    [self.tableView registerClass:[TemplateCategoryCell class] forCellReuseIdentifier:@"TemplateCategoryCell"];
-
-}
-
 - (void)loadNewData
 {
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self.tableView.mj_header endRefreshing];
-
     });
 }
+
 - (IBAction)cliicked:(id)sender {
     
     WebViewController *webViewController = [[WebViewController alloc] init];
@@ -91,7 +73,7 @@
          success:^(NSURLSessionDataTask *task, id responseObject){
              NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSUTF8StringEncoding error:nil];
              weakself.floorModel = [TemplateChannelModel mj_objectWithKeyValues:dic];
-             
+             [_tableView.mj_header endRefreshing];
              [SVProgressHUD dismiss];
              //更新UI
              [weakself.tableView reloadData];
@@ -99,7 +81,6 @@
          failure:^(NSURLSessionDataTask *task, NSError *error){
              [SVProgressHUD dismiss];
          }];
-    
 }
 
 #pragma mark - UITableViewDataSource,UITableViewDelegate

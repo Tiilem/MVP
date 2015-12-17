@@ -29,16 +29,21 @@
 - (NSInteger)numberOfChildModelsInContainer
 {
     NSUInteger rows = 0;
-    if (self.margin) rows++;
+    if (self.fheader) rows ++;
     if (self.itemList) rows += (self.itemList.count);
+    if (self.margin) rows ++;
     return rows;
 }
 
 - (id <TemplateRenderProtocol>)childFloorModelAtIndex:(NSInteger)index
 {
+    if (self.fheader && (index == 0))
+        return self.fheader;
+    if ((index > 0) && (index < self.itemList.count))
+        return self.itemList[index];
     if ((self.margin)&&(index+1) == [self numberOfChildModelsInContainer])
         return self.margin;  //最后一行
-    return self.itemList[index];
+    return nil;
 }
 
 #pragma mark - TemplateJumpProtocol
@@ -46,14 +51,6 @@
 - (TemplateJumpModel *)jumpFloorModelAtIndexPath:(NSIndexPath *)indexPath
 {
     return nil;
-}
-
-#pragma mark -  TemplateRenderProtocol
-- (NSString *)floorIdentifier
-{
-    if ((self.margin)&&(NSInteger)(index+1) == [self numberOfChildModelsInContainer])
-        return @"TemplateHeaderCell";  //最后一行
-    return @"TemplateSingleCell";
 }
 
 @end

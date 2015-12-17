@@ -11,7 +11,7 @@
 @implementation TemplateMarginModel
 - (NSString *)floorIdentifier
 {
-    return @"TemplateHeaderCell";
+    return @"TemplateMarginCell";
 }
 
 @end

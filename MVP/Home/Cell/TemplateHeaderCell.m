@@ -7,11 +7,11 @@
 //
 
 #import "TemplateHeaderCell.h"
+#import "TemplateFHeaderModel.h"
 
 @interface TemplateHeaderCell ()
-
-@property (nonatomic,strong) UILabel *label;
-
+@property (nonatomic,strong) UIImageView *titleImageView;
+@property (nonatomic,strong) UILabel     *label;
 @end
 
 @implementation TemplateHeaderCell
@@ -20,30 +20,34 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        self.backgroundColor = [UIColor purpleColor];
-//        _label = [[UILabel alloc] init];
-//        _label.backgroundColor = [UIColor greenColor];
-//        [self.contentView addSubview:_label];
-//        
-//        [_label mas_makeConstraints:^(MASConstraintMaker *make){
-//            make.top.equalTo(@(5));
-//            make.left.equalTo(@(10));
-//            make.right.equalTo(@(10));
-//            make.height.equalTo(@(20));
-//        }];
+        self.selectionStyle = UITableViewCellSeparatorStyleNone;
+
+        self.backgroundColor = [UIColor whiteColor];
         
+        _titleImageView = [[UIImageView alloc] init];
+        _titleImageView.contentMode = UIViewContentModeScaleAspectFill;
+        _titleImageView.frame = CGRectMake(10, 5, 125, 20);
+        [self.contentView addSubview:_titleImageView];
+        
+        _label = [[UILabel alloc] init];
+        _label.text = @"更多爆款";
+        _label.textAlignment = NSTextAlignmentRight;
+        _label.frame = CGRectMake(ScreenWidth - 75, 5, 70, 20);
+        [self.contentView addSubview:_label];
     }
     return self;
 }
 
 + (CGSize)calculateSizeWithData:(id<NSObject>)data constrainedToSize:(CGSize)size
 {
-    return CGSizeMake(ScreenWidth, 20);
+    return CGSizeMake(ScreenWidth, 31);
 }
 
 - (void)processData:(id <TemplateRenderProtocol>)data
 {
+    TemplateFHeaderModel *model = (TemplateFHeaderModel *)data;
     
+    [_titleImageView setImageWithURL:[NSURL URLWithString:model.lctitleImg]];
 }
 
 

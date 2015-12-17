@@ -7,11 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TemplateRenderProtocol"
-#import "TemplateJumpProtocol"
-#import "TemplateContainerProtocol"
-#import "TemplateCellProtocol"
-
+//#import "TemplateRenderProtocol"
+//#import "TemplateJumpProtocol"
+//#import "TemplateContainerProtocol"
+//#import "TemplateCellProtocol"
 
 
 

@@ -14,7 +14,7 @@ NSString *const TemplateChannelPatternFocus          = @"Focus";
 NSString *const TemplateChannelPatternSingle         = @"SingleGoods";
 NSString *const TemplateChannelPatternNormal         = @"NormalFloor";
 
-NSString *const TemplateChannelPatternCategory         = @"Category";
+NSString *const TemplateChannelPatternCategory       = @"Category";
 
 
 @implementation TemplateChannelModel
@@ -66,7 +66,9 @@ NSString *const TemplateChannelPatternCategory         = @"Category";
     if ([pattern isEqualToString:TemplateChannelPatternFocus]) {
         return @"TemplateFloorFocusModel";
     }
-    
+    if ([pattern isEqualToString:TemplateChannelPatternNormal]) {
+        return @"TemplateNormalModel";
+    }
     if ([pattern isEqualToString:TemplateChannelPatternSingle]) {
         return @"TemplateSingleModel";
     }

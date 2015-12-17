@@ -21,15 +21,13 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         self.selectionStyle = UITableViewCellSelectionStyleNone;
+        
         _singleView = [[TemplateSingleView alloc] init];
         _singleView.translatesAutoresizingMaskIntoConstraints = NO;
         [self.contentView addSubview:_singleView];
-        
-        
         [_singleView mas_makeConstraints:^(MASConstraintMaker *make){
             make.edges.equalTo(self.contentView).insets(UIEdgeInsetsZero);
         }];
-        
     }
     return self;
 }
@@ -41,7 +39,7 @@
 
 - (void)processData:(id <TemplateRenderProtocol>)data
 {
-    self.contentView.backgroundColor = [UIColor grayColor];
+    self.contentView.backgroundColor = [UIColor whiteColor];
 
     [_singleView processData:data];
 }

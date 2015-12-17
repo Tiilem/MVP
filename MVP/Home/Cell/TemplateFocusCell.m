@@ -24,6 +24,8 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     
     if (self) {
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
+        
         _focusView = [[TemplateFocusView alloc] init];
         _focusView.translatesAutoresizingMaskIntoConstraints = NO;
         [self.contentView addSubview:_focusView];
