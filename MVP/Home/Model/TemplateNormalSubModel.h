@@ -8,8 +8,21 @@
 
 #import <Foundation/Foundation.h>
 #import "TemplateRenderProtocol.h"
-@interface TemplateNormalSubModel : NSObject<TemplateRenderProtocol>
 
+typedef NS_ENUM(NSInteger,TemplateNormalStyle)
+{
+    TemplateNormalStyle001 = 0,
+    TemplateNormalStyle002,
+    TemplateNormalStyle003,
+    TemplateNormalStyle004,
+    TemplateNormalStyle005,
+    TemplateNormalStyle006,
+    TemplateNormalStyle007,
+    TemplateNormalStyle008,
+    TemplateNormalStyle009,
+};
+
+@interface TemplateNormalSubModel : NSObject<TemplateRenderProtocol>
 @property (nonatomic,strong) NSString * pattern;
 @property (nonatomic,strong) NSArray  * picList;
 @property (nonatomic,strong) NSNumber * identityId;

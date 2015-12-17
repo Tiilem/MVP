@@ -28,9 +28,7 @@
     self.title = @"Index";
     self.view.backgroundColor = [UIColor whiteColor];
     
-
     [self.tableView registTableViewCell];
-    
     [self fetchData];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.contentInset = UIEdgeInsetsMake(-64, 0, 0, 0);
@@ -68,13 +66,14 @@
     
     __weak typeof (self) weakself = self;
     [SVProgressHUD show];
-    [manager GET:@"http://ccguo.github.io/MVP/food.json"
+    [manager GET:@"http://7af4d4.com1.z0.glb.clouddn.com/food.json"
       parameters:nil
          success:^(NSURLSessionDataTask *task, id responseObject){
              NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSUTF8StringEncoding error:nil];
              weakself.floorModel = [TemplateChannelModel mj_objectWithKeyValues:dic];
              [_tableView.mj_header endRefreshing];
              [SVProgressHUD dismiss];
+
              //更新UI
              [weakself.tableView reloadData];
          }

@@ -7,11 +7,11 @@
 //
 
 #import "TemplateNormalView.h"
-#import "TemplateNormalModel.h"
-#import "TemplateNormalSubModel.h"
 #import "TemplatePicModel.h"
 #import "TemplateNormalTapView.h"
+#import "TemplateNormalSubModel.h"
 
+@class TemplateNormalSubModel;
 @implementation TemplateNormalView
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -25,7 +25,7 @@
 
 + (CGSize)calculateSizeWithData:(id<TemplateRenderProtocol>)data constrainedToSize:(CGSize)size
 {
-    return size;
+    return CGSizeMake(ScreenWidth, 100);
 }
 
 - (void)processData:(id <TemplateRenderProtocol>)data

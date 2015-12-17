@@ -9,6 +9,7 @@
 #import "TemplateNormalSubModel.h"
 
 @implementation TemplateNormalSubModel
+
 + (NSDictionary *)mj_objectClassInArray
 {
     return @{
