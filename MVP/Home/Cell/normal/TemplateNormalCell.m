@@ -23,7 +23,9 @@
         self.contentView.backgroundColor = [UIColor whiteColor];
         
         _normalView = [[TemplateNormalView alloc] init];
+//        _normalView.frame = CGRectMake(0, 0, ScreenWidth, 67);
         _normalView.translatesAutoresizingMaskIntoConstraints = NO;
+        [self.contentView addSubview:_normalView];
         
         [_normalView mas_makeConstraints:^(MASConstraintMaker *make){
             make.edges.equalTo(self.contentView).insets(UIEdgeInsetsZero);

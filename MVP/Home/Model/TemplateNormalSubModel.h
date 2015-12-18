@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "TemplateRenderProtocol.h"
+#import "TemplateValidationProtocol.h"
 
 typedef NS_ENUM(NSInteger,TemplateNormalStyle)
 {
-    TemplateNormalStyle001 = 0,
+    TemplateNormalStyle001 = 1,
     TemplateNormalStyle002,
     TemplateNormalStyle003,
     TemplateNormalStyle004,
@@ -22,7 +23,7 @@ typedef NS_ENUM(NSInteger,TemplateNormalStyle)
     TemplateNormalStyle009,
 };
 
-@interface TemplateNormalSubModel : NSObject<TemplateRenderProtocol>
+@interface TemplateNormalSubModel : NSObject<TemplateRenderProtocol,TemplateValidationProtocol>
 @property (nonatomic,strong) NSString * pattern;
 @property (nonatomic,strong) NSArray  * picList;
 @property (nonatomic,strong) NSNumber * identityId;

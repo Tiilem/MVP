@@ -9,8 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "TemplateJumpModel.h"
 #import "TemplateShareModel.h"
+#import "TemplateRenderProtocol.h"
 
-@interface TemplatePicModel : NSObject
+@interface TemplatePicModel : NSObject<TemplateRenderProtocol>
+
 @property (nonatomic,strong) NSString           *identityId;
 @property (nonatomic,strong) NSString           *img;
 @property (nonatomic,assign) BOOL               isShare;

@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TemplateCellProtocol.h"
 
-@interface TemplateNormalTapView : UIImageView
+@interface TemplateNormalTapView : UIImageView<TemplateCellProtocol>
 
 @property (nonatomic,copy) void (^tapBlock)(void);
 

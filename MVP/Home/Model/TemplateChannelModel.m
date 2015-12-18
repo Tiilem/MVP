@@ -10,6 +10,9 @@
 #import "TemplateContainerModel.h"
 #import "TemplateFloorFocusModel.h"
 
+
+#import "TemplateNormalModel.h"
+
 NSString *const TemplateChannelPatternFocus          = @"Focus";
 NSString *const TemplateChannelPatternSingle         = @"SingleGoods";
 NSString *const TemplateChannelPatternNormal         = @"NormalFloor";

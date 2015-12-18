@@ -10,6 +10,11 @@
 
 @implementation TemplateContainerModel
 
+- (void)mj_keyValuesDidFinishConvertingToObject {
+    if (self.fheader.isValid == NO) {
+        self.fheader = nil;
+    }
+}
 
 #pragma mark - TemplateContainerProtocol
 

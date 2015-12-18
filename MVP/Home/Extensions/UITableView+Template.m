@@ -18,6 +18,7 @@
                        @"TemplateHeaderCell",
                        @"TemplateCategoryCell",
                        @"TemplateMarginCell",
+                       @"TemplateNormalCell"
                        ];
     
     for (NSString * cell in cellIdentifier) {

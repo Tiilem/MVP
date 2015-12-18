@@ -23,9 +23,8 @@
 #import <SVProgressHUD/SVProgressHUD.h>
 #import <UITableView+FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell.h>
 
-
-
 #import "GlobalConfig.h"
 #import "NavigateManager.h"
+#import "UIView+Template.h"
 
 #endif /* MVP_pch */

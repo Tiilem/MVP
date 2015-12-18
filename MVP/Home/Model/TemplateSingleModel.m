@@ -30,7 +30,7 @@
 {
     NSUInteger rows = 0;
     if (self.fheader) rows ++;
-    if (self.itemList) rows += (self.itemList.count);
+    if (self.itemList) rows ++;
     if (self.margin) rows ++;
     return rows;
 }
@@ -39,10 +39,12 @@
 {
     if (self.fheader && (index == 0))
         return self.fheader;
-    if ((index > 0) && (index < self.itemList.count))
-        return self.itemList[index];
+
     if ((self.margin)&&(index+1) == [self numberOfChildModelsInContainer])
         return self.margin;  //最后一行
+    
+    if ((self.itemList.count > 0) && (index < self.itemList.count))
+        return self;
     return nil;
 }
 
@@ -51,6 +53,12 @@
 - (TemplateJumpModel *)jumpFloorModelAtIndexPath:(NSIndexPath *)indexPath
 {
     return nil;
+}
+
+
+- (NSString *)floorIdentifier
+{
+    return @"TemplateSingleCell";
 }
 
 @end

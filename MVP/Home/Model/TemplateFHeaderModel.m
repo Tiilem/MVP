@@ -10,6 +10,11 @@
 
 @implementation TemplateFHeaderModel
 
+- (BOOL)isValid
+{
+    return (self.lctitleImg.length > 0);
+}
+
 - (NSString *)floorIdentifier
 {
     return @"TemplateHeaderCell";

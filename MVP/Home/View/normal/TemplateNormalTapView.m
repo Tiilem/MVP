@@ -7,6 +7,7 @@
 //
 
 #import "TemplateNormalTapView.h"
+#import "TemplatePicModel.h"
 
 @implementation TemplateNormalTapView
 
@@ -14,7 +15,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.contentMode = UIViewContentModeScaleToFill;
+        self.contentMode = UIViewContentModeScaleAspectFill;
         self.userInteractionEnabled = YES;
         
         UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] init];
@@ -29,5 +30,11 @@
     if (self.tapBlock) {
         self.tapBlock();
     }
+}
+
+- (void)processData:(id <TemplateRenderProtocol>)data
+{
+    TemplatePicModel *picModel = (TemplatePicModel *)data;
+    [self setImageWithURL:[NSURL URLWithString:picModel.img]];
 }
 @end

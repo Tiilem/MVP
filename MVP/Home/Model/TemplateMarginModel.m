@@ -9,6 +9,7 @@
 #import "TemplateMarginModel.h"
 
 @implementation TemplateMarginModel
+
 - (NSString *)floorIdentifier
 {
     return @"TemplateMarginCell";

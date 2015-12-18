@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		379530AC1C23B31F00DAAF9D /* NSArray+Template.m in Sources */ = {isa = PBXBuildFile; fileRef = 379530AB1C23B31F00DAAF9D /* NSArray+Template.m */; };
+		379530AF1C23ED0D00DAAF9D /* UIView+Template.m in Sources */ = {isa = PBXBuildFile; fileRef = 379530AE1C23ED0D00DAAF9D /* UIView+Template.m */; };
 		37C7ED681C229C720056CF29 /* TemplateNormalSubModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C7ED671C229C720056CF29 /* TemplateNormalSubModel.m */; };
 		37C7ED6D1C229D9B0056CF29 /* TemplateNormalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C7ED6C1C229D9B0056CF29 /* TemplateNormalCell.m */; };
 		37C7ED701C229DB80056CF29 /* TemplateNormalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C7ED6F1C229DB80056CF29 /* TemplateNormalView.m */; };
@@ -14,6 +16,9 @@
 		37C7ED7F1C22B2400056CF29 /* UITableView+Template.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C7ED7E1C22B2400056CF29 /* UITableView+Template.m */; };
 		37C7ED821C22BB2B0056CF29 /* TemplateNormalTapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C7ED811C22BB2B0056CF29 /* TemplateNormalTapView.m */; };
 		37D64E731C1ACE410052D5D3 /* TemplateFHeaderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D64E721C1ACE410052D5D3 /* TemplateFHeaderModel.m */; };
+		37DFF2D31C23F8890081D547 /* TemplateSingleSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DFF2D21C23F8890081D547 /* TemplateSingleSubView.m */; };
+		37DFF2D61C240A180081D547 /* TemplateActionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DFF2D51C240A180081D547 /* TemplateActionHandler.m */; };
+		37DFF2D91C240A290081D547 /* TemplateAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DFF2D81C240A290081D547 /* TemplateAction.m */; };
 		65EBE5A4E57EA4334C64C36D /* libPods-MVP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F12F47E4BED75B6E52829F8A /* libPods-MVP.a */; };
 		B03F9F341C13E30500B653A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B03F9F331C13E30500B653A6 /* main.m */; };
 		B03F9F371C13E30500B653A6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B03F9F361C13E30500B653A6 /* AppDelegate.m */; };
@@ -55,6 +60,11 @@
 
 /* Begin PBXFileReference section */
 		373164701C200844001FADE6 /* TemplateSpecialRenderProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateSpecialRenderProtocol.h; sourceTree = "<group>"; };
+		379530A91C23A77F00DAAF9D /* TemplateValidationProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateValidationProtocol.h; sourceTree = "<group>"; };
+		379530AA1C23B31F00DAAF9D /* NSArray+Template.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Template.h"; sourceTree = "<group>"; };
+		379530AB1C23B31F00DAAF9D /* NSArray+Template.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Template.m"; sourceTree = "<group>"; };
+		379530AD1C23ED0D00DAAF9D /* UIView+Template.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Template.h"; sourceTree = "<group>"; };
+		379530AE1C23ED0D00DAAF9D /* UIView+Template.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Template.m"; sourceTree = "<group>"; };
 		37C7ED661C229C720056CF29 /* TemplateNormalSubModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateNormalSubModel.h; sourceTree = "<group>"; };
 		37C7ED671C229C720056CF29 /* TemplateNormalSubModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateNormalSubModel.m; sourceTree = "<group>"; };
 		37C7ED6B1C229D9B0056CF29 /* TemplateNormalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateNormalCell.h; sourceTree = "<group>"; };
@@ -69,6 +79,12 @@
 		37C7ED811C22BB2B0056CF29 /* TemplateNormalTapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateNormalTapView.m; sourceTree = "<group>"; };
 		37D64E711C1ACE410052D5D3 /* TemplateFHeaderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateFHeaderModel.h; sourceTree = "<group>"; };
 		37D64E721C1ACE410052D5D3 /* TemplateFHeaderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateFHeaderModel.m; sourceTree = "<group>"; };
+		37DFF2D11C23F8890081D547 /* TemplateSingleSubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateSingleSubView.h; sourceTree = "<group>"; };
+		37DFF2D21C23F8890081D547 /* TemplateSingleSubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateSingleSubView.m; sourceTree = "<group>"; };
+		37DFF2D41C240A180081D547 /* TemplateActionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateActionHandler.h; sourceTree = "<group>"; };
+		37DFF2D51C240A180081D547 /* TemplateActionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateActionHandler.m; sourceTree = "<group>"; };
+		37DFF2D71C240A290081D547 /* TemplateAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateAction.h; sourceTree = "<group>"; };
+		37DFF2D81C240A290081D547 /* TemplateAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateAction.m; sourceTree = "<group>"; };
 		69D15DC9917C1A5FA5B20A0C /* Pods-MVP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVP.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVP/Pods-MVP.release.xcconfig"; sourceTree = "<group>"; };
 		B03F9F2F1C13E30500B653A6 /* MVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B03F9F331C13E30500B653A6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -183,6 +199,10 @@
 			children = (
 				37C7ED7D1C22B2400056CF29 /* UITableView+Template.h */,
 				37C7ED7E1C22B2400056CF29 /* UITableView+Template.m */,
+				379530AA1C23B31F00DAAF9D /* NSArray+Template.h */,
+				379530AB1C23B31F00DAAF9D /* NSArray+Template.m */,
+				379530AD1C23ED0D00DAAF9D /* UIView+Template.h */,
+				379530AE1C23ED0D00DAAF9D /* UIView+Template.m */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -190,6 +210,10 @@
 		37C7ED7C1C22B1070056CF29 /* Actions */ = {
 			isa = PBXGroup;
 			children = (
+				37DFF2D41C240A180081D547 /* TemplateActionHandler.h */,
+				37DFF2D51C240A180081D547 /* TemplateActionHandler.m */,
+				37DFF2D71C240A290081D547 /* TemplateAction.h */,
+				37DFF2D81C240A290081D547 /* TemplateAction.m */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -322,6 +346,7 @@
 		B06B75951C1709FF00F59BB1 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				379530A91C23A77F00DAAF9D /* TemplateValidationProtocol.h */,
 				373164701C200844001FADE6 /* TemplateSpecialRenderProtocol.h */,
 				B06B75961C1709FF00F59BB1 /* TemplateActionProtocol.h */,
 				B06B75971C1709FF00F59BB1 /* TemplateCellProtocol.h */,
@@ -443,6 +468,8 @@
 			children = (
 				B06B75C81C171C6D00F59BB1 /* TemplateSingleView.h */,
 				B06B75C91C171C6D00F59BB1 /* TemplateSingleView.m */,
+				37DFF2D11C23F8890081D547 /* TemplateSingleSubView.h */,
+				37DFF2D21C23F8890081D547 /* TemplateSingleSubView.m */,
 			);
 			name = SingleGood;
 			sourceTree = "<group>";
@@ -520,6 +547,7 @@
 				TargetAttributes = {
 					B03F9F2E1C13E30500B653A6 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 5CW9655WUX;
 					};
 				};
 			};
@@ -611,6 +639,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				379530AC1C23B31F00DAAF9D /* NSArray+Template.m in Sources */,
+				37DFF2D31C23F8890081D547 /* TemplateSingleSubView.m in Sources */,
 				B0FCB24C1C1BD97900989E36 /* TemplateCategoryItemModel.m in Sources */,
 				B06B75C61C1719FA00F59BB1 /* TemplateHeaderCell.m in Sources */,
 				37D64E731C1ACE410052D5D3 /* TemplateFHeaderModel.m in Sources */,
@@ -618,7 +648,9 @@
 				B03F9F371C13E30500B653A6 /* AppDelegate.m in Sources */,
 				B06B75A11C1709FF00F59BB1 /* TemplateContainerModel.m in Sources */,
 				37C7ED681C229C720056CF29 /* TemplateNormalSubModel.m in Sources */,
+				37DFF2D91C240A290081D547 /* TemplateAction.m in Sources */,
 				B06B75CA1C171C6D00F59BB1 /* TemplateSingleView.m in Sources */,
+				37DFF2D61C240A180081D547 /* TemplateActionHandler.m in Sources */,
 				B06B75A81C1709FF00F59BB1 /* TemplateHeaderModel.m in Sources */,
 				B06113DD1C1EF0F8006BA721 /* NavigateManager.m in Sources */,
 				B0FCB2521C1BE62200989E36 /* TemplateCategoryHeaderCell.m in Sources */,
@@ -626,6 +658,7 @@
 				B06B75A71C1709FF00F59BB1 /* TemplateShareModel.m in Sources */,
 				B0FCB2561C1BEA8A00989E36 /* TemplateCategoryView.m in Sources */,
 				B06B759F1C1709FF00F59BB1 /* TemplateFocusCell.m in Sources */,
+				379530AF1C23ED0D00DAAF9D /* UIView+Template.m in Sources */,
 				B06B75A51C1709FF00F59BB1 /* TemplateNormalModel.m in Sources */,
 				B06B75A21C1709FF00F59BB1 /* TemplateFloorFocusModel.m in Sources */,
 				B03F9F341C13E30500B653A6 /* main.m in Sources */,
@@ -759,7 +792,7 @@
 			baseConfigurationReference = B7DD2DC6FB0B979D0CA6C60A /* Pods-MVP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Xiaoman Wang (ZSGG66K35W)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MVP/MVP.pch";
 				INFOPLIST_FILE = MVP/Info.plist;
@@ -767,7 +800,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.360buy.MVP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4248a077-8fcd-4dc9-a782-5a0b640869c6";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -776,6 +809,7 @@
 			baseConfigurationReference = 69D15DC9917C1A5FA5B20A0C /* Pods-MVP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MVP/MVP.pch";
 				INFOPLIST_FILE = MVP/Info.plist;
@@ -783,7 +817,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.360buy.MVP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4248a077-8fcd-4dc9-a782-5a0b640869c6";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

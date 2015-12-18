@@ -14,10 +14,12 @@
 #import "TemplateSpecialRenderProtocol.h"
 #import "UITableView+Template.h"
 
+#import "TemplateActionHandler.h"
+
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 
-@property (nonatomic,strong) TemplateChannelModel *floorModel;
-
+@property (nonatomic,strong) TemplateChannelModel  *floorModel;
+@property (nonatomic,strong) TemplateActionHandler *handler;
 @end
 
 @implementation ViewController
@@ -66,7 +68,7 @@
     
     __weak typeof (self) weakself = self;
     [SVProgressHUD show];
-    [manager GET:@"http://7af4d4.com1.z0.glb.clouddn.com/food.json"
+    [manager GET:@"http://ccguo.github.io/MVP/food.json"
       parameters:nil
          success:^(NSURLSessionDataTask *task, id responseObject){
              NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSUTF8StringEncoding error:nil];
@@ -99,11 +101,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     id <TemplateRenderProtocol> model = [self.floorModel rowModelAtIndexPath:indexPath];
-    
     UITableViewCell <TemplateCellProtocol> * cell = [tableView dequeueReusableCellWithIdentifier:[model floorIdentifier]];
-    
     [cell processData:model];
-    
     if(!cell){
         return [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
     }else{
@@ -147,7 +146,6 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     id <TemplateSpecialRenderProtocol,TemplateRenderProtocol> floor = self.floorModel.floors[section];
-    
     if ([floor conformsToProtocol:@protocol(TemplateSpecialRenderProtocol)]) {
         id<TemplateSpecialRenderProtocol> headerModel = [floor headerFloorModelAtIndex:section];
         if (headerModel) {
@@ -157,10 +155,11 @@
 //            if ([headerView respondsToSelector:@selector(tapOnePlace:)]) {
 //                [headerView tapOnePlace:[self tapBlockForModel:headerModel]];
 //            }
-            
             return headerView;
         }
     }
     return nil;
 }
+
+
 @end

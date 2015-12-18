@@ -7,102 +7,80 @@
 //
 
 #import "TemplateSingleView.h"
-#import "TemplateSkuModel.h"
+#import "TemplateSingleModel.h"
+#import "TemplatePicModel.h"
+#import "TemplateSingleSubView.h"
 
-@interface TemplateSingleView ()
-{
-    UIImageView *_imageView;
-    UILabel     *_pPriceLabel;
-    UILabel     *_wPriceLabel;
-    UILabel     *_titleLabel;
-    
-    UIView *_lineView;
+@interface TemplateSingleView ()<iCarouselDelegate,iCarouselDataSource>{
+     iCarousel *_scrollView;
 }
 
-
+@property (nonatomic,strong) TemplateSingleModel *singleModel;
 @end
-@implementation TemplateSingleView
 
-- (instancetype)init
+@implementation TemplateSingleView
+- (instancetype)initWithFrame:(CGRect)frame
 {
-    self = [super init];
+    self = [super initWithFrame:frame];
     if (self) {
-        
-        _imageView = [[UIImageView alloc] init];
-        _imageView.translatesAutoresizingMaskIntoConstraints = NO;
-        [self addSubview:_imageView];
-        
-        _pPriceLabel = [[UILabel alloc] init];
-        _pPriceLabel.translatesAutoresizingMaskIntoConstraints = NO;
-        [self addSubview:_pPriceLabel];
-        
-        _wPriceLabel = [[UILabel alloc] init];
-        _wPriceLabel.translatesAutoresizingMaskIntoConstraints = NO;
-        [self addSubview:_wPriceLabel];
-        
-        _titleLabel = [[UILabel alloc] init];
-        _titleLabel.numberOfLines = 0;
-        _titleLabel.translatesAutoresizingMaskIntoConstraints = NO;
-        [self addSubview:_titleLabel];
-        
-        _lineView = [[UIView alloc] init];
-        _lineView.backgroundColor = [UIColor blackColor];
-        [self addSubview:_lineView];
-        
-//        _titleLabel.backgroundColor = [UIColor yellowColor];
-//        _pPriceLabel.backgroundColor = [UIColor purpleColor];
-//        _wPriceLabel.backgroundColor = [UIColor greenColor];
-        
-        [_imageView mas_makeConstraints:^(MASConstraintMaker *make){
-            make.top.mas_equalTo(@10);
-            make.left.mas_equalTo(@10);
-            make.width.mas_equalTo(@120);
-            make.height.mas_equalTo(@120);
+        //
+        _scrollView = [[iCarousel alloc] init];
+        _scrollView.delegate = self;
+        _scrollView.dataSource = self;
+        _scrollView.type = iCarouselTypeLinear;
+        _scrollView.pagingEnabled = YES;
+        _scrollView.bounceDistance = 0.5;
+        _scrollView.decelerationRate = 0.5;
+        _scrollView.clipsToBounds = YES;
+        _scrollView.translatesAutoresizingMaskIntoConstraints = NO;
+        [self addSubview:_scrollView];
+
+        [_scrollView mas_makeConstraints:^(MASConstraintMaker *make){
+            make.edges.equalTo(self).insets(UIEdgeInsetsZero);
         }];
-        
-        [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make){
-            make.top.mas_equalTo(@10);
-            make.left.equalTo(_imageView.mas_right).offset(10);
-            make.right.equalTo(@(-20));
-            make.height.lessThanOrEqualTo(@(70));
-        }];
-        
-        [_pPriceLabel mas_makeConstraints:^(MASConstraintMaker *make){
-            make.left.equalTo(_titleLabel);
-            make.top.equalTo(_titleLabel.mas_bottom).offset(69);
-            make.width.lessThanOrEqualTo(@(150));
-            make.bottom.equalTo(_imageView.mas_bottom).offset(0);
-        }];
-        
-        [_wPriceLabel mas_makeConstraints:^(MASConstraintMaker *make){
-            make.left.equalTo(_pPriceLabel.mas_right).offset(20);
-            make.top.equalTo(_pPriceLabel.mas_top);
-            make.width.lessThanOrEqualTo(@(100));
-            make.bottom.equalTo(_pPriceLabel);
-        }];
-        
-        [_lineView mas_makeConstraints:^(MASConstraintMaker *make){
-            make.left.equalTo(_wPriceLabel);
-            make.top.equalTo(_titleLabel.mas_bottom).offset(80);
-            make.width.equalTo(_wPriceLabel);
-            make.height.equalTo(@(1));
-        }];
-        
     }
     return self;
 }
 
 + (CGSize)calculateSizeWithData:(id<NSObject>)data constrainedToSize:(CGSize)size
 {
-    return size;
+    return CGSizeMake(ScreenWidth, 100);
 }
 
 - (void)processData:(id <TemplateRenderProtocol>)data
 {
-    TemplateSkuModel<TemplateRenderProtocol> *skuModel = (TemplateSkuModel *)data;
-    [_imageView setImageWithURL:[NSURL URLWithString:skuModel.img]];
-    [_titleLabel setText:skuModel.title];
-    _pPriceLabel.text = skuModel.pprice;
-    _wPriceLabel.text = skuModel.wprice;
+    self.singleModel = (TemplateSingleModel *)data;
+    [_scrollView reloadData];
 }
+
+#pragma mark -
+- (NSInteger)numberOfItemsInCarousel:(iCarousel *)carousel
+{
+    return _singleModel.itemList.count;
+}
+
+- (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view
+{
+    TemplateSingleSubView  *imageView = nil;
+    if (!view) {
+        imageView = [[TemplateSingleSubView alloc] initWithFrame:CGRectMake(0, 0, 80, 100)];
+    }else{
+        imageView = (TemplateSingleSubView *)view;
+    }
+    
+    TemplatePicModel *model = self.singleModel.itemList[index];
+    [imageView processData:model];
+    return imageView;
+}
+
+- (CGFloat)carousel:(iCarousel *)carousel valueForOption:(iCarouselOption)option withDefault:(CGFloat)value
+{
+    if (option == iCarouselOptionWrap)
+    {
+        return YES;
+    }
+    return value;
+}
+
+
 @end

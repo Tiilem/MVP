@@ -32,9 +32,9 @@
     return self;
 }
 
-+ (CGSize)calculateSizeWithData:(id<NSObject>)data constrainedToSize:(CGSize)size
++ (CGSize)calculateSizeWithData:(id<TemplateRenderProtocol>)data constrainedToSize:(CGSize)size
 {
-    return CGSizeMake(ScreenWidth, 150);
+    return [TemplateSingleView calculateSizeWithData:data constrainedToSize:size];
 }
 
 - (void)processData:(id <TemplateRenderProtocol>)data

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "TemplateContainerModel.h"
+
 @interface TemplateNormalModel :  TemplateContainerModel
 
 @end
