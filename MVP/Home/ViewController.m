@@ -16,7 +16,7 @@
 
 #import "TemplateActionHandler.h"
 
-@interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface ViewController ()<UITableViewDataSource,UITableViewDelegate,TemplateActionHandlerDelegate>
 
 @property (nonatomic,strong) TemplateChannelModel  *floorModel;
 @property (nonatomic,strong) TemplateActionHandler *handler;
@@ -161,5 +161,15 @@
     return nil;
 }
 
+#pragma makk - set get
+
+- (TemplateActionHandler *)handler
+{
+    if (!_handler) {
+        _handler = [[TemplateActionHandler alloc] init];
+        _handler.delegate = self;
+    }
+    return self;
+}
 
 @end

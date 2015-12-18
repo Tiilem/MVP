@@ -20,7 +20,7 @@
 
 @interface TemplateActionHandler : NSObject
 
-+ (instancetype)shareInstance;
+@property (nonatomic,assign) id<TemplateActionHandlerDelegate> delegate;
 
 - (BOOL)handlerAction:(TemplateAction *)action;
 
