@@ -34,11 +34,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>UITableView+FDTemplateLayoutCell.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>iCarousel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,22 +42,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1B16820C6F4206F2CB386D85E0FABD39</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>2602F3D0DAC534568B6AD7EEA0DD1959</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>53480ED0BE09FF49E34B1702D485CAAB</key>
+		<key>2B4D49833F35301D145FB15674FB0B13</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8C1707B6A8C25063D6B4E103EDDD03DC</key>
+		<key>53480ED0BE09FF49E34B1702D485CAAB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -77,7 +67,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9E4F93FEE8B3FB31E258F01CFD49097E</key>
+		<key>AC60DA119FA3306315A25B11DDA02B2E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
