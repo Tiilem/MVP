@@ -2,8 +2,8 @@
 //  ViewController.m
 //  MVP
 //
-//  Created by ccguo on 15/12/6.
-//  Copyright © 2015年 ccguo. All rights reserved.
+//  Created by sunnyvale on 15/12/6.
+//  Copyright © 2015年 sunnyvale. All rights reserved.
 //
 
 #import "ViewController.h"
@@ -11,10 +11,12 @@
 #import "TemplateContainerModel.h"
 #import "WebViewController.h"
 #import "TemplateCellProtocol.h"
-#import "TemplateSpecialRenderProtocol.h"
+#import "TemplateSorbRenderProtocol.h"
 #import "UITableView+Template.h"
 
 #import "TemplateActionHandler.h"
+#import "TemplateAction.h"
+#import "ViewController+Template.h"
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate,TemplateActionHandlerDelegate>
 
@@ -31,6 +33,8 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self.tableView registTableViewCell];
+    [self addShareBarButtonItemWihtModel:nil];
+    
     [self fetchData];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.contentInset = UIEdgeInsetsMake(-64, 0, 0, 0);
@@ -44,7 +48,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)loadNewData
@@ -54,10 +57,15 @@
     });
 }
 
-- (IBAction)cliicked:(id)sender {
-    
-    WebViewController *webViewController = [[WebViewController alloc] init];
-    [NavigateManager pushViewController:webViewController];
+- (TapBlock)tapBlockForModel:(id<TemplateRenderProtocol>)model
+{
+    __weak typeof (self) weakself = self;
+    return ^(NSIndexPath * indexPath){
+        if ([model conformsToProtocol:@protocol(TemplateActionProtocol)]) {
+            TemplateAction *action = [(id<TemplateActionProtocol>)model jumpFloorModelAtIndexPath:indexPath];
+            [weakself.handler handlerAction:action];
+        }
+    };
 }
 
 - (void)fetchData
@@ -68,7 +76,7 @@
     
     __weak typeof (self) weakself = self;
     [SVProgressHUD show];
-    [manager GET:@"http://ccguo.github.io/MVP/food.json"
+    [manager GET:@"http://sunnyvalue.github.io/MVP/food.json"
       parameters:nil
          success:^(NSURLSessionDataTask *task, id responseObject){
              NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSUTF8StringEncoding error:nil];
@@ -94,7 +102,6 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     TemplateContainerModel<TemplateContainerProtocol> *list = self.floorModel.floors[section];
-    
     return [list numberOfChildModelsInContainer];
 }
 
@@ -103,17 +110,12 @@
     id <TemplateRenderProtocol> model = [self.floorModel rowModelAtIndexPath:indexPath];
     UITableViewCell <TemplateCellProtocol> * cell = [tableView dequeueReusableCellWithIdentifier:[model floorIdentifier]];
     [cell processData:model];
+    [cell tapOnePlace:[self tapBlockForModel:model]];
     if(!cell){
         return [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
     }else{
         return (UITableViewCell *)cell;
     }
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    WebViewController *webViewController = [[WebViewController alloc] initWithUrl:nil];
-    [NavigateManager pushViewController:webViewController];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -130,8 +132,8 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    id <TemplateSpecialRenderProtocol,TemplateRenderProtocol> floor = self.floorModel.floors[section];
-    if ([floor conformsToProtocol:@protocol(TemplateSpecialRenderProtocol)]) {
+    id <TemplateSorbRenderProtocol,TemplateRenderProtocol> floor = self.floorModel.floors[section];
+    if ([floor conformsToProtocol:@protocol(TemplateSorbRenderProtocol)]) {
         NSString *headerIdentifier = [floor headerFloorIdentifier];
         if (headerIdentifier) {
             Class<TemplateCellProtocol> viewClass = NSClassFromString(headerIdentifier);
@@ -145,16 +147,13 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    id <TemplateSpecialRenderProtocol,TemplateRenderProtocol> floor = self.floorModel.floors[section];
-    if ([floor conformsToProtocol:@protocol(TemplateSpecialRenderProtocol)]) {
-        id<TemplateSpecialRenderProtocol> headerModel = [floor headerFloorModelAtIndex:section];
+    id <TemplateSorbRenderProtocol,TemplateRenderProtocol> floor = self.floorModel.floors[section];
+    if ([floor conformsToProtocol:@protocol(TemplateSorbRenderProtocol)]) {
+        id<TemplateSorbRenderProtocol> headerModel = [floor headerFloorModelAtIndex:section];
         if (headerModel) {
             NSString *identifier = [headerModel headerFloorIdentifier];
             UIView <TemplateCellProtocol> *headerView = (UIView <TemplateCellProtocol> *)[tableView dequeueReusableHeaderFooterViewWithIdentifier:identifier];
             [headerView processData:floor];
-//            if ([headerView respondsToSelector:@selector(tapOnePlace:)]) {
-//                [headerView tapOnePlace:[self tapBlockForModel:headerModel]];
-//            }
             return headerView;
         }
     }
@@ -169,7 +168,7 @@
         _handler = [[TemplateActionHandler alloc] init];
         _handler.delegate = self;
     }
-    return self;
+    return _handler;
 }
 
 @end

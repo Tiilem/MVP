@@ -11,10 +11,11 @@ Protocol
 
 
 render 协议
-－TemplateRenderProtocol
-－TemplateSpecialRenderProtocol
-－TemplateActionProtocol
-－TemplateCellProtocol
+- TemplateRenderProtocol
+- TemplateSorbRenderProtocol
+- TemplateActionProtocol
+- TemplateCellProtocol
+- TemplateValidationProtocol
 
 
 - TemplateContainerProtocol 容器协议 每种楼层抽象一个协议，通过协议可以对内部的元素进行提取和计算
@@ -23,13 +24,14 @@ render 协议
 - TemplateRenderProtocol内容协议 每种楼层哪需要显示绘制的对象统一抽象协议
 		- 用于绘制的model统一实现
 
-- TemplateCellDisplayProtocol基本属性协议
+- TemplateCellProtocol基本属性协议
 		- 传值、计算高度
 
 - TemplateActionProtocol 跳转协议
 		- 统一处理action协议，包装成一个ActionModel形式
 
-
+- TemplateValidationProtocol
+        - 处理一部分认证校验数据
 
 ViewController
 	- 楼层显示统一交与Model层定制

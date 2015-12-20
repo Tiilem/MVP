@@ -2,8 +2,8 @@
 //  TemplateNormalCell.m
 //  MVP
 //
-//  Created by guochaoyang on 15/12/17.
-//  Copyright © 2015年 ccguo. All rights reserved.
+//  Created by sunnyvale on 15/12/17.
+//  Copyright © 2015年 sunnyvale. All rights reserved.
 //
 
 #import "TemplateNormalCell.h"
@@ -42,6 +42,11 @@
 - (void)processData:(id <TemplateRenderProtocol>)data
 {
     [_normalView processData:data];
+}
+
+- (void)tapOnePlace:(TapBlock) block
+{
+    [_normalView setTapBlock:block];
 }
 
 @end

@@ -37,16 +37,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="Bnc-AU-FBr">
                         <nil key="title"/>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="dEJ-Fb-UcT">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ica-d4-Uh1">
-                                <rect key="frame" x="530" y="7" width="50" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Push"/>
-                                <connections>
-                                    <action selector="cliicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w73-hC-ZnX"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="GVH-yz-xeQ" id="qBx-1l-531"/>
@@ -72,7 +62,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CZI-lh-aya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-236.99999999999997" y="336.99999999999994"/>
+            <point key="canvasLocation" x="-486" y="295"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="3gf-yO-PCq">

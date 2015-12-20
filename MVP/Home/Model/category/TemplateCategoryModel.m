@@ -2,8 +2,8 @@
 //  TemplateCategoryModel.m
 //  MVP
 //
-//  Created by ccguo on 15/12/12.
-//  Copyright © 2015年 ccguo. All rights reserved.
+//  Created by sunnyvale on 15/12/12.
+//  Copyright © 2015年 sunnyvale. All rights reserved.
 //
 
 #import "TemplateCategoryModel.h"
@@ -42,9 +42,9 @@
     return self;
 }
 
-#pragma mark - TemplateJumpProtocol
+#pragma mark - TemplateActionProtocol
 
-- (TemplateJumpModel *)jumpFloorModelAtIndexPath:(NSIndexPath *)indexPath
+- (TemplateAction *)jumpFloorModelAtIndexPath:(NSIndexPath *)indexPath
 {
     return nil;
 }
@@ -60,7 +60,7 @@
     return @"TemplateCategoryHeaderCell";
 }
 
-- (id <TemplateSpecialRenderProtocol>)headerFloorModelAtIndex:(NSInteger)index
+- (id <TemplateSorbRenderProtocol>)headerFloorModelAtIndex:(NSInteger)index
 {
     return self;
 }

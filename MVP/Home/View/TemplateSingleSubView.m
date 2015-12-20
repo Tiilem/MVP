@@ -2,8 +2,8 @@
 //  TemplateSingleSubView.m
 //  MVP
 //
-//  Created by guochaoyang on 15/12/18.
-//  Copyright © 2015年 ccguo. All rights reserved.
+//  Created by sunnyvale on 15/12/18.
+//  Copyright © 2015年 sunnyvale. All rights reserved.
 //
 
 #import "TemplateSingleSubView.h"
@@ -37,22 +37,9 @@
         _pPriceLabel.textAlignment = NSTextAlignmentCenter;
         _pPriceLabel.font = [UIFont systemFontOfSize:12];
         [self addSubview:_pPriceLabel];
-//        
-//        _wPriceLabel = [[UILabel alloc] init];
-//        _wPriceLabel.translatesAutoresizingMaskIntoConstraints = NO;
-//        [self addSubview:_wPriceLabel];
         
         _titleLabel = [[UILabel alloc] init];
         _titleLabel.numberOfLines = 0;
-        
-//        [self addSubview:_titleLabel];
-//
-//        _lineView = [[UIView alloc] init];
-//        _lineView.backgroundColor = [UIColor blackColor];
-//        [self addSubview:_lineView];
-        
-        
-        
     }
     return self;
 }
@@ -70,5 +57,9 @@
     [_titleLabel setText:skuModel.title];
     _pPriceLabel.text = skuModel.pprice;
     _wPriceLabel.text = skuModel.wprice;
+}
+
+- (void)tapOnePlace:(TapBlock) block
+{
 }
 @end

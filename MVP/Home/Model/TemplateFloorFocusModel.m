@@ -2,12 +2,13 @@
 //  TemplateFloorFocusModel.m
 //  MVP
 //
-//  Created by ccguo on 15/12/6.
-//  Copyright © 2015年 ccguo. All rights reserved.
+//  Created by sunnyvale on 15/12/6.
+//  Copyright © 2015年 sunnyvale. All rights reserved.
 //
 
 #import "TemplateFloorFocusModel.h"
 #import "TemplatePicModel.h"
+#import "TemplateJumpAction.h"
 
 @implementation TemplateFloorFocusModel
 
@@ -42,10 +43,20 @@
     return self;
 }
 
-#pragma mark - TemplateJumpProtocol
+#pragma mark - TemplateActionProtocol
 
-- (TemplateJumpModel *)jumpFloorModelAtIndexPath:(NSIndexPath *)indexPath
+- (TemplateAction *)jumpFloorModelAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSUInteger position = [indexPath indexAtPosition:0];
+    if (position < self.itemList.count) {
+        
+        TemplatePicModel *picModel = self.itemList[position];
+        TemplateJumpAction *action = [[TemplateJumpAction alloc] init];
+        action.jumpToType = TemplateJumpToActivityM;
+        action.jumpToUrl = picModel.jump.url;
+        action.eventId = @"GeneralChannel_BannerPic";
+        return action;
+    }
     return nil;
 }
 

@@ -2,8 +2,8 @@
 //  TemplateSingleView.m
 //  MVP
 //
-//  Created by ccguo on 15/12/8.
-//  Copyright © 2015年 ccguo. All rights reserved.
+//  Created by sunnyvale on 15/12/8.
+//  Copyright © 2015年 sunnyvale. All rights reserved.
 //
 
 #import "TemplateSingleView.h"
@@ -82,5 +82,11 @@
     return value;
 }
 
-
+- (void)carousel:(iCarousel *)carousel didSelectItemAtIndex:(NSInteger)index
+{
+    NSIndexPath *indexPath = [NSIndexPath indexPathWithIndex:index];
+    if (_tapBlock) {
+        _tapBlock(indexPath);
+    }
+}
 @end

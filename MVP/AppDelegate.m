@@ -2,8 +2,8 @@
 //  AppDelegate.m
 //  MVP
 //
-//  Created by ccguo on 15/12/6.
-//  Copyright © 2015年 ccguo. All rights reserved.
+//  Created by sunnyvale on 15/12/6.
+//  Copyright © 2015年 sunnyvale. All rights reserved.
 //
 
 #import "AppDelegate.h"
@@ -15,7 +15,7 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.    
+    // Override point for customization after application launch.
     return YES;
 }
 

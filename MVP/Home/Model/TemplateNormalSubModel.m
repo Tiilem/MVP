@@ -2,11 +2,13 @@
 //  TemplateNormalSubModel.m
 //  MVP
 //
-//  Created by guochaoyang on 15/12/17.
-//  Copyright © 2015年 ccguo. All rights reserved.
+//  Created by sunnyvale on 15/12/17.
+//  Copyright © 2015年 sunnyvale. All rights reserved.
 //
 
 #import "TemplateNormalSubModel.h"
+#import "TemplateJumpAction.h"
+#import "TemplatePicModel.h"
 
 @implementation TemplateNormalSubModel
 
@@ -54,7 +56,20 @@
     else {
         return NO;
     }
-
 }
 
+
+- (TemplateAction *)jumpFloorModelAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSUInteger position = [indexPath indexAtPosition:0];
+    if (position < self.picList.count) {
+        TemplatePicModel *picModel = self.picList[position];
+        TemplateJumpAction *action = [[TemplateJumpAction alloc] init];
+        action.jumpToType = TemplateJumpToActivityM;
+        action.jumpToUrl = picModel.jump.url;
+        action.eventId = @"GeneralChannel_BannerPic";
+        return action;
+    }
+    return nil;
+}
 @end

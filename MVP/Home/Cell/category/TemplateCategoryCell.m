@@ -2,8 +2,8 @@
 //  TemplateCategoryCell.m
 //  MVP
 //
-//  Created by ccguo on 15/12/13.
-//  Copyright © 2015年 ccguo. All rights reserved.
+//  Created by sunnyvale on 15/12/13.
+//  Copyright © 2015年 sunnyvale. All rights reserved.
 //
 
 #import "TemplateCategoryCell.h"
@@ -28,5 +28,10 @@
 - (void)processData:(id <TemplateRenderProtocol>)data
 {
     self.textLabel.text = [NSString stringWithFormat:@"cell"];
+}
+
+- (void)tapOnePlace:(TapBlock) block
+{
+    
 }
 @end

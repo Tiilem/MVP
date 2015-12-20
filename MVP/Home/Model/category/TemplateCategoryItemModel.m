@@ -2,8 +2,8 @@
 //  TemplateCategoryItemModel.m
 //  MVP
 //
-//  Created by ccguo on 15/12/12.
-//  Copyright © 2015年 ccguo. All rights reserved.
+//  Created by sunnyvale on 15/12/12.
+//  Copyright © 2015年 sunnyvale. All rights reserved.
 //
 
 #import "TemplateCategoryItemModel.h"

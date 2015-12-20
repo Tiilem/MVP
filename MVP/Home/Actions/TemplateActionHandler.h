@@ -2,13 +2,13 @@
 //  TemplateActionHandler.h
 //  MVP
 //
-//  Created by guochaoyang on 15/12/18.
-//  Copyright © 2015年 ccguo. All rights reserved.
+//  Created by sunnyvale on 15/12/18.
+//  Copyright © 2015年 sunnyvale. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "TemplateAction.h"
 
+@class TemplateAction;
 @class TemplateActionHandler;
 @protocol TemplateActionHandlerDelegate <NSObject>
 
@@ -19,6 +19,10 @@
 @end
 
 @interface TemplateActionHandler : NSObject
+
+@property (nonatomic,strong,readonly) TemplateAction *action;
+//拦截器
+//Result
 
 @property (nonatomic,assign) id<TemplateActionHandlerDelegate> delegate;
 

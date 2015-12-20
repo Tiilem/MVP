@@ -49,6 +49,9 @@
 		B06B75C21C17199D00F59BB1 /* TemplateSingleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B06B75C11C17199D00F59BB1 /* TemplateSingleCell.m */; };
 		B06B75C61C1719FA00F59BB1 /* TemplateHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B06B75C51C1719FA00F59BB1 /* TemplateHeaderCell.m */; };
 		B06B75CA1C171C6D00F59BB1 /* TemplateSingleView.m in Sources */ = {isa = PBXBuildFile; fileRef = B06B75C91C171C6D00F59BB1 /* TemplateSingleView.m */; };
+		B0739F411C2534EC005EE0A8 /* TemplateJumpAction.m in Sources */ = {isa = PBXBuildFile; fileRef = B0739F401C2534EC005EE0A8 /* TemplateJumpAction.m */; };
+		B073CF451C264F9800253B6C /* ViewController+Template.m in Sources */ = {isa = PBXBuildFile; fileRef = B073CF441C264F9800253B6C /* ViewController+Template.m */; };
+		B073CF481C2650A400253B6C /* UIButton+Action.m in Sources */ = {isa = PBXBuildFile; fileRef = B073CF471C2650A400253B6C /* UIButton+Action.m */; };
 		B0D058011C1D814F00ABDFD5 /* TemplateCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D058001C1D814F00ABDFD5 /* TemplateCategoryCell.m */; };
 		B0D058041C1DA4F000ABDFD5 /* back_bt_7h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B0D058031C1DA4F000ABDFD5 /* back_bt_7h@3x.png */; };
 		B0FCB2491C1BD8C100989E36 /* TemplateCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B0FCB2481C1BD8C100989E36 /* TemplateCategoryModel.m */; };
@@ -59,7 +62,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		373164701C200844001FADE6 /* TemplateSpecialRenderProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateSpecialRenderProtocol.h; sourceTree = "<group>"; };
 		379530A91C23A77F00DAAF9D /* TemplateValidationProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateValidationProtocol.h; sourceTree = "<group>"; };
 		379530AA1C23B31F00DAAF9D /* NSArray+Template.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Template.h"; sourceTree = "<group>"; };
 		379530AB1C23B31F00DAAF9D /* NSArray+Template.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Template.m"; sourceTree = "<group>"; };
@@ -127,7 +129,6 @@
 		B06B75941C1709FF00F59BB1 /* TemplateJumpModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateJumpModel.m; sourceTree = "<group>"; };
 		B06B75961C1709FF00F59BB1 /* TemplateActionProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateActionProtocol.h; sourceTree = "<group>"; };
 		B06B75971C1709FF00F59BB1 /* TemplateCellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateCellProtocol.h; sourceTree = "<group>"; };
-		B06B75991C1709FF00F59BB1 /* TemplateDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateDefine.h; sourceTree = "<group>"; };
 		B06B759B1C1709FF00F59BB1 /* TemplateFocusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateFocusView.h; sourceTree = "<group>"; };
 		B06B759C1C1709FF00F59BB1 /* TemplateFocusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateFocusView.m; sourceTree = "<group>"; };
 		B06B759D1C1709FF00F59BB1 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -144,9 +145,16 @@
 		B06B75C51C1719FA00F59BB1 /* TemplateHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateHeaderCell.m; sourceTree = "<group>"; };
 		B06B75C81C171C6D00F59BB1 /* TemplateSingleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateSingleView.h; sourceTree = "<group>"; };
 		B06B75C91C171C6D00F59BB1 /* TemplateSingleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateSingleView.m; sourceTree = "<group>"; };
+		B0739F3F1C2534EC005EE0A8 /* TemplateJumpAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateJumpAction.h; sourceTree = "<group>"; };
+		B0739F401C2534EC005EE0A8 /* TemplateJumpAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateJumpAction.m; sourceTree = "<group>"; };
+		B073CF431C264F9800253B6C /* ViewController+Template.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+Template.h"; sourceTree = "<group>"; };
+		B073CF441C264F9800253B6C /* ViewController+Template.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+Template.m"; sourceTree = "<group>"; };
+		B073CF461C2650A400253B6C /* UIButton+Action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Action.h"; sourceTree = "<group>"; };
+		B073CF471C2650A400253B6C /* UIButton+Action.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Action.m"; sourceTree = "<group>"; };
 		B0D057FF1C1D814F00ABDFD5 /* TemplateCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateCategoryCell.h; sourceTree = "<group>"; };
 		B0D058001C1D814F00ABDFD5 /* TemplateCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateCategoryCell.m; sourceTree = "<group>"; };
 		B0D058031C1DA4F000ABDFD5 /* back_bt_7h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back_bt_7h@3x.png"; sourceTree = "<group>"; };
+		B0E4138B1C2674F6001649D6 /* TemplateSorbRenderProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateSorbRenderProtocol.h; sourceTree = "<group>"; };
 		B0FCB2451C1BCFE400989E36 /* TemplateRenderProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateRenderProtocol.h; sourceTree = "<group>"; };
 		B0FCB2471C1BD8C100989E36 /* TemplateCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateCategoryModel.h; sourceTree = "<group>"; };
 		B0FCB2481C1BD8C100989E36 /* TemplateCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateCategoryModel.m; sourceTree = "<group>"; };
@@ -203,6 +211,10 @@
 				379530AB1C23B31F00DAAF9D /* NSArray+Template.m */,
 				379530AD1C23ED0D00DAAF9D /* UIView+Template.h */,
 				379530AE1C23ED0D00DAAF9D /* UIView+Template.m */,
+				B073CF431C264F9800253B6C /* ViewController+Template.h */,
+				B073CF441C264F9800253B6C /* ViewController+Template.m */,
+				B073CF461C2650A400253B6C /* UIButton+Action.h */,
+				B073CF471C2650A400253B6C /* UIButton+Action.m */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -214,6 +226,8 @@
 				37DFF2D51C240A180081D547 /* TemplateActionHandler.m */,
 				37DFF2D71C240A290081D547 /* TemplateAction.h */,
 				37DFF2D81C240A290081D547 /* TemplateAction.m */,
+				B0739F3F1C2534EC005EE0A8 /* TemplateJumpAction.h */,
+				B0739F401C2534EC005EE0A8 /* TemplateJumpAction.m */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -308,7 +322,6 @@
 				B06B759A1C1709FF00F59BB1 /* View */,
 				B06B759D1C1709FF00F59BB1 /* ViewController.h */,
 				B06B759E1C1709FF00F59BB1 /* ViewController.m */,
-				B06B75991C1709FF00F59BB1 /* TemplateDefine.h */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -346,8 +359,8 @@
 		B06B75951C1709FF00F59BB1 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				B0E4138B1C2674F6001649D6 /* TemplateSorbRenderProtocol.h */,
 				379530A91C23A77F00DAAF9D /* TemplateValidationProtocol.h */,
-				373164701C200844001FADE6 /* TemplateSpecialRenderProtocol.h */,
 				B06B75961C1709FF00F59BB1 /* TemplateActionProtocol.h */,
 				B06B75971C1709FF00F59BB1 /* TemplateCellProtocol.h */,
 				B0FCB2451C1BCFE400989E36 /* TemplateRenderProtocol.h */,
@@ -646,6 +659,7 @@
 				37D64E731C1ACE410052D5D3 /* TemplateFHeaderModel.m in Sources */,
 				B06B75BE1C17165F00F59BB1 /* TemplateSkuModel.m in Sources */,
 				B03F9F371C13E30500B653A6 /* AppDelegate.m in Sources */,
+				B073CF481C2650A400253B6C /* UIButton+Action.m in Sources */,
 				B06B75A11C1709FF00F59BB1 /* TemplateContainerModel.m in Sources */,
 				37C7ED681C229C720056CF29 /* TemplateNormalSubModel.m in Sources */,
 				37DFF2D91C240A290081D547 /* TemplateAction.m in Sources */,
@@ -654,6 +668,7 @@
 				B06B75A81C1709FF00F59BB1 /* TemplateHeaderModel.m in Sources */,
 				B06113DD1C1EF0F8006BA721 /* NavigateManager.m in Sources */,
 				B0FCB2521C1BE62200989E36 /* TemplateCategoryHeaderCell.m in Sources */,
+				B073CF451C264F9800253B6C /* ViewController+Template.m in Sources */,
 				B06B75A41C1709FF00F59BB1 /* TemplateMarginModel.m in Sources */,
 				B06B75A71C1709FF00F59BB1 /* TemplateShareModel.m in Sources */,
 				B0FCB2561C1BEA8A00989E36 /* TemplateCategoryView.m in Sources */,
@@ -676,6 +691,7 @@
 				B06B75AA1C1709FF00F59BB1 /* TemplateFocusView.m in Sources */,
 				37C7ED731C22A3D20056CF29 /* TemplateMarginCell.m in Sources */,
 				37C7ED821C22BB2B0056CF29 /* TemplateNormalTapView.m in Sources */,
+				B0739F411C2534EC005EE0A8 /* TemplateJumpAction.m in Sources */,
 				B06B75C21C17199D00F59BB1 /* TemplateSingleCell.m in Sources */,
 				B06B75BB1C1715EB00F59BB1 /* TemplateSingleModel.m in Sources */,
 				B06113D91C1EF0C0006BA721 /* MUAction.m in Sources */,

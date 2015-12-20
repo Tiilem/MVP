@@ -2,8 +2,8 @@
 //  TemplateBaseModel.m
 //  MVP
 //
-//  Created by ccguo on 15/12/6.
-//  Copyright © 2015年 ccguo. All rights reserved.
+//  Created by sunnyvale on 15/12/6.
+//  Copyright © 2015年 sunnyvale. All rights reserved.
 //
 
 #import "TemplateChannelModel.h"
@@ -51,11 +51,6 @@ NSString *const TemplateChannelPatternCategory       = @"Category";
     self.tempFloors = nil;
     self.floors = modelArray;
 }
-
-//- (id <TemplateContainerProtocol>)rowFloorModelAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    return nil;
-//}
 
 - (id <TemplateRenderProtocol>)rowModelAtIndexPath:(NSIndexPath *)indexPath
 {

@@ -2,8 +2,8 @@
 //  TemplateSingleSubView.h
 //  MVP
 //
-//  Created by guochaoyang on 15/12/18.
-//  Copyright © 2015年 ccguo. All rights reserved.
+//  Created by sunnyvale on 15/12/18.
+//  Copyright © 2015年 sunnyvale. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

@@ -2,8 +2,8 @@
 //  TemplateNormalView.m
 //  MVP
 //
-//  Created by guochaoyang on 15/12/17.
-//  Copyright © 2015年 ccguo. All rights reserved.
+//  Created by sunnyvale on 15/12/17.
+//  Copyright © 2015年 sunnyvale. All rights reserved.
 //
 
 #import "TemplateNormalView.h"
@@ -62,7 +62,6 @@ const CGFloat HomePageChannelNormalViewPattern09AspectRatio = 353.0 / 342.0;
             break;
         case TemplateNormalStyle004:
         {
-//            CGFloat style004Height = 74;
             CGFloat style004Width  = (width - 30)/2;
             CGFloat style004Height = (128.0/260.0) * style004Width;
 
@@ -189,11 +188,17 @@ const CGFloat HomePageChannelNormalViewPattern09AspectRatio = 353.0 / 342.0;
 
 - (void)addNormalTapViewWithCount:(NSInteger)count picList:(NSArray *)picList
 {
-//    __weak typeof(self) weakSelf = self;
+    __weak typeof(self) weakSelf = self;
     for (int i = 0; i < count; i++) {
         TemplateNormalSubModel *subModel = picList[i];
         TemplateNormalTapView *tapView = [[TemplateNormalTapView alloc] init];
         [tapView processData:subModel];
+        NSIndexPath *indexPath = [NSIndexPath indexPathWithIndex:i];
+        [tapView setTapBlock:^{
+            if (weakSelf.tapBlock) {
+                weakSelf.tapBlock(indexPath);
+            }
+        }];
         [self addSubview:tapView];
     }
 }
